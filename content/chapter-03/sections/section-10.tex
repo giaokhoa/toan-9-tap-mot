@@ -1,0 +1,168 @@
+% Bài 10 — SGK Toán 9 KNTT Tập 1, trang 60–62.
+% Nguồn direct image theo issue #16:
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-60-1773022940433.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-61-1773022940789.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-62-1773022941149.png
+% TODO(issue-16): Chưa thêm practice SBT trang 37–38 vì phiên hiện tại không đọc
+% được đúng file `SBT TOAN 9 KNTT TAP 1.pdf` có SHA-256 bắt buộc trong issue.
+
+\section{Căn bậc ba và căn thức bậc ba}
+
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    Căn bậc hai của một số thực (dương) có một vai trò quan trọng trong đời sống và toán học. Căn bậc hai của số thực $a$ không âm là các số thực $x$ thoả mãn điều kiện $x^2=a$. Trong bài học này, các em sẽ được làm quen với khái niệm căn bậc ba, một khái niệm tương tự khái niệm căn bậc hai.
+
+    \subsubsection{Căn bậc ba}
+
+    \textbf{Căn bậc ba của một số thực}
+
+    \textbf{HĐ1.} Kí hiệu $V$ là thể tích của hình lập phương với cạnh $x$. Hãy thay dấu ``?'' trong bảng sau bằng các giá trị thích hợp.
+
+    \begin{center}
+        \begin{tblr}{
+            colspec={Q[c] Q[c]},
+            row{1}={font=\bfseries}
+        }
+            $x$ & $V=x^3$ \\
+            $2$ & $8$ \\
+            ? & $27$ \\
+            ? & $64$ \\
+        \end{tblr}
+    \end{center}
+
+    Tổng quát, ta định nghĩa:
+
+    \begin{keyconcept}
+        Căn bậc ba của số thực $a$ là số thực $x$ thoả mãn $x^3=a$.
+    \end{keyconcept}
+
+    \textbf{Chú ý.} Mỗi số $a$ đều có duy nhất một căn bậc ba. Căn bậc ba của số $a$ được kí hiệu là $\sqrt[3]{a}$. Trong kí hiệu $\sqrt[3]{a}$, số $3$ được gọi là chỉ số của căn. Phép tìm căn bậc ba của một số gọi là phép khai căn bậc ba.
+
+    \textbf{Ví dụ 1.}
+    \begin{enumerate}[label=\alph*)]
+        \item Chứng tỏ rằng $\sqrt[3]{64}=4$.
+        \item Tính $\sqrt[3]{0}$ và $\sqrt[3]{-27}$.
+    \end{enumerate}
+
+    \textbf{Giải.}
+    \begin{enumerate}[label=\alph*)]
+        \item Vì $4^3=64$ nên $\sqrt[3]{64}=4$.
+        \item Vì $0^3=0$ nên $\sqrt[3]{0}=0$. Vì $(-3)^3=-27$ nên $\sqrt[3]{-27}=-3$.
+    \end{enumerate}
+
+    \textbf{Nhận xét.} Từ định nghĩa căn bậc ba, ta có $\left(\sqrt[3]{a}\right)^3=\sqrt[3]{a^3}=a$ với mọi số thực $a$. Do đó có thể giải Ví dụ 1 như sau: $\sqrt[3]{64}=\sqrt[3]{4^3}=4$.
+
+    \textbf{Luyện tập 1.} Tính:
+    \begin{enumerate}[label=\alph*)]
+        \item $\sqrt[3]{125}$;
+        \item $\sqrt[3]{0,008}$;
+        \item $\sqrt[3]{\dfrac{-8}{27}}$.
+    \end{enumerate}
+
+    \textbf{Tính căn bậc ba của một số bằng máy tính cầm tay}
+
+    Ta có thể sử dụng loại MTCT thích hợp để tính căn bậc ba của một số. Chẳng hạn, để tính $\sqrt[3]{343}$ và $\sqrt[3]{12}$ ta làm như sau:
+
+    \begin{center}
+        \begin{tblr}{
+            colspec={Q[c] Q[c]},
+            row{1}={font=\bfseries}
+        }
+            Phép tính & Kết quả \\
+            $\sqrt[3]{343}$ & $7$ \\
+            $\sqrt[3]{12}$ & $2,289428485$ \\
+        \end{tblr}
+    \end{center}
+
+    \textbf{Chú ý.} Màn hình MTCT chỉ hiển thị được một số hữu hạn chữ số nên các kết quả là số thập phân vô hạn (tuần hoàn hay không tuần hoàn) đều được làm tròn, chẳng hạn: $\sqrt[3]{12}\approx 2,289428485$.
+
+    \textbf{Ví dụ 2.} Sử dụng MTCT, tính $\sqrt[3]{3,25}$ rồi làm tròn kết quả đến chữ số thập phân thứ hai.
+
+    \textbf{Luyện tập 2.} Sử dụng MTCT, tính $\sqrt[3]{45}$ và làm tròn kết quả với độ chính xác $0,005$.
+
+    \textbf{Thử thách nhỏ.} Có thể xếp $125$ khối lập phương đơn vị (có cạnh bằng $1$ cm) thành một khối lập phương lớn được không nhỉ?
+
+    \subsubsection{Căn thức bậc ba}
+
+    \textbf{Nhận biết căn thức bậc ba}
+
+    Tương tự như căn thức bậc hai, ta có định nghĩa sau:
+
+    \begin{keyconcept}
+        Căn thức bậc ba là biểu thức có dạng $\sqrt[3]{A}$, trong đó $A$ là một biểu thức đại số.
+    \end{keyconcept}
+
+    \textbf{Chú ý.}
+    \begin{itemize}
+        \item Tương tự căn bậc ba của một số, ta cũng có $\left(\sqrt[3]{A}\right)^3=\sqrt[3]{A^3}=A$ ($A$ là một biểu thức).
+        \item Để tính giá trị của $\sqrt[3]{A}$ tại những giá trị cho trước của biến, ta thay các giá trị cho trước của biến vào căn thức rồi tính giá trị của biểu thức số nhận được.
+    \end{itemize}
+
+    \textbf{Ví dụ 3.} Tính giá trị của căn thức $\sqrt[3]{2x+5}$ tại:
+    \begin{enumerate}[label=\alph*)]
+        \item $x=60$;
+        \item $x=-6,5$.
+    \end{enumerate}
+
+    \textbf{Giải.}
+    \begin{enumerate}[label=\alph*)]
+        \item Với $x=60$ ta có $\sqrt[3]{2\cdot 60+5}=\sqrt[3]{125}=\sqrt[3]{5^3}=5$.
+        \item Với $x=-6,5$ ta có $\sqrt[3]{2\cdot(-6,5)+5}=\sqrt[3]{-8}=\sqrt[3]{(-2)^3}=-2$.
+    \end{enumerate}
+
+    \textbf{Ví dụ 4.} Rút gọn biểu thức $-x+5+\sqrt[3]{x^3+3x^2+3x+1}$.
+
+    \textbf{Giải.} Ta có $x^3+3x^2+3x+1=(x+1)^3$.
+
+    Do đó $-x+5+\sqrt[3]{x^3+3x^2+3x+1}=-x+5+\sqrt[3]{(x+1)^3}=-x+5+(x+1)=6$.
+
+    \textbf{Luyện tập 3.}
+    \begin{enumerate}[label=\alph*)]
+        \item Tính giá trị của căn thức $\sqrt[3]{5x-1}$ tại $x=0$ và tại $x=-1,4$.
+        \item Rút gọn biểu thức $\sqrt[3]{x^3-3x^2+3x-1}$.
+    \end{enumerate}
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}[resume=SGK]
+        \item Tính:
+        \begin{questions}
+            \item $\sqrt[3]{216}$;
+            \item $\sqrt[3]{-512}$;
+            \item $\sqrt[3]{-0,001}$;
+            \item $\sqrt[3]{1,331}$.
+        \end{questions}
+        \answerline
+        \answerline
+
+        \item Sử dụng MTCT, tính các căn bậc ba sau đây (làm tròn kết quả đến chữ số thập phân thứ hai):
+        \begin{questions}
+            \item $\sqrt[3]{2,1}$;
+            \item $\sqrt[3]{-18}$;
+            \item $\sqrt[3]{-28}$;
+            \item $\sqrt[3]{0,35}$.
+        \end{questions}
+        \answerline
+        \answerline
+
+        \item Một người thợ muốn làm một thùng tôn hình lập phương có thể tích bằng $730\,\text{dm}^3$. Em hãy ước lượng chiều dài cạnh thùng khoảng bao nhiêu dm?
+        \answerline
+        \answerline
+
+        \item Rút gọn các biểu thức sau:
+        \begin{questions}
+            \item $\sqrt[3]{(1-\sqrt{2})^3}$;
+            \item $\sqrt[3]{(2\sqrt{2}+1)^3}$;
+            \item $\left(\sqrt[3]{\sqrt{2}+1}\right)^3$.
+        \end{questions}
+        \answerline
+        \answerline
+
+        \item Rút gọn rồi tính giá trị của biểu thức $\sqrt[3]{27x^3-27x^2+9x-1}$ tại $x=7$.
+        \answerline
+        \answerline
+    \end{questions}
+\end{exercises}
