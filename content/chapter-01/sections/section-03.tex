@@ -1,0 +1,243 @@
+\setcounter{section}{2}
+\section{Giải bài toán bằng cách lập hệ phương trình}
+
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    \begin{center}
+        \begin{tblr}{colspec={X[l]}}
+            \textbf{Kiến thức, kĩ năng} \\
+            Giải một số bài toán bằng cách lập hệ phương trình bậc nhất hai ẩn.
+        \end{tblr}
+    \end{center}
+
+    \textbf{Bài toán.} Một vật có khối lượng $124$ g và thể tích $15\,\mathrm{cm}^3$ là hợp kim của đồng và kẽm. Tính xem trong đó có bao nhiêu gam đồng và bao nhiêu gam kẽm, biết rằng $1\,\mathrm{cm}^3$ đồng nặng $8{,}9$ g và $1\,\mathrm{cm}^3$ kẽm nặng $7$ g.
+
+    \textbf{Giải bài toán bằng cách lập hệ phương trình}
+
+    Xét bài toán ở Tình huống mở đầu. Gọi $x$ là số gam đồng, $y$ là số gam kẽm cần tính.
+
+    \textbf{HĐ1} Biểu thị khối lượng của vật qua $x$ và $y$.
+
+    \answerline
+
+    \textbf{HĐ2} Biểu thị thể tích của vật qua $x$ và $y$.
+
+    \answerline
+
+    \textbf{HĐ3} Giải hệ gồm hai phương trình bậc nhất hai ẩn $x$, $y$ nhận được ở HĐ1 và HĐ2. Từ đó trả lời câu hỏi ở Tình huống mở đầu.
+
+    \answerline
+    \answerline
+    \answerline
+
+    \textbf{Nhận xét.} Các bước giải một bài toán bằng cách lập hệ phương trình:
+
+    \begin{keyconcept}
+        \textbf{Bước 1. Lập hệ phương trình:}
+        \begin{itemize}
+            \item Chọn ẩn số (thường chọn hai ẩn số) và đặt điều kiện thích hợp cho các ẩn số;
+            \item Biểu diễn các đại lượng chưa biết theo ẩn và các đại lượng đã biết;
+            \item Lập hệ phương trình biểu thị mối quan hệ giữa các đại lượng.
+        \end{itemize}
+
+        \textbf{Bước 2.} Giải hệ phương trình.
+
+        \textbf{Bước 3. Trả lời:} Kiểm tra xem trong các nghiệm tìm được của hệ phương trình, nghiệm nào thoả mãn, nghiệm nào không thoả mãn điều kiện của ẩn, rồi kết luận.
+    \end{keyconcept}
+
+    \textbf{Ví dụ 1.} Tìm hai số tự nhiên có tổng bằng $1006$, biết rằng nếu lấy số lớn chia cho số nhỏ thì được thương là $2$ và số dư là $124$.
+
+    \textbf{Giải}
+
+    \begin{itemize}
+        \item Gọi hai số cần tìm là $x$ và $y$, trong đó $x<y$. Số dư trong phép chia $y$ cho $x$ là $124$ nên $x>124$. Vậy điều kiện của hai ẩn là $x,y\in\mathbb{N}$ và $124<x<y$.
+    \end{itemize}
+
+    Tổng hai số bằng $1006$ nên ta có phương trình
+    \[
+        x+y=1006. \tag{1}
+    \]
+
+    Khi chia $y$ cho $x$ ta được thương là $2$, dư $124$ nên ta có phương trình
+    \[
+        y=2x+124. \tag{2}
+    \]
+
+    Do đó, ta có hệ phương trình
+    \[
+        \begin{cases}
+            x+y=1006,\\
+            y=2x+124.
+        \end{cases}
+    \]
+
+    \begin{itemize}
+        \item Giải hệ phương trình:
+    \end{itemize}
+
+    Từ (2) thế $y=2x+124$ vào (1), ta được $3x+124=1006$ hay $3x=882$, suy ra $x=294$.
+
+    Từ đó ta được $y=2\cdot294+124=712$.
+
+    \begin{itemize}
+        \item Các giá trị $x=294$ và $y=712$ thoả mãn các điều kiện của ẩn.
+    \end{itemize}
+
+    Vậy hai số cần tìm là $294$ và $712$.
+
+    \textbf{Luyện tập 1.} Một chiếc xe khách đi từ Thành phố Hồ Chí Minh đến Cần Thơ, quãng đường dài $170$ km. Sau khi xe khách xuất phát $1$ giờ $40$ phút, một chiếc xe tải bắt đầu đi từ Cần Thơ về Thành phố Hồ Chí Minh và gặp xe khách sau đó $40$ phút. Tính vận tốc của mỗi xe, biết rằng mỗi giờ xe khách đi nhanh hơn xe tải $15$ km.
+
+    \textit{Hướng dẫn.} Gọi $x$ (km/h) là vận tốc của xe tải và $y$ (km/h) là vận tốc xe khách ($x,y>0$). Chú ý rằng hai xe (đi ngược chiều) gặp nhau khi tổng quãng đường hai xe đã đi bằng $170$ km.
+
+    \answerline
+    \answerline
+    \answerline
+
+    \textbf{Ví dụ 2.} Hai đội công nhân cùng làm một đoạn đường trong $24$ ngày thì xong. Mỗi ngày, đội I làm được nhiều gấp rưỡi đội II. Hỏi nếu làm một mình thì mỗi đội làm xong đoạn đường đó trong bao lâu? (Giả sử năng suất của mỗi đội là không đổi).
+
+    \textbf{Giải}
+
+    \begin{itemize}
+        \item Gọi $x$ là số ngày để đội I hoàn thành công việc nếu làm riêng một mình; $y$ là số ngày để đội II hoàn thành công việc nếu làm riêng một mình. Điều kiện: $x>0$ và $y>0$.
+    \end{itemize}
+
+    Mỗi ngày đội I làm được $\dfrac{1}{x}$ (công việc) và đội II làm được $\dfrac{1}{y}$ (công việc).
+
+    Mỗi ngày đội I làm được nhiều gấp rưỡi đội II nên ta có phương trình
+    \[
+        \dfrac{1}{x}=\dfrac{3}{2}\cdot\dfrac{1}{y},
+    \]
+    hay
+    \[
+        \dfrac{1}{x}-\dfrac{3}{2y}=0. \tag{3}
+    \]
+
+    Hai đội làm chung trong $24$ ngày thì xong công việc nên mỗi ngày, hai đội làm chung thì được $\dfrac{1}{24}$ (công việc). Ta có phương trình
+    \[
+        \dfrac{1}{x}+\dfrac{1}{y}=\dfrac{1}{24}. \tag{4}
+    \]
+
+    Từ (3) và (4), ta có hệ phương trình
+    \[
+        \text{(I)}\quad
+        \begin{cases}
+            \dfrac{1}{x}-\dfrac{3}{2y}=0,\\[4pt]
+            \dfrac{1}{x}+\dfrac{1}{y}=\dfrac{1}{24}.
+        \end{cases}
+    \]
+
+    \begin{itemize}
+        \item Nếu đặt $u=\dfrac{1}{x}$ và $v=\dfrac{1}{y}$ thì ta có hệ phương trình bậc nhất hai ẩn mới là $u$ và $v$:
+    \end{itemize}
+    \[
+        \text{(II)}\quad
+        \begin{cases}
+            u-\dfrac{3}{2}v=0,\\[4pt]
+            u+v=\dfrac{1}{24}.
+        \end{cases}
+    \]
+
+    Giải hệ (II): Thế $u=\dfrac{3}{2}v$ vào phương trình (4), ta được $\dfrac{3}{2}v+v=\dfrac{1}{24}$, suy ra $v=\dfrac{1}{60}$. Do đó $u=\dfrac{1}{40}$.
+
+    Từ đó, ta có:
+    \[
+        \dfrac{1}{x}=\dfrac{1}{40}\ \text{suy ra }x=40;
+        \qquad
+        \dfrac{1}{y}=\dfrac{1}{60}\ \text{suy ra }y=60.
+    \]
+
+    \begin{itemize}
+        \item Các giá trị tìm được của $x$ và $y$ thoả mãn điều kiện của ẩn.
+    \end{itemize}
+
+    Trả lời: Nếu làm một mình thì đội I làm xong đoạn đường đó trong $40$ ngày, còn đội II làm xong trong $60$ ngày.
+
+    \textbf{Luyện tập 2.} Nếu hai vòi nước cùng chảy vào một bể không có nước thì bể sẽ đầy trong $1$ giờ $20$ phút. Nếu mở riêng vòi thứ nhất trong $10$ phút và vòi thứ hai trong $12$ phút thì chỉ được $\dfrac{2}{15}$ bể nước. Hỏi nếu mở riêng từng vòi thì thời gian để mỗi vòi chảy đầy bể nước là bao nhiêu phút?
+
+    \answerline
+    \answerline
+    \answerline
+    \answerline
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}[resume=SGK]
+        \item Tìm số tự nhiên $N$ có hai chữ số, biết rằng tổng của hai chữ số đó bằng $12$, và nếu viết hai chữ số đó theo thứ tự ngược lại thì được một số lớn hơn $N$ là $36$ đơn vị.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Điểm số trung bình của một vận động viên bắn súng sau $100$ lần bắn là $8{,}69$ điểm. Kết quả cụ thể được ghi trong bảng sau, trong đó có hai ô bị mờ không đọc được (đánh dấu ``?''):
+
+        \begin{center}
+            \begin{tblr}{
+                colspec={Q[l] *{5}{Q[c]}},
+                cells={valign=m}
+            }
+                Điểm số của mỗi lần bắn & $10$ & $9$ & $8$ & $7$ & $6$ \\
+                Số lần bắn & $25$ & $42$ & ? & $15$ & ?
+            \end{tblr}
+        \end{center}
+
+        Em hãy tìm lại các số bị mờ trong hai ô đó.
+
+        \answerline
+        \answerline
+
+        \item Năm ngoái, hai đơn vị sản xuất nông nghiệp thu hoạch được $3\,600$ tấn thóc. Năm nay, hai đơn vị thu hoạch được $4\,095$ tấn thóc. Hỏi năm nay, mỗi đơn vị thu hoạch được bao nhiêu tấn thóc, biết rằng năm nay, đơn vị thứ nhất làm vượt mức $15\%$, đơn vị thứ hai làm vượt mức $12\%$ so với năm ngoái?
+
+        Hãy dùng máy tính cầm tay để kiểm tra lại kết quả thu được.
+
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+
+        \item Hai người thợ cùng làm một công việc trong $16$ giờ thì xong. Nếu người thứ nhất làm trong $3$ giờ và người thứ hai làm trong $6$ giờ thì chỉ hoàn thành được $25\%$ công việc. Hỏi nếu làm riêng thì mỗi người hoàn thành công việc trong bao lâu?
+
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{exercises}
+
+\begin{practice}
+    \subsection{Luyện tập}
+
+    \begin{questions}[resume=SBT]
+        \item Vào năm $2005$, có tổng cộng $55$ lần phóng vệ tinh thương mại và phi thương mại trên toàn thế giới. Ngoài ra, số lần phóng vệ tinh phi thương mại nhiều hơn $1$ lần so với hai lần số lần phóng vệ tinh thương mại. Tính số lần phóng vệ tinh thương mại và phi thương mại trong năm $2005$.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Một ca nô đi ngược dòng sông một quãng đường $6$ km thì hết $\dfrac{3}{2}$ giờ. Mặt khác, ca nô đó chỉ mất $45$ phút để đi xuôi dòng sông một quãng đường tương tự. Tính vận tốc thực của ca nô và vận tốc của dòng nước.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Để pha chế $1\,000$ lít cồn nồng độ $16\%$, người ta trộn lẫn dung dịch cồn nồng độ $10\%$ và dung dịch cồn nồng độ $70\%$. Tính số lít mỗi dung dịch cồn nồng độ $10\%$ và nồng độ $70\%$ cần dùng.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Chị Hương tập thể dục vào mỗi buổi sáng trong vòng $40$ phút. Chị ấy kết hợp giữa thể dục nhịp điệu giúp đốt cháy khoảng $11$ calo mỗi phút và giãn cơ giúp đốt cháy khoảng $4$ calo mỗi phút. Mục tiêu của chị là đốt cháy $335$ calo trong mỗi buổi tập sáng của mình.
+        \begin{questions}
+            \item Viết hệ phương trình biểu thị thời gian chị dành cho mỗi hoạt động tập.
+
+            \answerline
+            \answerline
+            \item Từ hệ phương trình lập được ở câu a, tính thời gian chị nên dành cho mỗi hoạt động tập để đạt được mục tiêu của mình.
+
+            \answerline
+            \answerline
+        \end{questions}
+    \end{questions}
+\end{practice}
