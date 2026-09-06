@@ -1,0 +1,411 @@
+% Nguồn SGK Toán 9 Tập một — Bài 13, trang 83--86:
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-83-1773022947998.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-84-1773022948374.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-85-1773022948693.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-86-1773022949023.png
+%
+% Nguồn SBT Toán 9 Tập một — Bài 13, trang 54--56:
+% SBT TOAN 9 KNTT TAP 1.pdf
+% SHA-256: d7ffd04618456682795977e5c47de7874161a35e8606e5bac1906881603a72f7
+
+\section{Mở đầu về đường tròn}
+
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    \begin{center}
+    \begin{tblr}{
+        width=\linewidth,
+        colspec={X[2,l] X[5,l]},
+        cells={valign=t},
+        row{1}={font=\bfseries, halign=c}
+    }
+        Khái niệm, thuật ngữ & Kiến thức, kĩ năng \\
+        \begin{minipage}[t]{\linewidth}
+        \begin{itemize}
+            \item Đường tròn, tâm, bán kính
+            \item Tâm đối xứng
+            \item Trục đối xứng
+        \end{itemize}
+        \end{minipage}
+        &
+        \begin{minipage}[t]{\linewidth}
+        \begin{itemize}
+            \item Nhận biết một điểm thuộc hay không thuộc một đường tròn.
+            \item Nhận biết hai điểm đối xứng nhau qua một tâm, qua một trục.
+            \item Nhận biết tâm đối xứng và trục đối xứng của đường tròn.
+        \end{itemize}
+        \end{minipage}
+    \end{tblr}
+    \end{center}
+
+    Bạn Oanh có một mảnh giấy hình tròn nhưng không còn dấu vết của tâm. Theo em, Oanh làm thế nào để tìm lại được tâm của hình tròn đó.
+
+    \subsubsection{Đường tròn}
+
+    \textbf{Đường tròn, điểm thuộc đường tròn}
+
+    Ở lớp dưới các em đã biết cách dùng compa để vẽ đường tròn. Vậy đường tròn là gì? Ta định nghĩa:
+
+    \begin{keyconcept}
+        Đường tròn tâm $O$ bán kính $R$ ($R>0$), kí hiệu là $(O;R)$, là hình gồm tất cả các điểm cách điểm $O$ một khoảng bằng $R$.
+    \end{keyconcept}
+
+    % TODO(HINH-NGUON): minh hoạ bàn tay dùng compa ở SGK trang 83 là tranh minh hoạ; không redraw xấp xỉ bằng TikZ.
+
+    \begin{itemize}
+        \item Khi không cần để ý đến bán kính ta kí hiệu đường tròn tâm $O$ là $(O)$.
+        \item Nếu $A$ là một điểm của đường tròn $(O)$ thì ta viết $A\in(O)$. Khi đó, ta còn nói đường tròn $(O)$ đi qua điểm $A$, hay điểm $A$ nằm trên đường tròn $(O)$.
+    \end{itemize}
+
+    \textbf{Nhận xét}
+
+    1) Trên Hình 5.1, ta thấy điểm $A$ nằm trên, điểm $C$ nằm trong và điểm $B$ nằm ngoài đường tròn $(O)$. Một cách tổng quát, ta có:
+    \begin{itemize}
+        \item Điểm $M$ nằm trên đường tròn $(O;R)$ nếu $OM=R$;
+        \item Điểm $M$ nằm trong đường tròn $(O;R)$ nếu $OM<R$;
+        \item Điểm $M$ nằm ngoài đường tròn $(O;R)$ nếu $OM>R$.
+    \end{itemize}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (38:1.8);
+            \coordinate (C) at (0.95,0);
+            \coordinate (B) at (2.35,0);
+            \draw (O) circle (1.8);
+            \draw (O)--(A);
+            \draw (O)--(B);
+            \fill (O) circle (1.2pt);
+            \fill (A) circle (1.2pt);
+            \fill (C) circle (1.2pt);
+            \fill (B) circle (1.2pt);
+            \node[below left=1pt of O] {$O$};
+            \node[above right=1pt of A] {$A$};
+            \node[below=1pt of C] {$C$};
+            \node[below=1pt of B] {$B$};
+            \node[above left] at ($(O)!0.55!(A)$) {$R$};
+        \end{tikzpicture}
+
+        \textit{Hình 5.1}
+    \end{center}
+
+    2) Hình tròn tâm $O$ bán kính $R$ là hình gồm các điểm nằm trên và nằm trong đường tròn $(O;R)$.
+
+    \textbf{Ví dụ 1}
+
+    Gọi $O$ là trung điểm của đoạn thẳng $AB$. Chứng minh rằng đường tròn $(O;OA)$ đi qua $B$.
+
+    \textbf{Giải (H.5.2)}
+
+    Vì $O$ là trung điểm của đoạn $AB$ nên $OB=OA$. Do đó $B\in(O;OA)$, nói cách khác, đường tròn $(O;OA)$ đi qua $B$.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (-1.8,0);
+            \coordinate (B) at (1.8,0);
+            \coordinate (L) at ($(A)!0.5!(O)$);
+            \coordinate (R) at ($(O)!0.5!(B)$);
+            \draw (O) circle (1.8);
+            \draw (A)--(B);
+            \fill (O) circle (1.2pt);
+            \fill (A) circle (1.2pt);
+            \fill (B) circle (1.2pt);
+            \node[above=2pt of O] {$O$};
+            \node[left=2pt of A] {$A$};
+            \node[right=2pt of B] {$B$};
+            \draw ($(L)+(0,-0.08)$)--($(L)+(0,0.08)$);
+            \draw ($(R)+(0,-0.08)$)--($(R)+(0,0.08)$);
+        \end{tikzpicture}
+
+        \textit{Hình 5.2}
+    \end{center}
+
+    \textbf{Chú ý.} Ở lớp dưới, ta đã biết đoạn $AB$ trong Ví dụ 1 là một đường kính của đường tròn $(O)$. Do đó $(O)$ còn gọi là đường tròn đường kính $AB$.
+
+    \textbf{Luyện tập 1}
+
+    Cho tam giác $ABC$ vuông tại $A$. Chứng minh rằng điểm $A$ thuộc đường tròn đường kính $BC$.
+
+    \answerline
+    \answerline
+
+    \textbf{Vận dụng 1}
+
+    Trong mặt phẳng toạ độ $Oxy$, cho các điểm $A(3;0)$, $B(-2;0)$, $C(0;4)$. Vẽ hình và cho biết trong các điểm đã cho, điểm nào nằm trên, điểm nào nằm trong, điểm nào nằm ngoài đường tròn $(O;3)$?
+
+    \answerline
+    \answerline
+
+    \subsubsection{Tính đối xứng của đường tròn}
+
+    \textbf{Đối xứng tâm và đối xứng trục}
+
+    1) \textbf{Đối xứng tâm (H.5.3)}
+
+    Hai điểm $M$ và $M'$ gọi là đối xứng với nhau qua điểm $I$ (hay qua tâm $I$) nếu $I$ là trung điểm của đoạn $MM'$.
+
+    Chẳng hạn, nếu $O$ là giao điểm hai đường chéo của hình bình hành $ABCD$ thì $OA=OC$ nên $A$ và $C$ đối xứng với nhau qua $O$. Tương tự, $B$ và $D$ đối xứng với nhau qua $O$.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (M) at (0,0);
+            \coordinate (I) at (1.6,0);
+            \coordinate (Mp) at (3.2,0);
+            \draw (M)--(Mp);
+            \fill (M) circle (1.2pt);
+            \fill (I) circle (1.2pt);
+            \fill (Mp) circle (1.2pt);
+            \node[left=2pt of M] {$M$};
+            \node[below=2pt of I] {$I$};
+            \node[right=2pt of Mp] {$M'$};
+            \node[below=8pt of I] {a)};
+
+            \coordinate (A) at (5.0,-0.8);
+            \coordinate (B) at (5.6,1.0);
+            \coordinate (C) at (8.4,1.0);
+            \coordinate (D) at (7.8,-0.8);
+            \coordinate (O2) at ($(A)!0.5!(C)$);
+            \draw (A)--(B)--(C)--(D)--cycle;
+            \draw (A)--(C);
+            \draw (B)--(D);
+            \fill (O2) circle (1.2pt);
+            \node[below left=1pt of A] {$A$};
+            \node[above left=1pt of B] {$B$};
+            \node[above right=1pt of C] {$C$};
+            \node[below right=1pt of D] {$D$};
+            \node[below=2pt of O2] {$O$};
+            \draw ($(A)!0.26!(C)+(-0.05,0.08)$)--($(A)!0.26!(C)+(0.05,-0.08)$);
+            \draw ($(A)!0.74!(C)+(-0.05,0.08)$)--($(A)!0.74!(C)+(0.05,-0.08)$);
+            \draw ($(B)!0.27!(D)+(-0.06,-0.07)$)--($(B)!0.27!(D)+(0.06,0.07)$);
+            \draw ($(B)!0.73!(D)+(-0.06,-0.07)$)--($(B)!0.73!(D)+(0.06,0.07)$);
+            \node[below=8pt] at ($(A)!0.5!(D)$) {b)};
+        \end{tikzpicture}
+
+        \textit{Hình 5.3}
+    \end{center}
+
+    2) \textbf{Đối xứng trục (H.5.4)}
+
+    Hai điểm $M$ và $M'$ gọi là đối xứng với nhau qua đường thẳng $d$ (hay qua trục $d$) nếu $d$ là đường trung trực của đoạn thẳng $MM'$.
+
+    Chẳng hạn, nếu $AH$ là đường cao trong tam giác $ABC$ cân tại $A$ thì $AH$ cũng là đường trung trực của $BC$, nên $B$ và $C$ đối xứng với nhau qua $AH$.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (M) at (0,0);
+            \coordinate (H) at (1.6,0);
+            \coordinate (Mp) at (3.2,0);
+            \coordinate (T) at (1.6,1.3);
+            \coordinate (S) at (1.6,-1.3);
+            \draw (M)--(Mp);
+            \draw (S)--(T);
+            \fill (M) circle (1.2pt);
+            \fill (H) circle (1.2pt);
+            \fill (Mp) circle (1.2pt);
+            \node[left=2pt of M] {$M$};
+            \node[below left=1pt of H] {$H$};
+            \node[right=2pt of Mp] {$M'$};
+            \node[left=2pt of T] {$d$};
+            \draw ($(H)+(0.12,0)$)--($(H)+(0.12,0.12)$)--($(H)+(0,0.12)$);
+            \node[below=8pt of H] {a)};
+
+            \coordinate (A) at (6.8,1.4);
+            \coordinate (B) at (5.4,-1.0);
+            \coordinate (C) at (8.2,-1.0);
+            \coordinate (H2) at ($(B)!0.5!(C)$);
+            \draw (A)--(B)--(C)--cycle;
+            \draw (A)--(H2);
+            \node[above=2pt of A] {$A$};
+            \node[below left=1pt of B] {$B$};
+            \node[below right=1pt of C] {$C$};
+            \node[below=2pt of H2] {$H$};
+            \draw ($(A)!0.45!(B)+(-0.07,-0.03)$)--($(A)!0.45!(B)+(0.07,0.03)$);
+            \draw ($(A)!0.45!(C)+(-0.07,0.03)$)--($(A)!0.45!(C)+(0.07,-0.03)$);
+            \draw ($(H2)+(0.12,0)$)--($(H2)+(0.12,0.12)$)--($(H2)+(0,0.12)$);
+            \node[below=8pt of H2] {b)};
+        \end{tikzpicture}
+
+        \textit{Hình 5.4}
+    \end{center}
+
+    \textbf{Tâm và trục đối xứng của đường tròn}
+
+    \textbf{HĐ} Chứng minh rằng nếu một điểm thuộc đường tròn $(O)$ thì:
+    \begin{enumerate}[label=\alph*)]
+        \item Điểm đối xứng với nó qua tâm $O$ cũng thuộc $(O)$.
+
+        \answerline
+        \answerline
+        \item Điểm đối xứng với nó qua một đường thẳng $d$ tuỳ ý đi qua $O$ cũng thuộc $(O)$.
+
+        \answerline
+        \answerline
+    \end{enumerate}
+
+    Khi đó ta nói $O$ là tâm đối xứng của đường tròn $(O)$; $d$ là trục đối xứng của đường tròn $(O)$, ta có:
+
+    \begin{keyconcept}
+        \begin{itemize}
+            \item Đường tròn là hình có tâm đối xứng; tâm của đường tròn là tâm đối xứng của nó.
+            \item Đường tròn là hình có trục đối xứng; mỗi đường thẳng qua tâm của đường tròn là một trục đối xứng của nó.
+        \end{itemize}
+    \end{keyconcept}
+
+    Đường tròn có một tâm đối xứng, nhưng có vô số trục đối xứng.
+
+    % TODO(HINH-NGUON): nhân vật minh hoạ cạnh nhận xét ở SGK trang 85 là tranh trang trí; không redraw xấp xỉ bằng TikZ.
+
+    \textbf{Ví dụ 2}
+
+    Cho điểm $M$ nằm trên đường tròn $(O)$ đường kính $AB$. Sử dụng tính đối xứng của $(O)$, hãy nêu cách tìm:
+    \begin{enumerate}[label=\alph*)]
+        \item Điểm $N$ đối xứng với điểm $M$ qua tâm $O$;
+        \item Điểm $P$ đối xứng với điểm $M$ qua đường thẳng $AB$.
+    \end{enumerate}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (-1.8,0);
+            \coordinate (B) at (1.8,0);
+            \coordinate (M) at (48:1.8);
+            \coordinate (N) at ($(M)!2!(O)$);
+            \coordinate (H) at ($(A)!(M)!(B)$);
+            \coordinate (P) at ($(M)!2!(H)$);
+            \draw (O) circle (1.8);
+            \draw (A)--(B);
+            \draw (N)--(M);
+            \draw (M)--(P);
+            \fill (O) circle (1.2pt);
+            \fill (A) circle (1.2pt);
+            \fill (B) circle (1.2pt);
+            \fill (M) circle (1.2pt);
+            \fill (N) circle (1.2pt);
+            \fill (H) circle (1.2pt);
+            \fill (P) circle (1.2pt);
+            \node[left=2pt of A] {$A$};
+            \node[right=2pt of B] {$B$};
+            \node[below left=1pt of O] {$O$};
+            \node[above right=1pt of M] {$M$};
+            \node[below left=1pt of N] {$N$};
+            \node[below left=1pt of H] {$H$};
+            \node[below right=1pt of P] {$P$};
+            \draw ($(H)+(0.12,0)$)--($(H)+(0.12,0.12)$)--($(H)+(0,0.12)$);
+        \end{tikzpicture}
+
+        \textit{Hình 5.5}
+    \end{center}
+
+    \textbf{Giải (H.5.5)}
+
+    a) Do $O$ là tâm đối xứng của $(O)$ nên điểm $N$ đối xứng với điểm $M$ qua tâm $O$ phải vừa thuộc $(O)$, vừa thuộc $OM$. Vậy $N$ là giao điểm của $(O)$ với đường thẳng $OM$.
+
+    b) Do $AB$ là trục đối xứng của $(O)$ nên điểm $P$ đối xứng với điểm $M$ qua $AB$ phải vừa thuộc $(O)$, vừa thuộc đường vuông góc hạ từ $M$ xuống $AB$. Vậy $P$ là giao điểm của $(O)$ với đường thẳng đi qua $M$ và vuông góc với $AB$.
+
+    \textbf{Luyện tập 2}
+
+    Cho đường tròn tâm $O$ và hai điểm $A$, $B$ thuộc $(O)$. Gọi $d$ là đường trung trực của đoạn $AB$. Chứng minh rằng $d$ là một trục đối xứng của $(O)$.
+
+    \answerline
+    \answerline
+    \answerline
+
+    \textbf{Vận dụng 2}
+
+    Trở lại tình huống mở đầu, bằng cách gấp đôi mảnh giấy hình tròn theo hai cách khác nhau, Oanh có thể tìm lại được tâm của hình tròn. Em hãy làm thử xem.
+
+    \answerline
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}[series=SGK]
+        \item Trong mặt phẳng toạ độ $Oxy$, cho các điểm $M(0;2)$, $N(0;-3)$ và $P(2;-1)$. Vẽ hình và cho biết trong các điểm đã cho, điểm nào nằm trên, điểm nào nằm trong, điểm nào nằm ngoài đường tròn $(O;\sqrt{5})$? Vì sao?
+
+        \answerline
+        \answerline
+
+        \item Cho tam giác $ABC$ vuông tại $A$ có $AB=3$ cm, $AC=4$ cm. Chứng minh rằng các điểm $A$, $B$, $C$ thuộc cùng một đường tròn. Tính bán kính của đường tròn đó.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho đường tròn $(O)$, đường thẳng $d$ đi qua $O$ và điểm $A$ thuộc $(O)$ nhưng không thuộc $d$. Gọi $B$ là điểm đối xứng với $A$ qua $d$, $C$ và $D$ lần lượt là điểm đối xứng với $A$ và $B$ qua $O$.
+        \begin{questions}
+            \item Ba điểm $B$, $C$ và $D$ có thuộc $(O)$ không? Vì sao?
+
+            \answerline
+            \answerline
+            \item Chứng minh tứ giác $ABCD$ là hình chữ nhật.
+
+            \answerline
+            \answerline
+            \item Chứng minh rằng $C$ và $D$ đối xứng với nhau qua $d$.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Cho hình vuông $ABCD$ có $E$ là giao điểm của hai đường chéo.
+        \begin{questions}
+            \item Chứng minh rằng có một đường tròn đi qua bốn điểm $A$, $B$, $C$ và $D$. Xác định tâm đối xứng và chỉ ra hai trục đối xứng của đường tròn đó.
+
+            \answerline
+            \answerline
+            \answerline
+            \item Tính bán kính của đường tròn ở câu a, biết rằng hình vuông có cạnh bằng $3$ cm.
+
+            \answerline
+            \answerline
+        \end{questions}
+    \end{questions}
+\end{exercises}
+
+\begin{practice}
+    \subsection{Luyện tập}
+
+    \begin{questions}[series=SBT]
+        \item Các bánh xe (xe đạp, ô tô,...) đều có dạng hình tròn (với tâm tại trục của bánh xe). Hãy giải thích lí do.
+
+        \answerline
+        \answerline
+
+        \item Cho đường tròn $(O)$ có bán kính bằng $2{,}5$ cm và hai tia $Ox$, $Oy$ vuông góc với nhau tại $O$. Trên tia $Ox$ lấy điểm $A$ sao cho $OA=3$ cm; trên tia $Oy$ lấy điểm $B$ sao cho $OB=4$ cm. Gọi $M$ là trung điểm của đoạn $AB$. Chứng minh rằng điểm $M$ nằm trên đường tròn $(O)$.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Trên mặt phẳng tọa độ $Oxy$, cho hai điểm $A(0;-3)$ và $B(2;0)$. Gọi $C$ và $D$ là các điểm lần lượt đối xứng với $A$ và $B$ qua $O$.
+        \begin{questions}
+            \item Xác định tọa độ của hai điểm $C$ và $D$.
+
+            \answerline
+            \item Xác định vị trí của các điểm $A$, $B$, $C$ và $D$ đối với đường tròn $(O;3)$.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Trên mặt phẳng tọa độ $Oxy$, cho điểm $A(3;1)$. Gọi $B$, $C$ và $D$ là các điểm đối xứng với $A$ lần lượt qua trục hoành, qua gốc $O$ và qua trục tung.
+        \begin{questions}
+            \item Xác định tọa độ của ba điểm $B$, $C$ và $D$.
+
+            \answerline
+            \item Có hay không một đường tròn đi qua bốn điểm $A$, $B$, $C$ và $D$. Xác định tâm và bán kính của đường tròn đó, nếu có.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Cho đường tròn $(O)$, đường kính $AB$ và điểm $M$ thuộc $(O)$ ($M$ không trùng với điểm nào trong hai điểm $A$ và $B$). Trên $(O)$ lấy điểm $N$ nằm khác phía của $M$ đối với đường thẳng $AB$ sao cho $AM=BN$. Chứng minh rằng $O$ là trung điểm của đoạn $MN$.
+
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{practice}
