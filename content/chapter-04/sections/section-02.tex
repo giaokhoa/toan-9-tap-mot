@@ -38,9 +38,9 @@
             \node[above=1pt of A] {$A$};
             \node[below left=1pt of B] {$B$};
             \node[below right=1pt of C] {$C$};
-            \node[midway, below] {$a$};
-            \node[midway, above right] {$b$};
-            \node[midway, above left] {$c$};
+            \path (B)--(C) node[midway, below] {$a$};
+            \path (A)--(C) node[midway, above right] {$b$};
+            \path (A)--(B) node[midway, above left] {$c$};
         \end{tikzpicture}
 
         \textit{Hình 4.12}
@@ -113,9 +113,9 @@
             \node[above=1pt of A] {$A$};
             \node[below left=1pt of B] {$B$};
             \node[below right=1pt of C] {$C$};
-            \node[midway, below] {$a$};
-            \node[midway, above right] {$b$};
-            \node[midway, above left] {$c$};
+            \path (B)--(C) node[midway, below] {$a$};
+            \path (A)--(C) node[midway, above right] {$b$};
+            \path (A)--(B) node[midway, above left] {$c$};
         \end{tikzpicture}
 
         \textit{Hình 4.16}
@@ -172,8 +172,8 @@
             \node[below left=1pt of A] {$A$};
             \node[below right=1pt of B] {$B$};
             \node[above left=1pt of C] {$C$};
-            \node[midway, below] {$5$};
-            \node[midway, left] {$8$};
+            \path (A)--(B) node[midway, below] {$5$};
+            \path (A)--(C) node[midway, left] {$8$};
         \end{tikzpicture}
 
         \textit{Hình 4.19}
@@ -224,7 +224,7 @@
             \node[below left=1pt of A] {$A$};
             \node[below right=1pt of B] {$B$};
             \node[above left=1pt of C] {$C$};
-            \node[midway, below] {$3$};
+            \path (A)--(B) node[midway, below] {$3$};
         \end{tikzpicture}
 
         \textit{Hình 4.20}
@@ -260,9 +260,9 @@
             \node[below left=1pt of A] {$A$};
             \node[below right=1pt of B] {$B$};
             \node[above left=1pt of C] {$C$};
-            \node[midway, below] {$c$};
-            \node[midway, left] {$b$};
-            \node[midway, above right] {$a$};
+            \path (A)--(B) node[midway, below] {$c$};
+            \path (A)--(C) node[midway, left] {$b$};
+            \path (B)--(C) node[midway, above right] {$a$};
         \end{tikzpicture}
 
         \textit{Hình 4.21}
