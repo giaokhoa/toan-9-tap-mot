@@ -1,0 +1,428 @@
+% SGK direct images — Bài 12, trang 74–78
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-74-1773022945067.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-75-1773022945381.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-76-1773022945709.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-77-1773022946037.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-78-1773022946367.png
+% SBT: SBT TOAN 9 KNTT TAP 1.pdf, trang 47–49; không lấy lời giải SBT.
+
+\section{Một số hệ thức giữa cạnh, góc trong tam giác vuông và ứng dụng}
+
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    \textbf{Kiến thức, kĩ năng}
+    \begin{itemize}
+        \item Giải thích một số hệ thức về cạnh và góc trong tam giác vuông.
+        \item Giải tam giác vuông.
+        \item Giải quyết một số vấn đề thực tiễn gắn với tỉ số lượng giác của góc nhọn.
+    \end{itemize}
+
+    Để đo chiều cao của một toà lâu đài (H.4.11), người ta đặt giác kế thẳng đứng tại điểm $M$. Quay ống ngắm của giác kế sao cho nhìn thấy đỉnh $P'$ của toà lâu đài dưới góc nhọn $\alpha$. Sau đó, đặt giác kế thẳng đứng tại điểm $N$, $NM=20$ m, thì nhìn thấy đỉnh $P'$ dưới góc nhọn $\beta$ ($\beta<\alpha$). Biết chiều cao giác kế là $1{,}6$ m, hãy tính chiều cao của toà lâu đài.
+
+    % TODO(HINH-NGUON): bo sung asset/crop dung Hinh 4.11 tu SGK trang 74; hinh co toa lau dai va giac ke, khong redraw xap xi bang TikZ.
+
+    \subsubsection{Hệ thức giữa cạnh huyền và cạnh góc vuông}
+
+    \textbf{Công thức tính cạnh góc vuông theo cạnh huyền và sin, côsin của các góc nhọn}
+
+    \textbf{HĐ1} Cho tam giác $ABC$ vuông tại $A$, cạnh huyền $a$ và các cạnh góc vuông $b$, $c$ (H.4.12).
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (B) at (-3,0);
+            \coordinate (C) at (4,0);
+            \coordinate (A) at (0,{sqrt(12)});
+            \draw (B)--(C)--(A)--cycle;
+            \pic[draw, angle radius=4mm] {right angle=B--A--C};
+            \node[above=1pt of A] {$A$};
+            \node[below left=1pt of B] {$B$};
+            \node[below right=1pt of C] {$C$};
+            \node[midway, below] {$a$};
+            \node[midway, above right] {$b$};
+            \node[midway, above left] {$c$};
+        \end{tikzpicture}
+
+        \textit{Hình 4.12}
+    \end{center}
+
+    \begin{enumerate}[label=\alph*)]
+        \item Viết các tỉ số lượng giác sin, côsin của góc $B$ và góc $C$ theo độ dài các cạnh của tam giác $ABC$.
+
+        \answerline
+        \answerline
+        \item Tính mỗi cạnh góc vuông $b$ và $c$ theo cạnh huyền $a$ và các tỉ số lượng giác trên của góc $B$ và góc $C$.
+
+        \answerline
+        \answerline
+    \end{enumerate}
+
+    \textbf{Định lí 1}
+    \begin{keyconcept}
+        Trong tam giác vuông, mỗi cạnh góc vuông bằng cạnh huyền nhân với sin góc đối hoặc nhân với côsin góc kề.
+    \end{keyconcept}
+
+    \textbf{Chú ý.} Trong tam giác $ABC$ vuông tại $A$ (H.4.12), ta có:
+    \[
+        b=a\cdot\sin B=a\cdot\cos C;\qquad c=a\cdot\sin C=a\cdot\cos B.
+    \]
+
+    \textbf{Ví dụ 1.} Một chiếc máy bay bay lên với vận tốc $500$ km/h. Đường bay lên tạo với phương nằm ngang một góc $30^\circ$ (H.4.13). Hỏi sau $1{,}2$ phút, máy bay lên cao được bao nhiêu kilômét theo phương thẳng đứng?
+
+    % TODO(HINH-NGUON): bo sung asset/crop dung Hinh 4.13 tu SGK trang 75; hinh co may bay minh hoa, khong redraw xap xi bang TikZ.
+
+    \textbf{Giải.}
+
+    Giả sử trong Hình 4.13, $AB$ là đoạn đường máy bay bay lên trong $1{,}2$ phút thì $BH$ chính là độ cao máy bay đạt được sau $1{,}2$ phút đó.
+
+    Ta có $1{,}2$ phút $=\dfrac{1}{50}$ giờ nên $AB=500\cdot\dfrac{1}{50}=10$ (km).
+
+    Tam giác $ABH$ vuông tại $H$, có $\widehat{A}=30^\circ$. Theo Định lí 1, ta có
+    \[
+        BH=AB\cdot\sin A=10\cdot\sin30^\circ=10\cdot\dfrac{1}{2}=5\text{ (km)}.
+    \]
+    Vậy sau $1{,}2$ phút, máy bay lên cao được $5$ km.
+
+    \textbf{Luyện tập 1.}
+    \begin{enumerate}[label=\arabic*.]
+        \item Một chiếc thang dài $3$ m. Cần đặt chân thang cách chân tường một khoảng bằng bao nhiêu mét (làm tròn đến số thập phân thứ hai) để nó tạo được với mặt đất một góc ``an toàn'' $65^\circ$ (tức là đảm bảo thang chắc chắn khi sử dụng) (H.4.14)?
+
+        % TODO(HINH-NGUON): bo sung asset/crop dung Hinh 4.14 tu SGK trang 75; hinh co thang va tuong, khong redraw xap xi bang TikZ.
+        \answerline
+        \answerline
+        \item Một khúc sông rộng khoảng $250$ m. Một con đò chèo qua sông bị dòng nước đẩy xiên nên phải chèo khoảng $320$ m mới sang được bờ bên kia. Hỏi dòng nước đã đẩy con đò đi lệch một góc $\alpha$ bằng bao nhiêu độ (làm tròn đến phút)? (H.4.15).
+
+        % TODO(HINH-NGUON): bo sung asset/crop dung Hinh 4.15 tu SGK trang 75; hinh co con do minh hoa, khong redraw xap xi bang TikZ.
+        \answerline
+        \answerline
+    \end{enumerate}
+
+    \subsubsection{Hệ thức giữa hai cạnh góc vuông}
+
+    \textbf{Công thức tính cạnh góc vuông theo cạnh góc vuông kia và tang, côtang của các góc nhọn}
+
+    \textbf{HĐ2} Xét tam giác $ABC$ trong Hình 4.16.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (B) at (-3,0);
+            \coordinate (C) at (4,0);
+            \coordinate (A) at (0,{sqrt(12)});
+            \draw (B)--(C)--(A)--cycle;
+            \pic[draw, angle radius=4mm] {right angle=B--A--C};
+            \node[above=1pt of A] {$A$};
+            \node[below left=1pt of B] {$B$};
+            \node[below right=1pt of C] {$C$};
+            \node[midway, below] {$a$};
+            \node[midway, above right] {$b$};
+            \node[midway, above left] {$c$};
+        \end{tikzpicture}
+
+        \textit{Hình 4.16}
+    \end{center}
+
+    \begin{enumerate}[label=\alph*)]
+        \item Viết các tỉ số lượng giác tang, côtang của góc $B$ và góc $C$ theo $b$, $c$.
+
+        \answerline
+        \answerline
+        \item Tính mỗi cạnh góc vuông $b$ và $c$ theo cạnh góc vuông kia và các tỉ số lượng giác trên của góc $B$ và góc $C$.
+
+        \answerline
+        \answerline
+    \end{enumerate}
+
+    \textbf{Định lí 2}
+    \begin{keyconcept}
+        Trong tam giác vuông, mỗi cạnh góc vuông bằng cạnh góc vuông kia nhân với tang góc đối hoặc nhân với côtang góc kề.
+    \end{keyconcept}
+
+    \textbf{Chú ý.} Trong tam giác $ABC$ vuông tại $A$ (H.4.16), ta có:
+    \[
+        b=c\cdot\tan B=c\cdot\cot C;\qquad c=b\cdot\tan C=b\cdot\cot B.
+    \]
+
+    \textbf{Ví dụ 2.} Các tia nắng mặt trời tạo với mặt đất một góc xấp xỉ bằng $34^\circ$ và bóng của một toà tháp trên mặt đất dài $8{,}6$ m (H.4.17). Tính chiều cao của toà tháp đó (làm tròn đến mét).
+
+    % TODO(HINH-NGUON): bo sung asset/crop dung Hinh 4.17 tu SGK trang 76; hinh co toa thap va mat troi, khong redraw xap xi bang TikZ.
+
+    \textbf{Giải.} Ta nhận thấy đường cao của tháp đối diện với góc $34^\circ$ (góc tạo bởi tia nắng mặt trời và bóng của tháp trên mặt đất).
+
+    Theo Định lí 2, ta có $h=8{,}6\cdot\tan34^\circ\approx 6$ (m).
+
+    Vậy chiều cao của tháp là khoảng $6$ m.
+
+    \textbf{Luyện tập 2.} Bóng trên mặt đất của một cây dài $25$ m. Tính chiều cao của cây (làm tròn đến dm), biết rằng tia nắng mặt trời tạo với mặt đất góc $40^\circ$ (H.4.18).
+
+    % TODO(HINH-NGUON): bo sung asset/crop dung Hinh 4.18 tu SGK trang 76; hinh co cay va mat troi, khong redraw xap xi bang TikZ.
+    \answerline
+    \answerline
+
+    \subsubsection{Giải tam giác vuông}
+
+    \textbf{Ví dụ 3.} Cho tam giác vuông $ABC$ với các cạnh góc vuông $AB=5$, $AC=8$ (H.4.19). Hãy tính cạnh $BC$ (làm tròn đến chữ số thập phân thứ nhất) và các góc $B$, $C$ (làm tròn đến độ).
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (3.1,0);
+            \coordinate (C) at (0,4.3);
+            \draw (A)--(B)--(C)--cycle;
+            \pic[draw, angle radius=4mm] {right angle=B--A--C};
+            \node[below left=1pt of A] {$A$};
+            \node[below right=1pt of B] {$B$};
+            \node[above left=1pt of C] {$C$};
+            \node[midway, below] {$5$};
+            \node[midway, left] {$8$};
+        \end{tikzpicture}
+
+        \textit{Hình 4.19}
+    \end{center}
+
+    \textbf{Giải.} Xét $\triangle ABC$ vuông tại $A$.
+
+    \textbf{Cách 1.} Theo định lí Pythagore, ta có:
+    \[
+        BC=\sqrt{AB^2+AC^2}=\sqrt{5^2+8^2}=\sqrt{89}\approx 9{,}4.
+    \]
+    Ta có
+    \[
+        \tan C=\dfrac{AB}{AC}=\dfrac{5}{8}=0{,}625.
+    \]
+    Từ đó tìm được $\widehat{C}\approx32^\circ$, suy ra
+    \[
+        \widehat{B}=90^\circ-\widehat{C}\approx90^\circ-32^\circ=58^\circ.
+    \]
+
+    \textbf{Cách 2.} Sau khi tìm được $\widehat{C}\approx32^\circ$, ta tính cạnh $BC$.
+
+    Ta có
+    \[
+        \sin32^\circ\approx\sin C=\dfrac{AB}{BC}=\dfrac{5}{BC},
+    \]
+    suy ra
+    \[
+        BC\approx\dfrac{5}{\sin32^\circ}\approx9{,}4.
+    \]
+
+    \textbf{Luyện tập 3.} Cho tam giác vuông $ABC$ có cạnh góc vuông $AB=4$, cạnh huyền $BC=8$. Tính cạnh $AC$ (làm tròn đến số thập phân thứ ba) và các góc $B$, $C$ (làm tròn đến độ).
+
+    \answerline
+    \answerline
+    \answerline
+
+    \textbf{Ví dụ 4.} Cho tam giác $ABC$ vuông tại $A$ có $AB=3$, $\widehat{B}=42^\circ$ (H.4.20). Tính góc $C$ và các cạnh $AC$, $BC$ (làm tròn đến chữ số thập phân thứ ba).
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (4,0);
+            \coordinate (C) at (0,{4*tan(42)});
+            \draw (A)--(B)--(C)--cycle;
+            \pic[draw, angle radius=4mm] {right angle=B--A--C};
+            \pic[draw, angle radius=7mm, "$42^\circ$"] {angle=A--B--C};
+            \node[below left=1pt of A] {$A$};
+            \node[below right=1pt of B] {$B$};
+            \node[above left=1pt of C] {$C$};
+            \node[midway, below] {$3$};
+        \end{tikzpicture}
+
+        \textit{Hình 4.20}
+    \end{center}
+
+    \textbf{Giải.} Xét $\triangle ABC$ vuông tại $A$.
+
+    Ta có:
+    \[
+        \widehat{C}=90^\circ-\widehat{B}=90^\circ-42^\circ=48^\circ;
+    \]
+    \[
+        AC=AB\cdot\tan B=3\cdot\tan42^\circ\approx2{,}701.
+    \]
+    Theo định nghĩa các tỉ số lượng giác của góc nhọn, ta có:
+    \[
+        \cos B=\dfrac{AB}{BC},\quad\text{suy ra}\quad BC=\dfrac{AB}{\cos B}=\dfrac{3}{\cos42^\circ}\approx4{,}037.
+    \]
+
+    \textbf{Giải tam giác vuông là gì?}
+
+    Trong một tam giác vuông, nếu cho biết trước hai cạnh (hoặc một góc nhọn và một cạnh) thì ta sẽ tìm được tất cả các cạnh và các góc còn lại của tam giác vuông đó. Bài toán này gọi là bài toán Giải tam giác vuông.
+
+    Ví dụ 3, Luyện tập 3 và Ví dụ 4 là những bài toán Giải tam giác vuông.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (4,0);
+            \coordinate (C) at (0,3);
+            \draw (A)--(B)--(C)--cycle;
+            \pic[draw, angle radius=4mm] {right angle=B--A--C};
+            \node[below left=1pt of A] {$A$};
+            \node[below right=1pt of B] {$B$};
+            \node[above left=1pt of C] {$C$};
+            \node[midway, below] {$c$};
+            \node[midway, left] {$b$};
+            \node[midway, above right] {$a$};
+        \end{tikzpicture}
+
+        \textit{Hình 4.21}
+    \end{center}
+
+    \textbf{Câu hỏi}
+    \begin{enumerate}[label=\arabic*.]
+        \item Hãy nêu cách giải tam giác $ABC$ vuông tại $A$ khi biết hai cạnh $AB=c$, $AC=b$ hoặc $AB=c$, $BC=a$ và không sử dụng định lí Pythagore (H.4.21).
+
+        \answerline
+        \answerline
+        \answerline
+        \item Hãy nêu cách giải tam giác $ABC$ vuông tại $A$ khi biết cạnh góc vuông $AB$ (hoặc cạnh huyền $BC$) và góc $B$.
+
+        \answerline
+        \answerline
+        \answerline
+    \end{enumerate}
+
+    \textbf{Luyện tập 4.} Giải tam giác $ABC$ vuông tại $A$, biết $BC=9$, $\widehat{C}=53^\circ$.
+
+    \answerline
+    \answerline
+    \answerline
+
+    \textbf{Vận dụng.} Giải bài toán ở tình huống mở đầu với $\alpha=27^\circ$ và $\beta=19^\circ$.
+
+    \answerline
+    \answerline
+    \answerline
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}[resume=SGK]
+        \item Giải tam giác $ABC$ vuông tại $A$ có $BC=a$, $AC=b$, $AB=c$, trong các trường hợp:
+        \begin{questions}
+            \item $a=21$, $b=18$;
+
+            \answerline
+            \answerline
+            \answerline
+            \item $b=10$, $\widehat{C}=30^\circ$;
+
+            \answerline
+            \answerline
+            \answerline
+            \item $c=5$, $b=3$.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Tính góc nghiêng $\alpha$ của thùng xe chở rác trong Hình 4.22.
+
+        % TODO(HINH-NGUON): bo sung asset/crop dung Hinh 4.22 tu SGK trang 78; hinh xe cho rac khong redraw xap xi bang TikZ.
+        \answerline
+        \answerline
+
+        \item Tìm góc nghiêng $\alpha$ và chiều rộng $AB$ của mái nhà kho trong Hình 4.23.
+
+        % TODO(HINH-NGUON): bo sung asset/crop dung Hinh 4.23 tu SGK trang 78; hinh phoi canh mai nha kho khong redraw xap xi bang TikZ.
+        \answerline
+        \answerline
+
+        \item Tính các góc của hình thoi có hai đường chéo dài $2\sqrt{3}$ và $2$.
+
+        \answerline
+        \answerline
+
+        \item Cho hình thang $ABCD$ ($AD\parallel BC$) có $AD=16$ cm, $BC=4$ cm và $\widehat{A}=\widehat{B}=\widehat{ACD}=90^\circ$.
+        \begin{questions}
+            \item Kẻ đường cao $CE$ của tam giác $ACD$. Chứng minh $\widehat{ADC}=\widehat{ACE}$. Tính sin của các góc $\widehat{ADC}$, $\widehat{ACE}$ và suy ra $AC^2=AE\cdot AD$. Từ đó tính $AC$.
+
+            \answerline
+            \answerline
+            \answerline
+            \answerline
+            \item Tính góc $D$ của hình thang.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Một người đứng tại điểm $A$, cách gương phẳng đặt nằm trên mặt đất tại điểm $B$ là $1{,}2$ m, nhìn thấy hình phản chiếu qua gương $B$ của ngọn cây (cây có gốc ở tại điểm $C$ cách $B$ là $4{,}8$ m, $B$ nằm giữa $A$ và $C$). Biết khoảng cách từ mặt đất đến mắt người đó là $1{,}65$ m. Tính chiều cao của cây (H.4.24).
+
+        % TODO(HINH-NGUON): bo sung asset/crop dung Hinh 4.24 tu SGK trang 78; hinh nguoi-guong-cay khong redraw xap xi bang TikZ.
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{exercises}
+
+\begin{practice}
+    \subsection{Luyện tập}
+
+    \begin{questions}[resume=SBT]
+        \item Cho tam giác $ABC$ vuông tại $A$ với đường cao $AH$. Hãy tính $\cos C$ theo hai cách và suy ra $AC^2=BC\cdot HC$.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Gọi $AH$ là đường cao của tam giác $ABC$ vuông tại $A$. Tính $\tan\widehat{ABH}$ và $\tan\widehat{CAH}$, suy ra $AH^2=BH\cdot CH$.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho tam giác $ABC$ vuông tại $A$, $AH$ là đường cao. Chứng minh rằng
+        \[
+            \dfrac{1}{AH^2}=\dfrac{1}{AB^2}+\dfrac{1}{AC^2}.
+        \]
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho tam giác $ABC$ có $BC=11$ cm, $\widehat{ABC}=38^\circ$, $\widehat{ACB}=30^\circ$. Gọi $H$ là chân của đường vuông góc kẻ từ $A$ đến $BC$. Hãy tính $AH$.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Giải tam giác $ABC$ vuông tại $A$, với $AB=c$, $BC=a$, $CA=b$ trong các trường hợp (cạnh làm tròn đến chữ số thập phân thứ ba):
+        \begin{questions}
+            \item $a=5$, $\widehat{B}=50^\circ$;
+
+            \answerline
+            \answerline
+            \item $b=5$, $\widehat{B}=40^\circ$;
+
+            \answerline
+            \answerline
+            \item $b=5$, $\widehat{C}=55^\circ$.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Cho $A$, $B$ là hai địa điểm ở hai bên bờ sông, biết $AN$ và $PM$ cùng vuông góc $MN$, $MN=n$ (mét), $MP=p$ (mét), $p>n$ và $\widehat{MPA}=\alpha$ (H.4.12).
+
+        Chứng minh rằng:
+        \[
+            AB=\dfrac{p\tan\alpha-n}{\sin\alpha}.
+        \]
+
+        % TODO(HINH-NGUON): bo sung asset/crop dung Hinh 4.12 tu SBT trang 49; hinh co minh hoa bo song, khong redraw xap xi bang TikZ.
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+
+        \item Một người đứng xa toà nhà $100$ m, dùng giác kế thẳng đứng ngắm thấy điểm trên nóc nhà với góc nhìn $15^\circ$ (so với phương nằm ngang) (H.4.13). Hỏi toà nhà cao bao nhiêu mét (làm tròn đến chữ số thập phân thứ nhất), biết chiều cao của giác kế là $1{,}7$ m?
+
+        % TODO(HINH-NGUON): bo sung asset/crop dung Hinh 4.13 tu SBT trang 49; hinh co toa nha va nguoi/giac ke, khong redraw xap xi bang TikZ.
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{practice}
