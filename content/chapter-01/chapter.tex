@@ -1,5 +1,21 @@
-\chapter{Số nguyên}
+% Verification-only harness for issue #16. Do not merge.
+\setcounter{chapter}{2}
+\chapter{Căn bậc hai và căn bậc ba}
 
-Giới thiệu chương
+\setcounter{section}{9}
 
-\input{content/chapter-01/sections/section-01}
+% Seed named SGK series immediately before Bài 3.23 without rendering the seed.
+\setbox0=\vbox{%
+    \begin{questions}[series=SGK,start=22]
+        \item seed
+    \end{questions}%
+}
+
+% Seed named SBT series immediately before Bài 3.21 without rendering the seed.
+\setbox0=\vbox{%
+    \begin{questions}[series=SBT,start=20]
+        \item seed
+    \end{questions}%
+}
+
+\input{content/chapter-03/sections/section-10}
