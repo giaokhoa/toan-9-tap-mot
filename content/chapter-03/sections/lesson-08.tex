@@ -1,0 +1,421 @@
+% Nguồn SGK Toán 9 Tập một — Bài 8, trang 49--51:
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-49-1773022936775.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-50-1773022937147.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-51-1773022937458.png
+% Authority: https://olm.vn/thu-vien-so/doc-sach/shs-toan-tap-1.4491668113
+%
+% Nguồn SBT Toán 9 Tập một — Bài 8, trang 33--34:
+% https://thcs.toanmath.com/thcs-pdf/sach-bai-tap-toan-9-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf
+% SHA-256: d7ffd04618456682795977e5c47de7874161a35e8606e5bac1906881603a72f7
+
+\section{Khai căn bậc hai với phép nhân và phép chia}
+
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    \begin{center}
+    \begin{tblr}{
+        width=\linewidth,
+        colspec={X[2,l] X[5,l]},
+        cells={valign=t},
+        row{1}={font=\bfseries, halign=c}
+    }
+        Khái niệm, thuật ngữ & Kiến thức, kĩ năng \\
+        Phép khai căn bậc hai &
+        \begin{minipage}[t]{\linewidth}
+        \begin{itemize}
+            \item Nhận biết cách khai căn bậc hai của một tích, một thương.
+            \item Nhận biết cách nhân và chia các căn bậc hai.
+            \item Vận dụng tính toán đơn giản về căn thức bậc hai của biểu thức đại số (căn thức bậc hai của một tích, một thương).
+        \end{itemize}
+        \end{minipage}
+    \end{tblr}
+    \end{center}
+
+    Phép tìm căn bậc hai số học của một số hay biểu thức cũng được gọi là phép khai căn bậc hai. Phép khai căn bậc hai và phép nhân, phép chia có một mối liên hệ đặc biệt mà chúng ta sẽ tìm hiểu trong bài học này.
+
+    \subsubsection{Khai căn bậc hai và phép nhân}
+
+    \textbf{Liên hệ giữa phép khai căn bậc hai và phép nhân}
+
+    \textbf{HĐ1} Tính và so sánh: $\sqrt{100}\cdot\sqrt{4}$ và $\sqrt{100\cdot4}$.
+
+    \answerline
+    \answerline
+
+    \begin{keyconcept}
+        Với $A$, $B$ là các biểu thức không âm, ta có
+        \[
+            \sqrt A\cdot\sqrt B=\sqrt{AB}.
+        \]
+    \end{keyconcept}
+
+    \textbf{Chú ý.} Kết quả trên có thể mở rộng cho nhiều biểu thức không âm, chẳng hạn:
+    \[
+        \sqrt A\cdot\sqrt B\cdot\sqrt C=\sqrt{A\cdot B\cdot C}
+        \quad\text{(với }A\ge0,\ B\ge0,\ C\ge0\text{)}.
+    \]
+
+    \textbf{Ví dụ 1} Tính:
+    \begin{enumerate}[label=\alph*)]
+        \item $\sqrt{27}\cdot\sqrt3$;
+        \item $\sqrt5(\sqrt{125}+\sqrt5)$.
+    \end{enumerate}
+
+    \textbf{Giải}
+
+    a) Ta có:
+    \[
+        \sqrt{27}\cdot\sqrt3=\sqrt{27\cdot3}=\sqrt{81}=9.
+    \]
+
+    b) Ta có:
+    \[
+        \sqrt5(\sqrt{125}+\sqrt5)
+        =\sqrt5\cdot\sqrt{125}+\sqrt5\cdot\sqrt5
+        =\sqrt{5\cdot125}+\sqrt{25}
+        =25+5=30.
+    \]
+
+    \textbf{Ví dụ 2} Rút gọn $\sqrt{5x}\cdot\sqrt{20x}$ với $x\ge0$.
+
+    \textbf{Giải}
+
+    Ta có
+    \[
+        \sqrt{5x}\cdot\sqrt{20x}
+        =\sqrt{5x\cdot20x}
+        =\sqrt{100x^2}
+        =\sqrt{(10x)^2}
+        =|10x|
+        =10x
+    \]
+    với $x\ge0$.
+
+    \textbf{Luyện tập 1}
+    \begin{enumerate}[label=\alph*)]
+        \item Tính $\sqrt3\cdot\sqrt{75}$.
+
+        \answerline
+        \answerline
+
+        \item Rút gọn $\sqrt{5ab^3}\cdot\sqrt{5ab}$ (với $a<0$, $b<0$).
+
+        \answerline
+        \answerline
+    \end{enumerate}
+
+    \textbf{Ví dụ 3} Tính $\sqrt{2^2\cdot3^2\cdot5^2}$.
+
+    \textbf{Giải}
+
+    \[
+        \sqrt{2^2\cdot3^2\cdot5^2}
+        =\sqrt{2^2}\cdot\sqrt{3^2}\cdot\sqrt{5^2}
+        =2\cdot3\cdot5=30.
+    \]
+
+    Nếu $A\ge0$, $B\ge0$, $C\ge0$ thì
+    \[
+        \sqrt{A^2B^2C^2}=ABC.
+    \]
+
+    % TODO(HINH-NGUON): nhân vật minh hoạ đi kèm công thức trên ở SGK trang 50 là tranh trang trí; không redraw xấp xỉ bằng TikZ.
+
+    \textbf{Ví dụ 4} Rút gọn biểu thức $\sqrt{25a^2b^2}$ (với $a\ge0$, $b<0$).
+
+    \textbf{Giải}
+
+    Theo giả thiết $a\ge0$, $b<0$, do đó
+    \[
+        \sqrt{25a^2b^2}
+        =\sqrt{25}\cdot\sqrt{a^2}\cdot\sqrt{b^2}
+        =5|a|\cdot|b|
+        =-5ab.
+    \]
+
+    \textbf{Luyện tập 2}
+    \begin{enumerate}[label=\alph*)]
+        \item Tính nhanh $\sqrt{25\cdot49}$.
+
+        \answerline
+        \item Phân tích thành nhân tử: $\sqrt{ab}-4\sqrt a$ (với $a\ge0$, $b\ge0$).
+
+        \answerline
+        \answerline
+    \end{enumerate}
+
+    \subsubsection{Khai căn bậc hai và phép chia}
+
+    \textbf{Liên hệ giữa phép khai căn bậc hai và phép chia}
+
+    \textbf{HĐ2} Tính và so sánh: $\sqrt{100}:\sqrt4$ và $\sqrt{100:4}$.
+
+    \answerline
+    \answerline
+
+    \begin{keyconcept}
+        Nếu $A$, $B$ là các biểu thức với $A\ge0$, $B>0$ thì
+        \[
+            \dfrac{\sqrt A}{\sqrt B}=\sqrt{\dfrac AB}.
+        \]
+    \end{keyconcept}
+
+    \textbf{Ví dụ 5}
+    \begin{enumerate}[label=\alph*)]
+        \item Tính $\sqrt8:\sqrt2$.
+        \item Rút gọn $\sqrt{52a^3}:\sqrt{13a}$ ($a>0$).
+    \end{enumerate}
+
+    \textbf{Giải}
+
+    a)
+    \[
+        \sqrt8:\sqrt2=\sqrt{8:2}=\sqrt4=2.
+    \]
+
+    b)
+    \[
+        \sqrt{52a^3}:\sqrt{13a}
+        =\sqrt{52a^3:(13a)}
+        =\sqrt{4a^2}
+        =\sqrt{(2a)^2}
+        =|2a|
+        =2a
+    \]
+    (do $a>0$).
+
+    \textbf{Luyện tập 3}
+    \begin{enumerate}[label=\alph*)]
+        \item Tính $\sqrt{18}:\sqrt{50}$.
+
+        \answerline
+        \answerline
+
+        \item Rút gọn $\sqrt{16ab^2}:\sqrt{4a}$ (với $a>0$, $b<0$).
+
+        \answerline
+        \answerline
+    \end{enumerate}
+
+    \textbf{Ví dụ 6}
+    \begin{enumerate}[label=\alph*)]
+        \item Viết số dưới dấu căn thành một phân số thập phân rồi tính $\sqrt{1{,}69}$.
+        \item Rút gọn $a\cdot\sqrt{\dfrac{2}{a^2}}$ ($a>0$).
+    \end{enumerate}
+
+    \textbf{Giải}
+
+    a) Ta có
+    \[
+        1{,}69=\dfrac{169}{100}=\dfrac{13^2}{10^2}
+    \]
+    nên
+    \[
+        \sqrt{1{,}69}
+        =\sqrt{\dfrac{13^2}{10^2}}
+        =\dfrac{\sqrt{13^2}}{\sqrt{10^2}}
+        =\dfrac{13}{10}
+        =1{,}3.
+    \]
+
+    b) Do $a>0$ nên
+    \[
+        a\cdot\sqrt{\dfrac{2}{a^2}}
+        =a\cdot\dfrac{\sqrt2}{\sqrt{a^2}}
+        =a\cdot\dfrac{\sqrt2}{a}
+        =\sqrt2.
+    \]
+
+    \textbf{Luyện tập 4}
+    \begin{enumerate}[label=\alph*)]
+        \item Tính $\sqrt{6{,}25}$.
+
+        \answerline
+
+        \item Rút gọn $(a^2-1)\cdot\sqrt{\dfrac{5}{(a-1)^2}}$ ($a>1$).
+
+        \answerline
+        \answerline
+    \end{enumerate}
+
+    \textbf{Vận dụng}
+
+    Công suất $P$ (W), hiệu điện thế $U$ (V), điện trở $R$ ($\Omega$) trong đoạn mạch một chiều liên hệ với nhau theo công thức $U=\sqrt{PR}$. Nếu công suất tăng gấp 8 lần, điện trở giảm 2 lần thì tỉ số giữa hiệu điện thế lúc đó và hiệu điện thế ban đầu bằng bao nhiêu?
+
+    \answerline
+    \answerline
+
+    \textbf{Tranh luận}
+
+    Vì $\sqrt{(-3)^2}=-3$ và $\sqrt{(-12)^2}=-12$ nên
+    \[
+        \sqrt{(-3)^2\cdot(-12)^2}=(-3)\cdot(-12)=36.
+    \]
+
+    Theo em, cách làm của Vuông có đúng không? Vì sao?
+
+    \answerline
+    \answerline
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}[resume=SGK]
+        \item Tính:
+        \begin{questions}
+            \item $\sqrt{12}\cdot(\sqrt{12}+\sqrt3)$;
+
+            \answerline
+            \answerline
+
+            \item $\sqrt8\cdot(\sqrt{50}-\sqrt2)$;
+
+            \answerline
+            \answerline
+
+            \item $(\sqrt3+\sqrt2)^2-2\sqrt6$.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Rút gọn biểu thức
+        \[
+            \sqrt{2(a^2-b^2)}\cdot\sqrt{\dfrac{3}{a+b}}
+        \]
+        (với $a\ge b>0$).
+
+        \answerline
+        \answerline
+
+        \item Tính:
+        \begin{questions}
+            \item $\sqrt{99}:\sqrt{11}$;
+
+            \answerline
+            \item $\sqrt{7{,}84}$;
+
+            \answerline
+            \item $\sqrt{1815}:\sqrt{15}$.
+
+            \answerline
+        \end{questions}
+
+        \item Rút gọn
+        \[
+            \dfrac{-3\sqrt{16a}+5a\sqrt{16ab^2}}{2\sqrt a}
+        \]
+        (với $a>0$, $b>0$).
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Kích thước màn hình ti vi hình chữ nhật được xác định bởi độ dài đường chéo. Một loại ti vi có tỉ lệ hai cạnh màn hình là $4:3$.
+        \begin{questions}
+            \item Gọi $x$ (inch) là chiều rộng của màn hình ti vi. Viết công thức tính độ dài đường chéo $d$ (inch) của màn hình ti vi theo $x$.
+
+            \answerline
+            \answerline
+
+            \item Tính chiều rộng và chiều dài (theo centimét) của màn hình ti vi loại 40 inch.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+    \end{questions}
+\end{exercises}
+
+\begin{practice}
+    \subsection{Luyện tập}
+
+    \begin{questions}[resume=SBT]
+        \item So sánh:
+        \begin{questions}
+            \item $\sqrt5\cdot\sqrt{11}$ và $\sqrt{56}$;
+
+            \answerline
+            \answerline
+
+            \item $\dfrac{\sqrt{141}}{\sqrt3}$ và $7$.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Không dùng MTCT, tính giá trị của các biểu thức sau:
+        \begin{questions}
+            \item $\sqrt{1\dfrac{2}{3}}:\sqrt{\dfrac{1}{15}}$;
+
+            \answerline
+            \answerline
+
+            \item $\sqrt{4{,}9}\cdot\sqrt{1\,000}$.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Không dùng MTCT, chứng minh rằng các biểu thức sau có giá trị là số nguyên:
+        \begin{questions}
+            \item $\sqrt{8+\sqrt{15}}\cdot\sqrt{8-\sqrt{15}}$;
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item $\left(\sqrt{6-\sqrt{11}}+\sqrt{6+\sqrt{11}}\right)^2$.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Không dùng MTCT, tính giá trị của biểu thức sau:
+        \[
+            P=
+            \sqrt{2+\sqrt{2+\sqrt2}}\cdot
+            \sqrt{2-\sqrt{2+\sqrt2}}\cdot
+            \sqrt{4+\sqrt8}.
+        \]
+
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+
+        \item Rút gọn biểu thức
+        \[
+            P=\dfrac{3\sqrt{10}+\sqrt{20}-3\sqrt6-\sqrt{12}}{\sqrt5-\sqrt3}.
+        \]
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item So sánh
+        \[
+            \sqrt{\sqrt{6+\sqrt{20}}}
+            \quad\text{và}\quad
+            \sqrt{\sqrt6+1}.
+        \]
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho $a$, $b$ là hai số dương khác nhau thoả mãn điều kiện
+        \[
+            a-b=\sqrt{1-b^2}-\sqrt{1-a^2}.
+        \]
+        Chứng minh rằng $a^2+b^2=1$.
+
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{practice}
