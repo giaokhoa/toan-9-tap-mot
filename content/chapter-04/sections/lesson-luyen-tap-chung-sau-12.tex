@@ -82,7 +82,7 @@
             \draw[dashed] (B)--(E);
             \pic[draw, angle radius=4mm] {right angle=D--A--B};
             \pic[draw, angle radius=4mm] {right angle=A--D--C};
-            \pic[draw, angle radius=5mm] {angle=C--I--D};
+            \pic[draw, angle radius=5mm] {angle=D--I--C};
             \node[above left=1pt of B] {$B$};
             \node[above right=1pt of C] {$C$};
             \node[below right=1pt of D] {$D$};
@@ -196,7 +196,7 @@
                 \pic[draw, angle radius=2.5mm] {right angle=B2--A2--D2};
                 \pic[draw, angle radius=2.5mm] {right angle=D2--C2--B2};
                 \pic[draw, angle radius=2.5mm] {right angle=A2--D2--C2};
-                \pic[draw, angle radius=4mm] {angle=A2--B2--D2};
+                \pic[draw, angle radius=4mm] {angle=D2--B2--A2};
                 \node[above=2pt of $(D2)!0.5!(B2)$] {$10$};
                 \node[right=2pt of $(B2)!0.5!(C2)$] {$7$};
                 \node[above left=1pt of B2] {$?$};
@@ -208,7 +208,7 @@
                 \coordinate (C3) at (11.2,0.6);
                 \draw (A3)--(B3)--(C3)--cycle;
                 \pic[draw, angle radius=3mm] {right angle=A3--B3--C3};
-                \pic[draw, angle radius=4mm] {angle=B3--A3--C3};
+                \pic[draw, angle radius=4mm] {angle=C3--A3--B3};
                 \node[left=1pt of $(A3)!0.5!(B3)$] {$5$};
                 \node[above=1pt of $(B3)!0.5!(C3)$] {$7$};
                 \node[above right=1pt of A3] {$?$};
@@ -216,10 +216,10 @@
 
                 % d)
                 \coordinate (A4) at (12.0,0);
-                \coordinate (B4) at (13.72,1.20);
                 \coordinate (C4) at (14.87,2.01);
-                \coordinate (H4) at (13.72,0);
-                \coordinate (K4) at (14.87,0);
+                \coordinate (B4) at ($(A4)!0.6!(C4)$);
+                \coordinate (H4) at (B4 |- A4);
+                \coordinate (K4) at (C4 |- A4);
                 \draw (A4)--(C4);
                 \draw (A4)--(K4);
                 \draw (B4)--(H4);
@@ -261,6 +261,7 @@
                 \node[above right=1pt of A] {$A$};
                 \node[below=1pt of H] {$H$};
                 \node[below=2pt of $(B)!0.5!(C)$] {$150\text{ m}$};
+                \node[above=2pt of $(C)!0.5!(A)$] {$90\text{ m}$};
                 \node[above left=1pt of C] {$120^\circ$};
             \end{tikzpicture}
 
@@ -283,8 +284,8 @@
                 \draw (D)--(A)--(B)--(C)--cycle;
                 \draw (A)--(H);
                 \pic[draw, angle radius=3mm] {right angle=D--H--A};
-                \pic[draw, angle radius=4mm] {angle=A--D--C};
-                \pic[draw, angle radius=4mm] {angle=D--C--B};
+                \pic[draw, angle radius=4mm] {angle=C--D--A};
+                \pic[draw, angle radius=4mm] {angle=B--C--D};
                 \node[above left=1pt of A] {$A$};
                 \node[above right=1pt of B] {$B$};
                 \node[below left=1pt of D] {$D$};
