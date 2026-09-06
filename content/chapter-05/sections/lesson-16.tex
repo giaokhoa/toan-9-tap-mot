@@ -1,0 +1,518 @@
+% Nguồn SGK Toán 9 Tập một — Bài 16, trang 99--103:
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-99-1773022953326.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-100-1773022953612.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-101-1773022953927.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-102-1773022954222.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-103-1773022954499.png
+% Authority: https://olm.vn/thu-vien-so/doc-sach/shs-toan-tap-1.4491668113
+%
+% Nguồn SBT Toán 9 Tập một — Bài 16, trang 63--65:
+% SBT TOAN 9 KNTT TAP 1.pdf
+% SHA-256: d7ffd04618456682795977e5c47de7874161a35e8606e5bac1906881603a72f7
+
+\section{Vị trí tương đối của đường thẳng và đường tròn}
+
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    \begin{center}
+    \begin{tblr}{
+        width=\linewidth,
+        colspec={X[2,l] X[5,l]},
+        cells={valign=t},
+        row{1}={font=\bfseries, halign=c}
+    }
+        Khái niệm, thuật ngữ & Kiến thức, kĩ năng \\
+        \begin{minipage}[t]{\linewidth}
+        \begin{itemize}
+            \item Tiếp tuyến
+            \item Tiếp điểm
+            \item Hai tiếp tuyến cắt nhau
+        \end{itemize}
+        \end{minipage}
+        &
+        \begin{minipage}[t]{\linewidth}
+        \begin{itemize}
+            \item Mô tả và vẽ hình biểu thị ba vị trí tương đối của đường thẳng và đường tròn: cắt nhau, tiếp xúc nhau, không giao nhau.
+            \item Nhận biết tiếp tuyến của đường tròn dựa vào định nghĩa hoặc dấu hiệu nhận biết.
+            \item Áp dụng tính chất của hai tiếp tuyến cắt nhau trong giải toán.
+        \end{itemize}
+        \end{minipage}
+    \end{tblr}
+    \end{center}
+
+    Người ta gieo một đồng xu hình tròn bán kính 1 cm lên một tờ giấy trải phẳng. Trên tờ giấy đó có vẽ những đường thẳng song song cách đều, tức là những đường thẳng song song mà khoảng cách giữa hai đường thẳng bất kì nằm cạnh nhau luôn bằng nhau. Nếu khoảng cách ấy luôn bằng 2 cm thì có thể xảy ra những trường hợp nào sau đây, vì sao?
+
+    % TODO(HINH-NGUON): Hình minh hoạ đồng xu ở SGK trang 99 là ảnh thực tế; bổ sung asset/crop đúng từ nguồn, không redraw xấp xỉ bằng TikZ.
+
+    \begin{enumerate}[label=\alph*)]
+        \item Đồng xu đè lên một đường thẳng (đồng xu che khuất một phần của đường thẳng).
+        \item Đồng xu không đè lên đường thẳng nào;
+        \item Đồng xu đè lên nhiều hơn một đường thẳng.
+    \end{enumerate}
+
+    \answerline
+    \answerline
+
+    \subsubsection{Vị trí tương đối của đường thẳng và đường tròn}
+
+    \textbf{Số điểm chung của đường thẳng và đường tròn}
+
+    \textbf{HĐ1} Cho đường thẳng $a$ và điểm $O$. Gọi $H$ là chân đường vuông góc hạ từ $O$ xuống $a$, và $A$ là một điểm thuộc tia $OH$. Trong mỗi trường hợp sau đây, hãy vẽ đường tròn $(O;OA)$ và cho biết đường thẳng $a$ và đường tròn $(O;OA)$ có bao nhiêu điểm chung?
+
+    \begin{center}
+    \begin{tikzpicture}
+        \begin{scope}[xshift=-4.1cm]
+            \coordinate (Oa) at (0,1.25);
+            \coordinate (Ha) at (0,0);
+            \coordinate (Aa) at (0,-0.55);
+            \coordinate (La) at (-1.25,0);
+            \coordinate (Ra) at (1.25,0);
+            \draw (La)--(Ra);
+            \draw (Oa)--(Aa);
+            \fill (Oa) circle (1.2pt);
+            \fill (Aa) circle (1.2pt);
+            \node[above right=1pt of Oa] {$O$};
+            \node[right=1pt of Ha] {$H$};
+            \node[below right=1pt of Aa] {$A$};
+            \node[left=1pt of La] {$a$};
+            \pic[draw, angle radius=2.5mm] {right angle=Oa--Ha--La};
+            \node at (0,-1.05) {a) $OH<OA$};
+        \end{scope}
+        \begin{scope}
+            \coordinate (Ob) at (0,1.25);
+            \coordinate (Ab) at (0,0);
+            \coordinate (Lb) at (-1.25,0);
+            \coordinate (Rb) at (1.25,0);
+            \draw (Lb)--(Rb);
+            \draw (Ob)--(Ab);
+            \fill (Ob) circle (1.2pt);
+            \fill (Ab) circle (1.2pt);
+            \node[above right=1pt of Ob] {$O$};
+            \node[below left=1pt of Ab] {$A$};
+            \node[below right=1pt of Ab] {$H$};
+            \node[left=1pt of Lb] {$a$};
+            \pic[draw, angle radius=2.5mm] {right angle=Ob--Ab--Lb};
+            \node at (0,-1.05) {b) $OH=OA$};
+        \end{scope}
+        \begin{scope}[xshift=4.1cm]
+            \coordinate (Oc) at (0,1.25);
+            \coordinate (Ac) at (0,0.55);
+            \coordinate (Hc) at (0,0);
+            \coordinate (Lc) at (-1.25,0);
+            \coordinate (Rc) at (1.25,0);
+            \draw (Lc)--(Rc);
+            \draw (Oc)--(Hc);
+            \fill (Oc) circle (1.2pt);
+            \fill (Ac) circle (1.2pt);
+            \node[above right=1pt of Oc] {$O$};
+            \node[right=1pt of Ac] {$A$};
+            \node[below right=1pt of Hc] {$H$};
+            \node[left=1pt of Lc] {$a$};
+            \pic[draw, angle radius=2.5mm] {right angle=Oc--Hc--Lc};
+            \node at (0,-1.05) {c) $OH>OA$};
+        \end{scope}
+    \end{tikzpicture}
+
+    \textit{Hình 5.25}
+    \end{center}
+
+    \begin{keyconcept}
+        \begin{enumerate}[label=\arabic*)]
+            \item Đường thẳng $a$ và đường tròn $(O)$ gọi là \textbf{cắt nhau} nếu chúng có đúng hai điểm chung (H.5.26a).
+            \item Đường thẳng $a$ và đường tròn $(O)$ gọi là \textbf{tiếp xúc với nhau} nếu chúng có duy nhất một điểm chung $H$. Điểm chung ấy gọi là \textbf{tiếp điểm}. Khi đó, đường thẳng $a$ còn gọi là \textbf{tiếp tuyến} của đường tròn $(O)$ tại $H$ (H.5.26b).
+            \item Đường thẳng $a$ và đường tròn $(O)$ gọi là \textbf{không giao nhau} nếu chúng không có điểm chung (H.5.26c).
+        \end{enumerate}
+    \end{keyconcept}
+
+    \textbf{Nhận xét}
+
+    1) Cho đường thẳng $a$ và đường tròn $(O;R)$. Gọi $d$ là khoảng cách từ $O$ đến $a$. Từ HĐ1, ta nhận thấy: Đường thẳng $a$ và đường tròn $(O;R)$ cắt nhau khi $d<R$ (H.5.26a), tiếp xúc với nhau khi $d=R$ (H.5.26b) và không giao nhau khi $d>R$ (H.5.26c).
+
+    \begin{center}
+    \begin{tikzpicture}
+        \begin{scope}[xshift=-4.2cm]
+            \coordinate (Oa) at (0,1.0);
+            \coordinate (Ha) at (0,0);
+            \coordinate (La) at (-1.65,0);
+            \coordinate (Ra) at (1.65,0);
+            \path[name path=lineA] (La)--(Ra);
+            \path[name path=circleA] (Oa) circle (1.35);
+            \path[name intersections={of=lineA and circleA, by={Aa,Ba}}];
+            \draw (Oa) circle (1.35);
+            \draw (La)--(Ra);
+            \draw (Oa)--(Aa);
+            \draw (Oa)--(Ha);
+            \fill (Oa) circle (1.2pt);
+            \node[above right=1pt of Oa] {$O$};
+            \node[below=1pt of Aa] {$A$};
+            \node[below=1pt of Ba] {$B$};
+            \node[below right=1pt of Ha] {$H$};
+            \node[left=1pt of La] {$a$};
+            \node[left=1pt] at ($(Oa)!0.52!(Aa)$) {$R$};
+            \node[right=1pt] at ($(Oa)!0.55!(Ha)$) {$d$};
+            \pic[draw, angle radius=2.2mm] {right angle=Oa--Ha--La};
+            \node at (0,-1.72) {a)};
+        \end{scope}
+        \begin{scope}
+            \coordinate (Ob) at (0,1.25);
+            \coordinate (Hb) at (0,0);
+            \coordinate (Lb) at (-1.65,0);
+            \coordinate (Rb) at (1.65,0);
+            \draw (Ob) circle (1.25);
+            \draw (Lb)--(Rb);
+            \draw (Ob)--(Hb);
+            \fill (Ob) circle (1.2pt);
+            \node[above right=1pt of Ob] {$O$};
+            \node[below right=1pt of Hb] {$H$};
+            \node[left=1pt of Lb] {$a$};
+            \node[left=1pt] at ($(Ob)!0.5!(Hb)$) {$R$};
+            \pic[draw, angle radius=2.2mm] {right angle=Ob--Hb--Lb};
+            \node at (0,-1.72) {b)};
+        \end{scope}
+        \begin{scope}[xshift=4.2cm]
+            \coordinate (Oc) at (0,1.55);
+            \coordinate (Ac) at (0,0.55);
+            \coordinate (Hc) at (0,0);
+            \coordinate (Lc) at (-1.65,0);
+            \coordinate (Rc) at (1.65,0);
+            \draw (Oc) circle (1.0);
+            \draw (Lc)--(Rc);
+            \draw (Oc)--(Hc);
+            \fill (Oc) circle (1.2pt);
+            \node[above right=1pt of Oc] {$O$};
+            \node[below left=1pt of Ac] {$A$};
+            \node[below right=1pt of Hc] {$H$};
+            \node[left=1pt of Lc] {$a$};
+            \node[left=1pt] at ($(Oc)!0.5!(Ac)$) {$R$};
+            \pic[draw, angle radius=2.2mm] {right angle=Oc--Hc--Lc};
+            \node at (0,-1.72) {c)};
+        \end{scope}
+    \end{tikzpicture}
+
+    \textit{Hình 5.26}
+    \end{center}
+
+    2) Nếu đường thẳng $a$ tiếp xúc với đường tròn $(O)$ tại $H$ thì $OH\perp a$.
+
+    \textbf{Luyện tập 1} Cho đường thẳng $a$ và điểm $O$ cách $a$ một khoảng bằng 4 cm. Không vẽ hình, hãy dự đoán xem mỗi đường tròn sau cắt, tiếp xúc hay không cắt đường thẳng $a$. Tại sao?
+    \begin{enumerate}[label=\alph*)]
+        \item $(O;3\text{ cm})$;
+        \item $(O;5\text{ cm})$;
+        \item $(O;4\text{ cm})$.
+    \end{enumerate}
+
+    \answerline
+    \answerline
+
+    \subsubsection{Dấu hiệu nhận biết tiếp tuyến của đường tròn}
+
+    \textbf{Đường thẳng và đường tròn tiếp xúc với nhau khi nào?}
+
+    \textbf{HĐ2} Cho đoạn thẳng $OH$ và đường thẳng $a$ vuông góc với $OH$ tại $H$.
+    \begin{enumerate}[label=\alph*)]
+        \item Xác định khoảng cách từ $O$ đến đường thẳng $a$.
+
+        \answerline
+        \item Nếu vẽ đường tròn $(O;OH)$ thì đường tròn này và đường thẳng $a$ có vị trí tương đối như thế nào?
+
+        \answerline
+    \end{enumerate}
+
+    \begin{keyconcept}
+        \textbf{Định lí 1 (Dấu hiệu nhận biết tiếp tuyến)}
+
+        Nếu một đường thẳng đi qua một điểm nằm trên một đường tròn và vuông góc với bán kính đi qua điểm đó thì đường thẳng ấy là một tiếp tuyến của đường tròn.
+    \end{keyconcept}
+
+    \textbf{Ví dụ 1} Cho $AB$ là một dây không đi qua tâm của đường tròn $(O)$. Đường thẳng qua $O$ và vuông góc với $AB$ cắt tiếp tuyến tại $A$ của $(O)$ ở điểm $C$. Chứng minh rằng $CB$ là một tiếp tuyến của $(O)$.
+
+    \begin{center}
+    \begin{tikzpicture}
+        \coordinate (O) at (1,0);
+        \coordinate (C) at (-1,0);
+        \coordinate (A) at (0.5,{sqrt(3)/2});
+        \coordinate (B) at (0.5,{-sqrt(3)/2});
+        \coordinate (D) at (0.5,0);
+        \draw (O) circle (1);
+        \draw ($(C)!-0.08!(A)$)--($(C)!1.22!(A)$);
+        \draw ($(C)!-0.08!(B)$)--($(C)!1.22!(B)$);
+        \draw (A)--(B);
+        \draw (C)--(O);
+        \draw (O)--(A) (O)--(B);
+        \fill (O) circle (1.2pt);
+        \node[right=1pt of O] {$O$};
+        \node[above=1pt of A] {$A$};
+        \node[below=1pt of B] {$B$};
+        \node[left=1pt of C] {$C$};
+        \node[below left=1pt of D] {$D$};
+        \node[above left=1pt] at ($(O)+(-0.15,0.08)$) {$1$};
+        \node[below left=1pt] at ($(O)+(-0.15,-0.08)$) {$2$};
+        \pic[draw, angle radius=2.6mm] {right angle=C--A--O};
+        \pic[draw, angle radius=2.6mm] {right angle=A--D--O};
+    \end{tikzpicture}
+
+    \textit{Hình 5.27}
+    \end{center}
+
+    \textbf{Giải} (H.5.27)
+
+    Gọi $D$ là giao điểm của $AB$ và $OC$.
+
+    Trong tam giác cân $AOB$ ($OA=OB$), đường cao $OD$ (do $OC\perp AB$) cũng là đường phân giác của góc $O$, suy ra $\widehat{O_1}=\widehat{O_2}$.
+
+    Ta có $\triangle AOC=\triangle BOC$ (c.g.c), vì $OC$ là cạnh chung, $\widehat{O_1}=\widehat{O_2}$ và $OA=OB$.
+
+    % SGK trang 101 in/nhận dạng "do OA là tiếp tuyến"; sửa thành "CA" vì CA mới là tiếp tuyến tại A và lỗi gốc làm sai kiến thức.
+    Từ đó $\widehat{OBC}=\widehat{OAC}=90^\circ$ (do $CA$ là tiếp tuyến), tức là $CB$ vuông góc với bán kính $OB$ tại $B$.
+
+    Do đó theo định lí 1, $CB$ cũng là tiếp tuyến của $(O)$.
+
+    \textbf{Luyện tập 2} Cho một hình vuông có độ dài mỗi cạnh bằng 6 cm và hai đường chéo cắt nhau tại $I$. Chứng minh rằng đường tròn $(I;3\text{ cm})$ tiếp xúc với cả bốn cạnh của hình vuông.
+
+    \answerline
+    \answerline
+    \answerline
+
+    \textbf{Thực hành} Cho đường thẳng $a$ và điểm $M$ không thuộc $a$. Hãy vẽ đường tròn tâm $M$ tiếp xúc với $a$.
+
+    \answerline
+    \answerline
+    \answerline
+
+    \textbf{Vận dụng} Trở lại tình huống mở đầu. Ở đây, ta hiểu đồng xu nằm đè lên một đường thẳng khi đường tròn (hình ảnh của đồng xu) và đường thẳng ấy cắt nhau.
+
+    Bằng cách xét vị trí của tâm đồng xu trong một dải nằm giữa hai đường thẳng song song cạnh nhau (cách đều hoặc không cách đều hai đường thẳng đó), hãy chứng minh rằng chỉ xảy ra các trường hợp a và b, không thể xảy ra trường hợp c.
+
+    \answerline
+    \answerline
+    \answerline
+
+    \subsubsection{Hai tiếp tuyến cắt nhau của một đường tròn}
+
+    \textbf{Tính chất của hai tiếp tuyến cắt nhau}
+
+    \textbf{HĐ3} Cho điểm $P$ ở bên ngoài một đường tròn tâm $O$. Hãy dùng thước và compa thực hiện các bước vẽ hình như sau:
+    \begin{itemize}
+        \item Vẽ đường tròn đường kính $PO$ cắt đường tròn $(O)$ tại $A$ và $B$;
+        \item Vẽ và chứng tỏ các đường thẳng $PA$ và $PB$ là hai tiếp tuyến của $(O)$.
+    \end{itemize}
+
+    $PA$ và $PB$ gọi là hai tiếp tuyến cắt nhau của đường tròn $(O)$.
+
+    \answerline
+    \answerline
+
+    \textbf{HĐ4} (Dựa vào hình vẽ có được sau HĐ3). Bằng cách xét hai tam giác $OPA$ và $OPB$, chứng minh rằng:
+    \begin{enumerate}[label=\alph*)]
+        \item $PA=PB$;
+        \item $PO$ là tia phân giác của góc $APB$;
+        \item $OP$ là tia phân giác của góc $AOB$.
+    \end{enumerate}
+
+    \answerline
+    \answerline
+    \answerline
+
+    \begin{keyconcept}
+        \textbf{Định lí 2}
+
+        Nếu hai tiếp tuyến của đường tròn $(O)$ cắt nhau tại điểm $P$ thì:
+        \begin{itemize}
+            \item Điểm $P$ cách đều hai tiếp điểm;
+            \item $PO$ là tia phân giác của góc tạo bởi hai tiếp tuyến;
+            \item $OP$ là tia phân giác của góc tạo bởi hai bán kính qua hai tiếp điểm.
+        \end{itemize}
+    \end{keyconcept}
+
+    \begin{center}
+    \begin{tikzpicture}
+        \coordinate (O) at (0,0);
+        \coordinate (P) at (2,0);
+        \coordinate (A) at (0.5,{sqrt(3)/2});
+        \coordinate (B) at (0.5,{-sqrt(3)/2});
+        \draw (O) circle (1);
+        \draw ($(P)!1.2!(A)$)--(P)--($(P)!1.2!(B)$);
+        \draw (O)--(A) (O)--(B) (O)--(P);
+        \fill (O) circle (1.2pt);
+        \node[left=1pt of O] {$O$};
+        \node[right=1pt of P] {$P$};
+        \node[above=1pt of A] {$A$};
+        \node[below=1pt of B] {$B$};
+        \pic[draw, angle radius=2.5mm] {right angle=O--A--P};
+        \pic[draw, angle radius=2.5mm] {right angle=P--B--O};
+        \pic[draw, angle radius=4mm] {angle=A--O--P};
+        \pic[draw, angle radius=4mm] {angle=P--O--B};
+    \end{tikzpicture}
+
+    \textit{Hình 5.28}
+    \end{center}
+
+    \textbf{Ví dụ 2} Cho hai tiếp tuyến $PA$ và $PB$ của đường tròn $(O;R)$ ($A$ và $B$ là hai tiếp điểm).
+    \begin{enumerate}[label=\alph*)]
+        \item Chứng minh rằng $OP\perp AB$;
+        \item Tính $PA$ và $PB$, biết $R=2$ cm và $PO=4$ cm.
+    \end{enumerate}
+
+    \begin{center}
+    \begin{tikzpicture}
+        \coordinate (O) at (0,0);
+        \coordinate (P) at (-2,0);
+        \coordinate (A) at (-0.5,{sqrt(3)/2});
+        \coordinate (B) at (-0.5,{-sqrt(3)/2});
+        \coordinate (H) at (-0.5,0);
+        \draw (O) circle (1);
+        \draw ($(P)!1.18!(A)$)--(P)--($(P)!1.18!(B)$);
+        \draw (O)--(A) (O)--(B) (P)--(O) (A)--(B);
+        \fill (O) circle (1.2pt);
+        \node[right=1pt of O] {$O$};
+        \node[left=1pt of P] {$P$};
+        \node[above=1pt of A] {$A$};
+        \node[below=1pt of B] {$B$};
+        \pic[draw, angle radius=2.5mm] {right angle=P--A--O};
+        \pic[draw, angle radius=2.5mm] {right angle=O--B--P};
+        \pic[draw, angle radius=2.5mm] {right angle=A--H--O};
+    \end{tikzpicture}
+
+    \textit{Hình 5.29}
+    \end{center}
+
+    \textbf{Giải} (H.5.29)
+
+    % SGK trang 102 in/nhận dạng "OA và OB là hai tiếp tuyến"; sửa thành "PA và PB" vì đây mới là hai tiếp tuyến đã cho và lỗi gốc làm sai kiến thức.
+    a) Do $PA$ và $PB$ là hai tiếp tuyến cắt nhau của $(O)$ nên theo Định lí 2, ta có $OP$ là tia phân giác của góc $AOB$. Trong tam giác cân $AOB$ ($OA=OB$), đường phân giác $OP$ cũng là đường cao nên ta có $OP\perp AB$.
+
+    b) Tam giác $OAP$ có $\widehat{OAP}=90^\circ$ (do $PA$ tiếp xúc với đường tròn $(O)$ tại $A$) và $OA=R=2$ cm và $OP=4$ cm (giả thiết).
+
+    Áp dụng định lí Pythagore vào tam giác vuông $OAP$ ta có $AP^2+OA^2=OP^2$.
+
+    Từ đó suy ra:
+    \[
+        AP^2=OP^2-OA^2=4^2-2^2=12.
+    \]
+
+    Vậy $AP=\sqrt{12}=2\sqrt{3}$ (cm).
+
+    Theo tính chất của hai tiếp tuyến cắt nhau, ta cũng có $BP=AP=2\sqrt{3}$ cm.
+
+    \textbf{Thử thách nhỏ} Cho góc $xPy$ và điểm $A$ thuộc tia $Px$. Hãy vẽ đường tròn tâm $O$ tiếp xúc với cả hai cạnh của góc $xPy$ sao cho $A$ là một trong hai tiếp điểm.
+
+    \answerline
+    \answerline
+    \answerline
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}[resume=SGK]
+        \item Bạn Thanh cắt 4 hình tròn bằng giấy có bán kính lần lượt là 4 cm, 6 cm, 7 cm và 8 cm để dán trang trí trên một mảnh giấy, trên đó có vẽ trước hai đường thẳng $a$ và $b$. Biết rằng $a$ và $b$ là hai đường thẳng song song với nhau và cách nhau một khoảng 6 cm (nghĩa là mọi điểm trên đường thẳng $b$ đều cách $a$ một khoảng 6 cm). Hỏi nếu bạn Thanh dán sao cho tâm của cả 4 hình tròn đều nằm trên đường thẳng $b$ thì hình nào đè lên đường thẳng $a$, hình nào không đè lên đường thẳng $a$?
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho đường tròn $(O)$ đi qua ba đỉnh $A$, $B$ và $C$ của một tam giác cân tại $A$. Chứng minh rằng đường thẳng đi qua $A$ và song song với $BC$ là một tiếp tuyến của $(O)$.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho góc $xOy$ với đường phân giác $Ot$ và điểm $A$ trên cạnh $Ox$, điểm $B$ trên cạnh $Oy$ sao cho $OA=OB$. Đường thẳng qua $A$ và vuông góc với $Ox$ cắt $Ot$ tại $P$. Chứng minh rằng $OA$ và $OB$ là hai tiếp tuyến cắt nhau của đường tròn $(P;PA)$.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho $SA$ và $SB$ là hai tiếp tuyến cắt nhau của đường tròn $(O)$ ($A$ và $B$ là hai tiếp điểm). Gọi $M$ là một điểm tuỳ ý trên cung nhỏ $AB$. Tiếp tuyến của $(O)$ tại $M$ cắt $SA$ tại $E$ và cắt $SB$ tại $F$.
+        \begin{questions}
+            \item Chứng minh rằng chu vi của tam giác $SEF$ bằng $SA+SB$.
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Giả sử $M$ là giao điểm của đoạn $SO$ với đường tròn $(O)$. Chứng minh rằng $SE=SF$.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+    \end{questions}
+\end{exercises}
+
+\begin{practice}
+    \subsection{Luyện tập}
+
+    \begin{questions}[resume=SBT]
+        \item Cho đường tròn $(O)$ và điểm $P$.
+        \begin{questions}
+            \item Giả sử $P\in(O)$. Vẽ đường thẳng $a$ đi qua $P$ và vuông góc với $OP$. Chứng minh rằng $a$ là tiếp tuyến của đường tròn $(O)$ tại $P$.
+
+            \answerline
+            \answerline
+
+            \item Giả sử $P$ nằm ngoài $(O)$. Vẽ đường tròn đường kính $OP$. Đường tròn vừa vẽ cắt $(O)$ tại $A$ và $B$. Chứng minh rằng $PA$ và $PB$ là hai tiếp tuyến của $(O)$.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Cho đường thẳng $a$, điểm $M$ thuộc $a$ và số dương $R$.
+
+        Vẽ đường thẳng $b$ đi qua $M$ và vuông góc với $a$. Trên $b$ xác định điểm $A$ sao cho $AM=R$ (đvđd). Chứng minh rằng đường tròn $(A;R)$ tiếp xúc với $a$ tại $M$. Ta có thể vẽ được mấy đường tròn như thế?
+
+        \answerline
+        \answerline
+        \answerline
+
+        \textbf{Chú ý.} Hai bài tập trên giới thiệu cách vẽ tiếp tuyến của một đường tròn (bài tập 5.17) và cách vẽ đường tròn tiếp xúc với một đường thẳng cho trước (bài tập 5.18). Các em cần theo cách đó để vẽ hình khi giải toán.
+
+        \item Cho đường tròn $(O)$ và điểm $M$ nằm bên ngoài $(O)$. Từ $M$ kẻ tiếp tuyến $MA$ với $(O)$, trong đó $A$ là tiếp điểm. Đường thẳng qua $A$ và vuông góc với $MO$ cắt $(O)$ tại $B$ (khác $A$).
+        \begin{questions}
+            \item Chứng minh rằng $MB$ là tiếp tuyến của $(O)$;
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Tính $OM$ và diện tích phần của tam giác $AMB$ nằm bên ngoài $(O)$, biết bán kính của $(O)$ bằng 3 cm và $\widehat{MAB}=60^\circ$.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Cho $AM$ và $AN$ là hai tiếp tuyến cắt nhau của đường tròn $(O)$, trong đó $M$ và $N$ là hai tiếp điểm. Gọi $E$ là một điểm thuộc cung nhỏ $MN$. Tiếp tuyến của $(O)$ tại $E$ cắt $AM$ tại $B$ và cắt $AN$ tại $C$. Biết $AB=10$ cm, $AC=7$ cm và $BC=6$ cm. Tính độ dài của các đoạn thẳng $AM$, $AN$, $BM$ và $CN$.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho tam giác $ABC$ vuông tại $A$, có đường cao $AH$.
+        \begin{questions}
+            \item Chứng minh rằng $BC$ tiếp xúc với đường tròn $(A)$ bán kính $AH$;
+
+            \answerline
+            \answerline
+
+            \item Gọi $M$ và $N$ là các điểm đối xứng với $H$ lần lượt qua $AB$ và $AC$. Chứng minh rằng $BM$ và $CN$ là hai tiếp tuyến của $(A)$;
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Chứng minh rằng $MN$ là một đường kính của $(A)$;
+
+            \answerline
+            \answerline
+
+            \item Tính diện tích của tứ giác $BMNC$, biết $HB=2$ cm và $HC=4{,}5$ cm.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+    \end{questions}
+\end{practice}
