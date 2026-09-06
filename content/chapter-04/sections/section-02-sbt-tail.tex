@@ -1,0 +1,57 @@
+% Bổ sung phần C. BÀI TẬP SBT Bài 12 còn tiếp ở đầu PDF trang 50.
+% Authority: SBT TOAN 9 KNTT TAP 1.pdf, PDF page 50, SHA-256
+% d7ffd04618456682795977e5c47de7874161a35e8606e5bac1906881603a72f7
+
+\begin{practice}
+    \begin{questions}[resume=SBT]
+        \item Hai trạm quan trắc tàu biển đặt ở hai mỏm núi $A$ và $B$ cách nhau $2$ km, nhìn thấy chiếc tàu $C$ ở phía xa với với $\widehat{CAB}=50^\circ$, $\widehat{CBA}=45^\circ$ (H.4.14). Hỏi tàu còn cách đường thẳng $AB$ bao nhiêu mét?
+
+        \begin{center}
+            \begin{tikzpicture}
+                \coordinate (A) at (0,2.2);
+                \coordinate (B) at (4.4,2.2);
+                \coordinate (C) at (2.45,0);
+                \draw (A)--(B)--(C)--cycle;
+                \pic[draw, "$50^\circ$", angle radius=5mm, angle eccentricity=1.35] {angle=B--A--C};
+                \pic[draw, "$45^\circ$", angle radius=5mm, angle eccentricity=1.35] {angle=C--B--A};
+                \node[above left=1pt of A] {$A$};
+                \node[above right=1pt of B] {$B$};
+                \node[below=1pt of C] {$C$};
+            \end{tikzpicture}
+
+            \textit{Hình 4.14}
+        \end{center}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Trong một trận chiến đấu, một máy bay của đối phương bay ở độ cao $1\,800$ m. Khẩu pháo cao xạ ngắm chiếc máy bay đó dưới một góc $35^\circ$ so với phương nằm ngang. Tính khoảng cách từ pháo cao xạ đến máy bay (làm tròn đến mét).
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Từ một đài quan sát ở cạnh bờ biển, có độ cao $300$ m so với mặt biển, nhìn thấy một con tàu dưới một góc $25^\circ$ (so với phương nằm ngang của mực nước biển (H.4.15)). Hỏi khoảng cách từ tàu đến đài quan sát xấp xỉ bao nhiêu mét?
+
+        \begin{center}
+            \begin{tikzpicture}
+                \coordinate (T) at (4.5,0);
+                \coordinate (O) at (4.5,3.0);
+                \coordinate (H) at (0,3.0);
+                \coordinate (S) at (0.9,0);
+                \draw (T)--(O);
+                \draw (O)--(H);
+                \draw (O)--(S);
+                \pic[draw, "$25^\circ$", angle radius=7mm, angle eccentricity=1.35] {angle=S--O--H};
+                \node[right=2pt] at ($(T)!0.5!(O)$) {$300\,\mathrm{m}$};
+            \end{tikzpicture}
+
+            \textit{Hình 4.15}
+        \end{center}
+
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{practice}
