@@ -456,4 +456,14 @@ INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT ./content/chapter-02/chapter.tex
+INPUT ./content/chapter-02/chapter.tex
+INPUT ./content/chapter-02/chapter.tex
+INPUT ./content/chapter-02/chapter.tex
+INPUT content/chapter-02/chapter.tex
+INPUT ./content/chapter-02/sections/section-04.tex
+INPUT ./content/chapter-02/sections/section-04.tex
+INPUT ./content/chapter-02/sections/section-04.tex
+INPUT ./content/chapter-02/sections/section-04.tex
+INPUT content/chapter-02/sections/section-04.tex
 INPUT build/main.aux
