@@ -202,8 +202,8 @@
         \coordinate (C) at (2,0);
         \draw (A)--(B)--(C)--cycle;
         \pic[draw, angle radius=4mm] {right angle=B--A--C};
-        \pic[draw, "$45^\circ$", angle radius=5mm, angle eccentricity=1.35] {angle=A--B--C};
-        \pic[draw, "$45^\circ$", angle radius=5mm, angle eccentricity=1.35] {angle=B--C--A};
+        \pic[draw, "$45^\circ$", angle radius=5mm, angle eccentricity=1.35] {angle=C--B--A};
+        \pic[draw, "$45^\circ$", angle radius=5mm, angle eccentricity=1.35] {angle=A--C--B};
         \node[above] at (A) {$A$};
         \node[below left] at (B) {$B$};
         \node[below right] at (C) {$C$};
@@ -231,7 +231,7 @@
         \draw (A)--(B)--(C)--cycle;
         \draw (A)--(H);
         \pic[draw, angle radius=4mm] {right angle=A--H--C};
-        \pic[draw, "$60^\circ$", angle radius=5mm, angle eccentricity=1.35] {angle=A--B--C};
+        \pic[draw, "$60^\circ$", angle radius=5mm, angle eccentricity=1.35] {angle=C--B--A};
         \pic[draw, "$30^\circ$", angle radius=5mm, angle eccentricity=1.4] {angle=B--A--H};
         \node[above] at (A) {$A$};
         \node[below left] at (B) {$B$};
@@ -301,8 +301,8 @@
         \coordinate (C) at (0,{sqrt(6)});
         \draw (A)--(B)--(C)--cycle;
         \pic[draw, angle radius=4mm] {right angle=A--C--B};
-        \pic[draw, "$\alpha$", angle radius=6mm, angle eccentricity=1.35] {angle=C--A--B};
-        \pic[draw, "$\beta$", angle radius=6mm, angle eccentricity=1.35] {angle=A--B--C};
+        \pic[draw, "$\alpha$", angle radius=6mm, angle eccentricity=1.35] {angle=B--A--C};
+        \pic[draw, "$\beta$", angle radius=6mm, angle eccentricity=1.35] {angle=C--B--A};
         \node[below left] at (A) {$A$};
         \node[below right] at (B) {$B$};
         \node[above] at (C) {$C$};
