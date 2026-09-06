@@ -1,0 +1,317 @@
+\section{Bất phương trình bậc nhất một ẩn}
+
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    Bạn Thanh có 100 nghìn đồng. Bạn muốn mua một cái bút giá 18 nghìn đồng và một số quyển vở, mỗi quyển vở giá 7 nghìn đồng. Hỏi bạn Thanh mua được nhiều nhất bao nhiêu quyển vở?
+
+    \subsubsection{Khái niệm bất phương trình bậc nhất một ẩn}
+
+    Trong bài toán mở đầu, nếu kí hiệu số vở mà Thanh mua là $x$ ($x \in \mathbb{N}^*$) thì $x$ phải thoả mãn hệ thức $7x+18\leq 100$. Khi đó ta nói hệ thức $7x+18\leq 100$ là bất phương trình với ẩn là $x$.
+
+    Trong bất phương trình này, ta gọi $7x+18$ là vế trái, $100$ là vế phải.
+
+    Ta có thể biến đổi bất phương trình này về dạng $7x-82\leq 0$.
+
+    Hệ thức này là bất phương trình bậc nhất với ẩn là $x$.
+
+    \begin{keyconcept}
+        Bất phương trình dạng $ax+b<0$ (hoặc $ax+b>0$; $ax+b\leq 0$; $ax+b\geq 0$) trong đó $a$, $b$ là hai số đã cho, $a\ne 0$ được gọi là bất phương trình bậc nhất một ẩn $x$.
+    \end{keyconcept}
+
+    \textbf{Ví dụ 1.} Bất phương trình nào sau đây là bất phương trình bậc nhất một ẩn $x$?
+
+    \begin{enumerate}[label=\alph*)]
+        \item $3x+16\leq 0$;
+        \item $-5x+5>0$;
+        \item $x^2-4>0$;
+        \item $-3x<0$.
+    \end{enumerate}
+
+    \textbf{Giải.}
+
+    a), b), d) là bất phương trình bậc nhất một ẩn $x$.
+
+    c) không là bất phương trình bậc nhất một ẩn $x$ vì $x^2-4$ là một đa thức bậc hai.
+
+    \textbf{Luyện tập 1.} Bất phương trình nào sau đây là bất phương trình bậc nhất một ẩn $x$?
+
+    \begin{enumerate}[label=\alph*)]
+        \item $-3x+7\leq 0$;
+        \item $4x-\dfrac{3}{2}>0$;
+        \item $x^3>0$.
+    \end{enumerate}
+
+    \answerline
+
+    \subsubsection{Nghiệm của bất phương trình}
+
+    Xét bất phương trình $3x+8<20$.
+
+    Khi thay giá trị $x=\dfrac{4}{3}$ vào bất phương trình, ta được $3\cdot\dfrac{4}{3}+8<20$ là một khẳng định đúng.
+
+    Ta nói số $\dfrac{4}{3}$ (hay giá trị $x=\dfrac{4}{3}$) là một nghiệm của bất phương trình.
+
+    Khi thay giá trị $x=5$ vào bất phương trình, ta được $3\cdot 5+8<20$ là một khẳng định sai.
+
+    Ta nói số $5$ (hay giá trị $x=5$) không phải là nghiệm của bất phương trình.
+
+    \begin{keyconcept}
+        \begin{itemize}
+            \item Số $x_0$ là một nghiệm của bất phương trình $A(x)<B(x)$ nếu $A(x_0)<B(x_0)$ là khẳng định đúng.
+            \item Giải một bất phương trình là tìm tất cả các nghiệm của bất phương trình đó.
+        \end{itemize}
+    \end{keyconcept}
+
+    \textbf{Luyện tập 2.} Trong các số $-2$; $0$; $5$, những số nào là nghiệm của bất phương trình $2x-10<0$?
+
+    \answerline
+
+    \subsubsection{Cách giải bất phương trình bậc nhất một ẩn}
+
+    \textbf{HĐ.} Xét bất phương trình
+    \[
+        5x+3<0. \tag{1}
+    \]
+    Hãy thực hiện các yêu cầu sau để giải bất phương trình (1):
+
+    \begin{enumerate}[label=\alph*)]
+        \item Sử dụng tính chất của bất đẳng thức, cộng vào hai vế của bất phương trình (1) với $-3$, ta được một bất phương trình, kí hiệu là (2).
+
+        \answerline
+        \item Sử dụng tính chất của bất đẳng thức, nhân vào hai vế của bất phương trình (2) với $\dfrac{1}{5}$ (tức là chia cả hai vế của bất phương trình (2) cho hệ số của $x$ là $5$) để tìm nghiệm của bất phương trình.
+
+        \answerline
+    \end{enumerate}
+
+    \begin{keyconcept}
+        Bất phương trình bậc nhất một ẩn $ax+b<0$ ($a\ne 0$) được giải như sau:
+        \[
+            ax+b<0,
+        \]
+        \[
+            ax<-b.
+        \]
+        \begin{itemize}
+            \item Nếu $a>0$ thì $x<-\dfrac{b}{a}$.
+            \item Nếu $a<0$ thì $x>-\dfrac{b}{a}$.
+        \end{itemize}
+    \end{keyconcept}
+
+    \textbf{Chú ý.} Các bất phương trình $ax+b>0$, $ax+b\leq 0$, $ax+b\geq 0$ được giải tương tự.
+
+    \textbf{Ví dụ 2.} Giải bất phương trình $-2x-4>0$.
+
+    \textbf{Giải.} Ta có
+    \begin{align*}
+        -2x-4 &> 0,\\
+        -2x &> 0+4 && \text{(Cộng hai vế của bất phương trình với 4.)}\\
+        -2x &> 4,\\
+        x &< 4\cdot\left(-\dfrac{1}{2}\right) && \text{(Nhân hai vế với số âm $-\dfrac{1}{2}$ và đổi chiều bất đẳng thức.)}\\
+        x &< -2.
+    \end{align*}
+    Vậy nghiệm của bất phương trình là $x<-2$.
+
+    \textbf{Luyện tập 3.} Giải các bất phương trình:
+    \begin{enumerate}[label=\alph*)]
+        \item $6x+5<0$;
+
+        \answerline
+        \item $-2x-7>0$.
+
+        \answerline
+    \end{enumerate}
+
+    \textbf{Ví dụ 3.} Giải bài toán ở tình huống mở đầu.
+
+    \textbf{Giải.} Gọi $x$ (quyển) là số vở mà Thanh có thể mua. Theo bài ra, ta có bất phương trình:
+    \begin{align*}
+        7x+18 &\leq 100,\\
+        7x &\leq 100-18,\\
+        7x &\leq 82,\\
+        x &\leq \dfrac{82}{7}.
+    \end{align*}
+    Vì số vở là số tự nhiên nên Thanh có thể mua nhiều nhất $11$ quyển vở.
+
+    \textbf{Chú ý.} Ta cũng có thể giải được các bất phương trình một ẩn đưa được về dạng $ax+b<0$, $ax+b>0$, $ax+b\leq 0$, $ax+b\geq 0$.
+
+    \textbf{Ví dụ 4.} Giải các bất phương trình:
+    \begin{enumerate}[label=\alph*)]
+        \item $2x+5<3x-4$;
+        \item $-3x+5\geq -4x+3$.
+    \end{enumerate}
+
+    \textbf{Giải.}
+
+    a) Ta có
+    \begin{align*}
+        2x+5 &< 3x-4,\\
+        2x-3x &< -4-5,\\
+        -x &< -9,\\
+        x &> 9.
+    \end{align*}
+    Vậy nghiệm của bất phương trình là $x>9$.
+
+    b) Ta có
+    \begin{align*}
+        -3x+5 &\geq -4x+3,\\
+        -3x+4x &\geq 3-5,\\
+        x &\geq -2.
+    \end{align*}
+    Vậy nghiệm của bất phương trình là $x\geq -2$.
+
+    \textbf{Ví dụ 5.} Một ngân hàng đang áp dụng lãi suất gửi tiết kiệm kì hạn 12 tháng là $7{,}4\%$/năm. Bà Mai dự kiến gửi một khoản tiền vào ngân hàng này và cần số tiền lãi hàng năm ít nhất là 60 triệu để chi tiêu. Hỏi số tiền bà Mai cần gửi tiết kiệm ít nhất là bao nhiêu (làm tròn đến triệu đồng)?
+
+    \textbf{Giải.} Gọi $x$ (triệu đồng) là số tiền bà Mai cần gửi tiết kiệm. Ta có số tiền lãi gửi tiết kiệm $x$ (triệu đồng) trong một năm là $0{,}074\cdot x$ (triệu đồng).
+
+    Để có số tiền lãi ít nhất là 60 triệu đồng/năm thì ta phải có:
+    \begin{align*}
+        0{,}074x &\geq 60,\\
+        x &\geq 60:0{,}074,\\
+        x &\geq 810{,}81.
+    \end{align*}
+    Vậy bà Mai cần gửi ngân hàng ít nhất 811 triệu đồng.
+
+    \textbf{Luyện tập 4.} Giải các bất phương trình sau:
+    \begin{enumerate}[label=\alph*)]
+        \item $5x+7>8x-5$;
+
+        \answerline
+        \item $-4x+3\leq 3x-1$.
+
+        \answerline
+    \end{enumerate}
+
+    \textbf{Vận dụng.} Trong một cuộc thi tuyển dụng việc làm, ban tổ chức quy định mỗi người ứng tuyển phải trả lời 25 câu hỏi ở vòng sơ tuyển. Mỗi câu hỏi này có sẵn bốn đáp án, trong đó chỉ có một đáp án đúng. Người ứng tuyển chọn đáp án đúng sẽ được cộng thêm 2 điểm, chọn đáp án sai bị trừ đi 1 điểm. Ở vòng sơ tuyển, ban tổ chức tặng cho mỗi người dự thi 5 điểm và theo quy định người ứng tuyển phải trả lời hết 25 câu hỏi; người nào có số điểm từ 25 điểm trở lên mới được dự thi vòng tiếp theo. Hỏi người ứng tuyển phải trả lời chính xác ít nhất bao nhiêu câu hỏi ở vòng sơ tuyển thì mới được vào vòng tiếp theo?
+
+    \answerline
+    \answerline
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}[resume=SGK]
+        \item Giải các bất phương trình sau:
+        \begin{questions}
+            \item $x-5\geq 0$;
+
+            \answerline
+            \item $x+5\leq 0$;
+
+            \answerline
+            \item $-2x-6>0$;
+
+            \answerline
+            \item $4x-12<0$.
+
+            \answerline
+        \end{questions}
+
+        \item Giải các bất phương trình sau:
+        \begin{questions}
+            \item $3x+2>2x+3$;
+
+            \answerline
+            \item $5x+4<-3x-2$.
+
+            \answerline
+        \end{questions}
+
+        \item Một ngân hàng đang áp dụng lãi suất gửi tiết kiệm kì hạn 1 tháng là $0{,}4\%$. Hỏi nếu muốn có số tiền lãi hằng tháng ít nhất là 3 triệu đồng thì số tiền gửi tiết kiệm ít nhất là bao nhiêu (làm tròn đến triệu đồng)?
+
+        \answerline
+        \answerline
+
+        \item Một hãng taxi có giá mở cửa là 15 nghìn đồng và giá 12 nghìn đồng cho mỗi kilômét tiếp theo. Hỏi với 200 nghìn đồng thì hành khách có thể di chuyển được tối đa bao nhiêu kilômét (làm tròn đến hàng đơn vị)?
+
+        \answerline
+        \answerline
+
+        \item Người ta dùng một loại xe tải để chở bia cho một nhà máy. Mỗi thùng bia 24 lon nặng trung bình $6{,}7$ kg. Theo khuyến nghị, trọng tải của xe (tức là tổng khối lượng tối đa cho phép mà xe có thể chở) là $5{,}25$ tấn. Hỏi xe có thể chở được tối đa bao nhiêu thùng bia, biết bác lái xe nặng 65 kg?
+
+        \answerline
+        \answerline
+    \end{questions}
+\end{exercises}
+
+\begin{practice}
+    \subsection{Luyện tập}
+
+    \begin{questions}[resume=SBT]
+        \item Giải các bất phương trình:
+        \begin{questions}
+            \item $-7x+3>0$;
+
+            \answerline
+            \item $6x+5\geq 0$;
+
+            \answerline
+            \item $-\dfrac{1}{2}x+7<0$;
+
+            \answerline
+            \item $\dfrac{2}{5}x+3\leq 0$.
+
+            \answerline
+        \end{questions}
+
+        \item Giải các bất phương trình:
+        \begin{questions}
+            \item $-5x+3>2x+5$;
+
+            \answerline
+            \item $6x^2-5x+1\leq 6x^2+4x+3$.
+
+            \answerline
+        \end{questions}
+
+        \item Giải các bất phương trình:
+        \begin{questions}
+            \item $3(2x-3)(2x+3)>12x^2+2x$;
+
+            \answerline
+            \item $(2x+1)(5x-3)>10x^2+2x+1$.
+
+            \answerline
+        \end{questions}
+
+        \item Một công ty chuyển nhà cần di chuyển một cây đàn piano nặng 260 kg bằng thang máy. Thang máy có thể chở được tối đa là 710 kg.
+        \begin{questions}
+            \item Viết và giải bất phương trình để xác định khối lượng thang máy có thể chở thêm được.
+
+            \answerline
+            \answerline
+            \item Ngoài chiếc đàn piano, thang máy có thể chở thêm được bao nhiêu người biết mỗi người nặng khoảng 60 kg.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item David có thể kiếm được 8 USD cho mỗi giờ làm việc tại công ty chuyên chăm sóc cây cảnh và anh ấy muốn kiếm được ít nhất 1 200 USD trong mùa hè này.
+        \begin{questions}
+            \item Hãy viết một bất phương trình mô tả tình huống này.
+
+            \answerline
+            \item Hỏi anh ấy cần làm việc ít nhất bao nhiêu giờ để kiếm được số tiền trên?
+
+            \answerline
+        \end{questions}
+
+        \item Chiều dài của một hình chữ nhật thì luôn lớn hơn hoặc bằng chiều rộng. Hãy viết và giải bất phương trình để tìm giá trị có thể của $x$ (cm) trong hình vẽ dưới đây:
+
+        \begin{center}
+            \begin{tikzpicture}
+                \coordinate (A) at (0,0);
+                \coordinate (B) at (4.5,0);
+                \coordinate (C) at (4.5,2.8);
+                \coordinate (D) at (0,2.8);
+                \draw (A)--(B)--(C)--(D)--cycle;
+                \node[below] at ($(A)!0.5!(B)$) {$15$ cm};
+                \node[right] at ($(B)!0.5!(C)$) {$x-3$ cm};
+            \end{tikzpicture}
+        \end{center}
+
+        \answerline
+        \answerline
+    \end{questions}
+\end{practice}
