@@ -1,0 +1,398 @@
+% Nguồn SGK Toán 9 Tập một — Bài 14, trang 87--90:
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-87-1773022949340.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-88-1773022949759.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-89-1773022950107.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-90-1773022950394.png
+% Nguồn SBT Toán 9 Tập một — Bài 14, PDF trang 57--59:
+% SBT TOAN 9 KNTT TAP 1.pdf
+% SHA-256: d7ffd04618456682795977e5c47de7874161a35e8606e5bac1906881603a72f7
+
+\section{Cung và dây của một đường tròn}
+
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    \textbf{Mở đầu}
+
+    Trong các cuộc thi đấu thể thao, người ta thường tổ chức thi bắn cung. Thuở xưa, cây cung được làm ra bằng cách buộc một sợi dây (gọi là dây cung) vào hai đầu của một đoạn tre (hoặc gỗ) có tính đàn hồi cao. Đoạn tre bị kéo căng, cong lại tạo nên hình ảnh của một phần đường tròn, đó cũng chính là hình ảnh của ``cung'' trong Toán học. Trong bài này chúng ta sẽ tìm hiểu về những vấn đề liên quan đến khái niệm này.
+
+    % TODO(HINH-NGUON): bo sung crop minh hoa ban cung dung tu SGK trang 87; khong redraw anh do vat xap xi bang TikZ.
+
+    \subsubsection{Dây và đường kính của đường tròn}
+
+    \textbf{Khái niệm dây và đường kính của đường tròn}
+
+    \begin{itemize}
+        \item Đoạn thẳng nối hai điểm tuỳ ý của một đường tròn gọi là một \textbf{dây} (hay \textbf{dây cung}) của đường tròn.
+        \item Mỗi dây đi qua tâm là một \textbf{đường kính} của đường tròn. Dễ thấy đường kính của đường tròn bán kính $R$ có độ dài bằng $2R$.
+    \end{itemize}
+
+    Trên Hình 5.6, $CD$ là một dây, $AB$ là một đường kính của $(O)$.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (-1.55,0);
+            \coordinate (B) at (1.55,0);
+            \coordinate (C) at ({1.55*cos(155)},{1.55*sin(155)});
+            \coordinate (D) at ({1.55*cos(55)},{1.55*sin(55)});
+
+            \draw (O) circle[radius=1.55];
+            \draw (A)--(B);
+            \draw (C)--(D);
+
+            \fill (O) circle[radius=1.2pt];
+            \node[below=2pt of O] {$O$};
+            \node[left=2pt of A] {$A$};
+            \node[right=2pt of B] {$B$};
+            \node[left=1pt of C] {$C$};
+            \node[above right=1pt of D] {$D$};
+        \end{tikzpicture}
+
+        \textit{Hình 5.6}
+    \end{center}
+
+    \textbf{Quan hệ giữa dây và đường kính}
+
+    \textbf{HĐ.} Xét dây $AB$ tuỳ ý không đi qua tâm của đường tròn $(O;R)$ (H.5.7).
+
+    Dựa vào quan hệ giữa các cạnh của tam giác $AOB$, chứng minh $AB<2R$.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (A) at ({1.6*cos(-38)},{1.6*sin(-38)});
+            \coordinate (B) at ({1.6*cos(40)},{1.6*sin(40)});
+            \coordinate (L) at (-1.6,0);
+            \coordinate (R) at (1.6,0);
+
+            \draw (O) circle[radius=1.6];
+            \draw (L)--(R);
+            \draw (O)--(A)--(B)--cycle;
+
+            \fill (O) circle[radius=1.2pt];
+            \node[left=2pt of O] {$O$};
+            \node[below right=1pt of A] {$A$};
+            \node[above right=1pt of B] {$B$};
+        \end{tikzpicture}
+
+        \textit{Hình 5.7}
+    \end{center}
+
+    \answerline
+
+    \textbf{Định lí}
+
+    \begin{keyconcept}
+        Trong một đường tròn, đường kính là dây cung lớn nhất.
+    \end{keyconcept}
+
+    \textbf{Ví dụ 1.} Tứ giác lồi $ABCD$ có $\widehat{BAC}=\widehat{BDC}=90^\circ$. Chứng minh bốn điểm $A$, $B$, $C$, $D$ cùng nằm trên một đường tròn và $AD<BC$.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (B) at (-2,0);
+            \coordinate (C) at (2,0);
+            \coordinate (A) at ({2*cos(125)},{2*sin(125)});
+            \coordinate (D) at ({2*cos(55)},{2*sin(55)});
+
+            \draw[dashed] (O) circle[radius=2];
+            \draw (B)--(C);
+            \draw (B)--(A)--(C);
+            \draw (B)--(D)--(C);
+            \draw (A)--(D);
+
+            \node[below=2pt of O] {$O$};
+            \node[left=2pt of B] {$B$};
+            \node[right=2pt of C] {$C$};
+            \node[above left=1pt of A] {$A$};
+            \node[above right=1pt of D] {$D$};
+        \end{tikzpicture}
+
+        \textit{Hình 5.8}
+    \end{center}
+
+    \textbf{Giải} (H.5.8)
+
+    Gọi $O$ là trung điểm của đoạn $BC$. Tam giác $ABC$ vuông tại $A$ ($\widehat{BAC}=90^\circ$) nên đường trung tuyến $AO$ bằng nửa cạnh huyền, nghĩa là
+    \[
+        OA=OB=OC=\dfrac{BC}{2}.
+    \]
+    Do đó điểm $A$ nằm trên đường tròn $(O)$ đường kính $BC$.
+
+    Tương tự, bằng cách xét tam giác $DBC$ ta cũng suy ra điểm $D$ thuộc đường tròn $(O)$. Vậy $AD$ là một dây (không đi qua tâm) của đường tròn $(O)$. Áp dụng định lí trên ta có $AD<BC$.
+
+    \textbf{Luyện tập 1.} Cho đường tròn đường kính $BC$. Chứng minh rằng với điểm $A$ bất kì (khác $B$ và $C$) nằm trên đường tròn, ta đều có $BC<AB+AC<2BC$.
+
+    \answerline
+    \answerline
+
+    \subsubsection{Góc ở tâm, cung và số đo của một cung}
+
+    \textbf{Khái niệm góc ở tâm và cung tròn}
+
+    Cho hai điểm $A$ và $B$ cùng thuộc một đường tròn. Hai điểm ấy chia đường tròn thành hai phần, mỗi phần gọi là một \textbf{cung tròn} (hay \textbf{cung}). Hai điểm $A$ và $B$ gọi là hai mút (hay đầu mút) của mỗi cung đó.
+
+    \begin{keyconcept}
+        Góc ở tâm là góc có đỉnh trùng với tâm của đường tròn.
+    \end{keyconcept}
+
+    Trên Hình 5.9, ta có hai cung, kí hiệu là $\overset{\frown}{AmB}$ và $\overset{\frown}{AnB}$ nhưng chỉ có một góc ở tâm là $\widehat{AOB}$.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (1.65,0);
+            \coordinate (B) at ({1.65*cos(70)},{1.65*sin(70)});
+            \coordinate (Bout) at ({2.05*cos(70)},{2.05*sin(70)});
+            \coordinate (m) at ({1.86*cos(35)},{1.86*sin(35)});
+            \coordinate (n) at ({1.86*cos(205)},{1.86*sin(205)});
+
+            \draw (O) circle[radius=1.65];
+            \draw (O)--(A);
+            \draw (O)--(Bout);
+            \pic[draw, angle radius=5mm] {angle=A--O--B};
+
+            \node[left=2pt of O] {$O$};
+            \node[right=2pt of A] {$A$};
+            \node[above=2pt of B] {$B$};
+            \node at (m) {$m$};
+            \node at (n) {$n$};
+            \node at ({0.58*cos(35)},{0.58*sin(35)}) {$\alpha$};
+        \end{tikzpicture}
+
+        \textit{Hình 5.9}
+    \end{center}
+
+    \textbf{Chú ý}
+    \begin{itemize}
+        \item Khi góc $AOB$ không bẹt thì cung nằm trong góc $AOB$ gọi là \textit{cung nhỏ} (trên Hình 5.9, $\overset{\frown}{AmB}$ là cung nhỏ). Khi đó $\overset{\frown}{AmB}$ còn có thể kí hiệu gọn là $\overset{\frown}{AB}$. Cung còn lại, $\overset{\frown}{AnB}$ gọi là \textit{cung lớn}. Khi góc $AOB$ bẹt thì mỗi cung $AB$ được gọi là một \textit{nửa đường tròn}.
+        \item Ta còn nói góc $AOB$ chắn cung $AB$ hay cung $AB$ bị chắn bởi góc $AOB$.
+    \end{itemize}
+
+    \textbf{Ví dụ 2.} Cho ba điểm $A$, $B$ và $C$ thuộc đường tròn $(O)$ như Hình 5.10.
+    \begin{enumerate}[label=\alph*)]
+        \item Tìm các góc ở tâm có hai cạnh đi qua hai trong ba điểm $A$, $B$, $C$.
+        \item Tìm các cung có hai mút là hai trong ba điểm $A$, $B$, $C$.
+    \end{enumerate}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (A) at ({1.7*cos(65)},{1.7*sin(65)});
+            \coordinate (B) at ({1.7*cos(8)},{1.7*sin(8)});
+            \coordinate (C) at ({1.7*cos(150)},{1.7*sin(150)});
+            \coordinate (a) at ({1.9*cos(260)},{1.9*sin(260)});
+
+            \draw (O) circle[radius=1.7];
+            \draw (O)--(A);
+            \draw (O)--(B);
+            \draw (O)--(C);
+            \draw (C)--(A)--(B)--(C);
+
+            \node[below=2pt of O] {$O$};
+            \node[above right=1pt of A] {$A$};
+            \node[right=2pt of B] {$B$};
+            \node[left=2pt of C] {$C$};
+            \node at (a) {$a$};
+        \end{tikzpicture}
+
+        \textit{Hình 5.10}
+    \end{center}
+
+    \textbf{Giải}
+
+    a) Các góc ở tâm cần tìm là $\widehat{AOB}$, $\widehat{BOC}$ và $\widehat{COA}$.
+
+    b)
+    \begin{itemize}
+        \item Các cung có hai mút $A$, $B$ là $\overset{\frown}{AB}$, $\overset{\frown}{ACB}$.
+        \item Các cung có hai mút $A$, $C$ là $\overset{\frown}{AC}$, $\overset{\frown}{ABC}$.
+        \item Các cung có hai mút $B$, $C$ là $\overset{\frown}{BAC}$, $\overset{\frown}{BaC}$.
+    \end{itemize}
+
+    \textbf{Cách xác định số đo của một cung}
+
+    1) \textbf{Số đo của một cung} được xác định như sau:
+    \begin{itemize}
+        \item Số đo của nửa đường tròn bằng $180^\circ$.
+        \item Số đo của cung nhỏ bằng số đo của góc ở tâm chắn cung đó.
+        \item Số đo của cung lớn bằng hiệu giữa $360^\circ$ và số đo của cung nhỏ có chung hai mút.
+    \end{itemize}
+
+    2) Số đo của cung $AB$ được kí hiệu là $\operatorname{sđ}\overset{\frown}{AB}$. Trên Hình 5.9, ta có:
+    \[
+        \operatorname{sđ}\overset{\frown}{AmB}=\widehat{AOB}=\alpha\quad(0^\circ<\alpha\le180^\circ);
+        \qquad
+        \operatorname{sđ}\overset{\frown}{AnB}=360^\circ-\alpha.
+    \]
+
+    \textbf{Chú ý}
+    \begin{itemize}
+        \item Cung có số đo $n^\circ$ còn gọi là cung $n^\circ$. Cả đường tròn được coi là cung $360^\circ$. Đôi khi ta cũng coi một điểm là cung $0^\circ$.
+        \item Hai cung trên một đường tròn gọi là bằng nhau nếu chúng có cùng số đo.
+    \end{itemize}
+
+    \textbf{?} Tại sao số đo cung lớn của một đường tròn luôn lớn hơn $180^\circ$?
+
+    \answerline
+
+    \textbf{Nhận xét}
+
+    Nếu $A$ là một điểm thuộc cung $BAC$ thì
+    \[
+        \operatorname{sđ}\overset{\frown}{BAC}
+        =\operatorname{sđ}\overset{\frown}{BA}
+        +\operatorname{sđ}\overset{\frown}{AC}
+        \quad\text{(H.5.10)}.
+    \]
+
+    \textbf{Ví dụ 3.} Tính số đo của các cung có các đầu mút là hai trong các điểm $A$, $B$, $C$ trong Hình 5.11, biết rằng $ABC$ là tam giác vuông cân tại đỉnh $A$.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (B) at (-1.75,0);
+            \coordinate (C) at (1.75,0);
+            \coordinate (A) at (0,1.75);
+
+            \draw (O) circle[radius=1.75];
+            \draw (B)--(C);
+            \draw (A)--(B);
+            \draw (A)--(C);
+            \draw (A)--(O);
+
+            \node[below=2pt of O] {$O$};
+            \node[left=2pt of B] {$B$};
+            \node[right=2pt of C] {$C$};
+            \node[above=2pt of A] {$A$};
+        \end{tikzpicture}
+
+        \textit{Hình 5.11}
+    \end{center}
+
+    \textbf{Giải}
+
+    \begin{itemize}
+        \item Trên Hình 5.11, ta thấy $\overset{\frown}{AB}$ và $\overset{\frown}{AC}$ là các cung nhỏ bị chắn bởi các góc ở tâm thứ tự là $\widehat{AOB}$ và $\widehat{AOC}$. Do tam giác $ABC$ vuông cân tại $A$ nên đường trung tuyến $AO$ cũng là đường cao, tức là $AO\perp BC$. Do đó $\widehat{AOB}=\widehat{AOC}=90^\circ$, suy ra $\operatorname{sđ}\overset{\frown}{AB}=\operatorname{sđ}\overset{\frown}{AC}=90^\circ$.
+        \item $\overset{\frown}{ACB}$ là cung lớn có chung hai mút $A$, $B$ với cung nhỏ $AB$ nên
+        \[
+            \operatorname{sđ}\overset{\frown}{ACB}
+            =360^\circ-\operatorname{sđ}\overset{\frown}{AB}
+            =360^\circ-90^\circ=270^\circ.
+        \]
+    \end{itemize}
+
+    Tương tự, ta có:
+    \[
+        \operatorname{sđ}\overset{\frown}{ABC}
+        =360^\circ-\operatorname{sđ}\overset{\frown}{AC}
+        =360^\circ-90^\circ=270^\circ.
+    \]
+
+    Ngoài ra còn có hai nửa đường tròn có chung hai mút $A$ và $B$, có số đo bằng $180^\circ$.
+
+    \textbf{Luyện tập 2.} Cho điểm $C$ nằm trên đường tròn $(O)$. Đường trung trực của đoạn $OC$ cắt $(O)$ tại $A$ và $B$. Tính số đo của các cung $\overset{\frown}{ACB}$ và $\overset{\frown}{ABC}$.
+
+    \answerline
+    \answerline
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}[resume=SGK]
+        \item Cho nửa đường tròn đường kính $AB$ và một điểm $M$ tuỳ ý thuộc nửa đường tròn đó.
+
+        Chứng minh rằng khoảng cách từ $M$ đến $AB$ không lớn hơn $\dfrac{AB}{2}$.
+
+        \answerline
+        \answerline
+
+        \item Cho đường tròn $(O;5\text{ cm})$ và $AB$ là một dây bất kì của đường tròn đó. Biết $AB=6$ cm.
+        \begin{questions}
+            \item Tính khoảng cách từ $O$ đến đường thẳng $AB$.
+
+            \answerline
+            \item Tính $\tan\alpha$ nếu góc ở tâm chắn cung $AB$ bằng $2\alpha$.
+
+            \answerline
+        \end{questions}
+
+        \item Tâm $O$ của một đường tròn cách dây $AB$ của nó một khoảng $3$ cm. Tính bán kính của đường tròn $(O)$, biết rằng cung nhỏ $AB$ có số đo bằng $100^\circ$ (làm tròn kết quả đến hàng phần mười).
+
+        \answerline
+        \answerline
+
+        \item Trên mặt một chiếc đồng hồ có các vạch chia như Hình 5.12. Hỏi cứ sau mỗi khoảng thời gian $36$ phút:
+        \begin{questions}
+            \item Đầu kim phút vạch nên một cung có số đo bằng bao nhiêu độ?
+
+            \answerline
+            \item Đầu kim giờ vạch nên một cung có số đo bằng bao nhiêu độ?
+
+            \answerline
+        \end{questions}
+
+        % TODO(HINH-NGUON): bo sung asset/crop dung Hinh 5.12 tu SGK trang 90; khong redraw chiec dong ho xap xi bang TikZ.
+    \end{questions}
+\end{exercises}
+
+\begin{practice}
+    \subsection{Luyện tập}
+
+    \begin{questions}[resume=SBT]
+        \item Cho tam giác nhọn $ABC$, hai đường cao $BD$ và $CE$ cắt nhau tại $H$. Chứng minh rằng:
+        \begin{questions}
+            \item Bốn điểm $A$, $E$, $H$, $D$ cùng thuộc một đường tròn.
+
+            \answerline
+            \answerline
+            \item $AH>DE$.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Cho tam giác cân $ABC$ ($AB=AC$). Gọi $(O)$ là đường tròn đi qua ba điểm $A$, $B$, $C$ và $E$ là điểm trên cung nhỏ $BC$ sao cho $\overset{\frown}{BE}=\overset{\frown}{EC}$.
+        \begin{questions}
+            \item Chứng minh rằng ba điểm $A$, $O$, $E$ thẳng hàng.
+
+            \answerline
+            \answerline
+            \item Gọi $H$ là chân đường cao hạ từ $A$ xuống $BC$. Chứng minh rằng $AH<AE$.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Gọi $H$ là trung điểm của dây $AB$ không đi qua tâm của đường tròn $(O)$.
+        \begin{questions}
+            \item Chứng minh rằng bán kính $OH\perp AB$.
+
+            \answerline
+            \answerline
+            \item Tính khoảng cách từ $O$ đến $AB$, biết rằng $AB=8$ cm và bán kính của $(O)$ bằng $5$ cm.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Kim giờ và kim phút của một chiếc đồng hồ tạo thành góc ở tâm có số đo là bao nhiêu độ vào mỗi thời điểm sau:
+        \begin{questions}
+            \item $3$ giờ?
+            \item $6$ giờ?
+            \item $8$ giờ?
+            \item $11$ giờ?
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Cho ba điểm $A$, $B$ và $C$ nằm trên đường tròn $(O)$ sao cho $\widehat{AOB}=110^\circ$ và $\operatorname{sđ}\overset{\frown}{AC}=50^\circ$. Tính số đo của cung lớn $BC$.
+
+        \answerline
+        \answerline
+    \end{questions}
+\end{practice}
