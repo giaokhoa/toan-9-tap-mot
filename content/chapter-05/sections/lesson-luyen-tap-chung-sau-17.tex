@@ -1,0 +1,302 @@
+% Nguồn SGK Toán 9 Tập một — Luyện tập chung sau Bài 17, trang 108--111:
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-108-1773022956059.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-109-1773022956365.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-110-1773022956715.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-111-1773022957051.png
+
+\section*{Luyện tập chung}
+
+\begin{exercises}
+    \textbf{Ví dụ 1}
+
+    Cho hai đường tròn $(O; R)$ và $(O'; R')$ cắt nhau tại $A$ và $B$. Gọi $M$ là điểm đối xứng với $A$ qua $O$, $N$ là điểm đối xứng với $A$ qua $O'$.
+    \begin{enumerate}[label=\alph*)]
+        \item Chứng minh rằng $M\in (O)$, $N\in (O')$ và ba điểm $M$, $B$, $N$ thẳng hàng.
+        \item Chứng minh rằng đường thẳng $MN$ tiếp xúc với đường tròn đường kính $AB$.
+    \end{enumerate}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (-1.2,0);
+            \coordinate (Op) at (1.6,0);
+            \coordinate (A) at (0,1.35);
+            \coordinate (B) at (0,-1.35);
+            \coordinate (M) at ($(O)!-1!(A)$);
+            \coordinate (N) at ($(Op)!-1!(A)$);
+            \coordinate (H) at ($(A)!0.5!(B)$);
+
+            \draw (O) circle[radius={sqrt(1.2^2+1.35^2)}cm];
+            \draw (Op) circle[radius={sqrt(1.6^2+1.35^2)}cm];
+            \draw[dashed] (H) circle[radius=1.35cm];
+            \draw (M)--(N);
+            \draw (A)--(B);
+            \draw (M)--(A)--(N);
+
+            \node[above] at (A) {$A$};
+            \node[below] at (B) {$B$};
+            \node[left] at (M) {$M$};
+            \node[right] at (N) {$N$};
+            \node[above left] at (O) {$O$};
+            \node[above right] at (Op) {$O'$};
+        \end{tikzpicture}
+
+        \textit{Hình 5.38}
+    \end{center}
+
+    \textbf{Giải} (H.5.38, học sinh tự ghi giả thiết, kết luận)
+
+    \begin{enumerate}[label=\alph*)]
+        \item Do tính đối xứng của $(O)$ nên từ $A\in (O)$ suy ra $M\in (O)$ (vì $M$ đối xứng với $A$ qua $O$).
+
+        Tam giác $ABM$ có $BO$ là đường trung tuyến và $BO=\dfrac{1}{2}AM$ (bán kính bằng nửa đường kính) nên là tam giác vuông tại $B$. Vậy $\angle MBA=90^\circ$.
+
+        Tương tự, ta cũng có $N\in (O')$ và $\angle ABN=90^\circ$. Từ hai kết quả trên suy ra
+        \[
+            \angle MBN=\angle MBA+\angle ABN=90^\circ+90^\circ=180^\circ.
+        \]
+        Điều đó chứng tỏ ba điểm $M$, $B$, $N$ thẳng hàng.
+
+        \item Kết quả câu a còn cho thấy $MN\perp AB$, tức là $MN$ vuông góc với bán kính của đường tròn đường kính $AB$ tại $B$. Do đó, $MN$ là tiếp tuyến của đường tròn đường kính $AB$.
+    \end{enumerate}
+
+    \textbf{Ví dụ 2}
+
+    Cho hai đường tròn ngoài nhau $(O; R)$ và $(O'; R')$ với giả thiết $R>R'$. Một đường thẳng $d$ tiếp xúc với $(O; R)$ tại $A$ và tiếp xúc với $(O'; R')$ tại $B$ sao cho $O$ và $O'$ nằm cùng phía đối với $d$. Giả sử $d$ cắt đường thẳng $OO'$ tại điểm $P$ (Hình 5.39).
+    \begin{enumerate}[label=\alph*)]
+        \item Chứng minh rằng $\dfrac{PO}{PO'}=\dfrac{R}{R'}$;
+        \item Gọi $A'$ là điểm đối xứng với $A$ qua $OO'$. Chứng minh rằng đường thẳng $PA'$ tiếp xúc với $(O)$ và với $(O')$.
+    \end{enumerate}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (-2,0);
+            \coordinate (Op) at (1,0);
+            \coordinate (P) at (4,0);
+            \coordinate (L) at (-4,{2*sqrt(2)});
+            \coordinate (Lp) at (-4,{-2*sqrt(2)});
+            \coordinate (A) at ($(L)!(O)!(P)$);
+            \coordinate (B) at ($(L)!(Op)!(P)$);
+            \coordinate (Ap) at ($(O)!-1!(A)$);
+            \coordinate (Bp) at ($(Op)!-1!(B)$);
+
+            \draw (O) circle[radius=2cm];
+            \draw (Op) circle[radius=1cm];
+            \draw (L)--(P);
+            \draw (Lp)--(P);
+            \draw (O)--(P);
+            \draw (O)--(A);
+            \draw (Op)--(B);
+            \draw[dashed] (A)--(Ap);
+
+            \pic[draw, angle radius=3mm] {right angle=O--A--P};
+            \pic[draw, angle radius=2.5mm] {right angle=Op--B--P};
+
+            \node[below] at (O) {$O$};
+            \node[below] at (Op) {$O'$};
+            \node[right] at (P) {$P$};
+            \node[above] at (A) {$A$};
+            \node[above] at (B) {$B$};
+            \node[below] at (Ap) {$A'$};
+            \node[below] at (Bp) {$B'$};
+            \node[above] at ($(B)!0.45!(P)$) {$d$};
+            \node[below] at ($(Bp)!0.45!(P)$) {$d'$};
+        \end{tikzpicture}
+
+        \textit{Hình 5.39}
+    \end{center}
+
+    \textbf{Giải} (H.5.39, học sinh tự ghi giả thiết, kết luận)
+
+    \begin{enumerate}[label=\alph*)]
+        \item Do $d$ tiếp xúc với $(O)$ tại $A$, tiếp xúc với $(O')$ tại $B$ nên $OA\perp d$ và $O'B\perp d$. Do đó, trong tam giác $POA$ ta có $O'B\parallel OA$, suy ra $\triangle POA\sim\triangle PO'B$. Từ đó, ta có
+        \[
+            \dfrac{PO}{PO'}=\dfrac{OA}{O'B}=\dfrac{R}{R'}.
+        \]
+
+        \item Do $A'$ đối xứng với $A$ qua $OO'$ và $A\in (O)$ nên $A'\in (O)$ và $OO'\perp AA'$, tức là $OP\perp AA'$.
+
+        Tam giác $OAA'$ là tam giác cân (do $OA=OA'$) có $OP\perp AA'$ nên $OP$ là tia phân giác của góc $AOA'$, suy ra $\angle AOP=\angle A'OP$.
+
+        Hai tam giác $AOP$ và $A'OP$ có: $OA=OA'$ (bán kính đường tròn $(O)$); $OP$ chung và $\angle AOP=\angle A'OP$.
+
+        Vậy $\triangle AOP=\triangle A'OP$ (c.g.c), suy ra $\angle PA'O=\angle PAO$ mà $\angle PAO=90^\circ$ (do $PA$ tiếp xúc với $(O)$) nên $\angle PA'O=90^\circ$.
+
+        Vậy $PA'$ vuông góc với bán kính $OA'$ của $(O)$ tại $A'$. Điều đó chứng tỏ $PA'$ tiếp xúc với $(O)$ tại $A'$.
+
+        Đối với đường tròn $(O')$, gọi $B'$ là chân đường vuông góc hạ từ $O'$ xuống $PA'$. Để khẳng định rằng $PA'$ cũng tiếp xúc với $(O')$ tại $B'$, ta chỉ cần chứng minh $B'\in (O')$.
+
+        Thật vậy, $O'B'$ và $OA'$ cùng vuông góc với $PA'$ nên $O'B'\parallel OA'$, suy ra $\triangle POA'\sim\triangle PO'B'$.
+
+        Do đó
+        \[
+            \dfrac{OA'}{O'B'}=\dfrac{PO}{PO'}.
+        \]
+        Mà theo câu a ta có $\dfrac{PO}{PO'}=\dfrac{R}{R'}$ nên
+        \[
+            \dfrac{OA'}{O'B'}=\dfrac{R}{R'},
+        \]
+        hay $\dfrac{R}{O'B'}=\dfrac{R}{R'}$.
+
+        Điều này chứng tỏ $O'B'=R'$, nghĩa là $B'\in (O')$.
+
+        Vậy $PA'$ tiếp xúc với $(O)$ tại $A'$ và tiếp xúc với $(O')$ tại $B'$.
+    \end{enumerate}
+
+    \subsection{Bài tập}
+
+    \begin{questions}[resume=SGK]
+        \item Cho hai đường thẳng $a$ và $b$ song song với nhau, điểm $O$ nằm trong phần mặt phẳng ở giữa hai đường thẳng đó. Biết rằng khoảng cách từ $O$ đến $a$ và $b$ lần lượt bằng $2$ cm và $3$ cm.
+        \begin{questions}
+            \item Hỏi bán kính $R$ của đường tròn $(O; R)$ phải thoả mãn điều kiện gì để $(O; R)$ cắt cả hai đường thẳng $a$ và $b$?
+
+            \answerline
+            \answerline
+
+            \item Biết rằng đường tròn $(O; R)$ tiếp xúc với đường thẳng $a$. Hãy xác định vị trí tương đối của đường tròn $(O; R)$ và đường thẳng $b$.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Khi chuyển động, giả sử đầu mũi kim dài của một chiếc đồng hồ vạch nên một đường tròn, kí hiệu là $(T_1)$, trong khi đầu mũi kim ngắn vạch nên một đường tròn khác, kí hiệu là $(T_2)$.
+
+        % TODO(HINH-NGUON): bo sung asset/crop dung tu SGK trang 110 (hinh dong ho trong Bai 5.29); khong redraw xap xi bang TikZ.
+
+        \begin{questions}
+            \item Hai đường tròn $(T_1)$ và $(T_2)$ có vị trí tương đối như thế nào?
+
+            \answerline
+
+            \item Giả sử bán kính của $(T_1)$ và $(T_2)$ lần lượt là $R_1$ và $R_2$. Người ta vẽ trên mặt đồng hồ một hoạ tiết hình tròn có tâm nằm cách điểm trục kim đồng hồ một khoảng bằng $\dfrac{1}{2}R_1$ và có bán kính bằng $\dfrac{1}{2}R_2$.
+
+            Hãy cho biết vị trí tương đối của đường tròn $(T_3)$ đối với mỗi đường tròn $(T_1)$ và $(T_2)$. Vẽ ba đường tròn đó nếu $R_1=3$ cm và $R_2=2$ cm.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Cho đường tròn $(O)$ đường kính $AB$, tiếp tuyến $xx'$ tại $A$ và tiếp tuyến $yy'$ tại $B$ của $(O)$. Một tiếp tuyến thứ ba của $(O)$ tại điểm $P$ ($P$ khác $A$ và $B$) cắt $xx'$ tại $M$ và cắt $yy'$ tại $N$.
+        \begin{questions}
+            \item Chứng minh rằng $MN=MA+NB$.
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Đường thẳng đi qua $O$ và vuông góc với $AB$ cắt $NM$ tại $Q$. Chứng minh rằng $Q$ là trung điểm của đoạn $MN$.
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Chứng minh rằng $AB$ tiếp xúc với đường tròn đường kính $MN$.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Cho hai đường tròn $(O)$ và $(O')$ tiếp xúc ngoài với nhau tại $A$ và cùng tiếp xúc với đường thẳng $d$ tại $B$ và $C$ (khác $A$), trong đó $B\in (O)$ và $C\in (O')$. Tiếp tuyến của $(O)$ tại $A$ cắt $BC$ tại $M$. Chứng minh rằng:
+        \begin{questions}
+            \item Đường thẳng $MA$ tiếp xúc với $(O')$;
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Điểm $M$ là trung điểm của đoạn thẳng $BC$, từ đó suy ra $ABC$ là tam giác vuông.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+    \end{questions}
+
+    \textbf{EM CÓ BIẾT? (Đọc thêm)}
+
+    \textbf{Vẽ chắp nối trơn}
+
+    Trong những bản tin dự báo thời tiết trên truyền hình, các em có thể bắt gặp hình biểu tượng của đám mây như Hình 5.40.a. Quan sát đường viền của hình này, các em thấy có gì đáng chú ý?
+
+    % TODO(HINH-NGUON): bo sung asset/crop dung tu SGK trang 110, Hinh 5.40; khong redraw xap xi phan minh hoa dam may bang TikZ.
+
+    \begin{itemize}
+        \item Thứ nhất, đường viền gồm một đoạn thẳng và $4$ cung tròn được chắp nối với nhau như Hình 5.40.b.
+        \item Thứ hai, trên Hình 5.40.b, ta thấy đường viền bị ``gãy'' tại những điểm $C$, $D$ và $E$ (đó là những điểm chắp nối giữa hai cung tròn). Trong khi đó tại điểm chắp nối giữa đoạn thẳng $AB$ và cung tròn $AqE$, đường viền không bị ``gãy''. Ta nói rằng đoạn thẳng $AB$ được chắp nối trơn với cung $AqE$ (tại điểm $A$). Tương tự, cung $BmC$ được chắp nối trơn với đoạn $AB$ (tại điểm $B$).
+    \end{itemize}
+
+    Chắp nối trơn có nhiều ứng dụng trong thực tế đời sống. Chẳng hạn, tàu hoả phải chạy trên đường ray thẳng hoặc đường thẳng chắp nối trơn với đoạn đường cong (H.5.41).
+
+    % TODO(HINH-NGUON): bo sung asset/crop dung tu SGK trang 111, Hinh 5.41; khong redraw anh thuc te bang TikZ.
+
+    Vậy muốn có chắp nối trơn ta làm thế nào? Trước hết, ta tìm hiểu về vẽ chắp nối trơn. Cách vẽ chắp nối trơn được suy ra từ hai kết luận sau:
+    \begin{enumerate}[label=\arabic*)]
+        \item Nếu một đoạn thẳng được chắp nối trơn với một cung tròn thì đoạn thẳng đó nằm trên tiếp tuyến của đường tròn chứa cung tròn đó tại điểm chắp nối.
+        \item Nếu hai cung tròn được chắp nối trơn với nhau thì hai đường tròn chứa hai cung ấy tiếp xúc nhau tại điểm chắp nối.
+    \end{enumerate}
+
+    Để hiểu thêm về vẽ chắp nối trơn, em hãy chuẩn bị thước kẻ và compa để vẽ hình ``trái xoan'' (H.5.42) theo hướng dẫn sau đây:
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (A) at (-2,-1);
+            \coordinate (B) at (2,-1);
+            \coordinate (C) at (2,1);
+            \coordinate (D) at (-2,1);
+            \coordinate (I) at ($(A)!0.5!(B)$);
+            \coordinate (K) at ($(D)!0.5!(C)$);
+            \path[name path=AK] (A)--(K);
+            \path[name path=DI] (D)--(I);
+            \path[name intersections={of=AK and DI, by=E}];
+            \path[name path=BK] (B)--(K);
+            \path[name path=CI] (C)--(I);
+            \path[name intersections={of=BK and CI, by=F}];
+            \pgfmathsetmacro{\ovalangle}{atan(3/4)}
+            \pgfmathsetmacro{\ovalradius}{5/3}
+
+            \draw[dashed] (A)--(B)--(C)--(D)--cycle;
+            \draw[dashed] (A)--(K) (D)--(I) (B)--(K) (C)--(I);
+
+            \draw (D) arc[start angle=180,end angle=0,radius=2cm];
+            \draw (A) arc[start angle=180,end angle=360,radius=2cm];
+            \draw (D) arc[start angle={180-\ovalangle},end angle={180+\ovalangle},radius=\ovalradius cm];
+            \draw (B) arc[start angle={-\ovalangle},end angle={\ovalangle},radius=\ovalradius cm];
+
+            \node[left] at (A) {$A$};
+            \node[right] at (B) {$B$};
+            \node[right] at (C) {$C$};
+            \node[left] at (D) {$D$};
+            \node[below] at (I) {$I$};
+            \node[above] at (K) {$K$};
+            \node[above left] at (E) {$E$};
+            \node[above right] at (F) {$F$};
+            \node[above] at (0,3) {$p$};
+            \node[below] at (0,-3) {$m$};
+            \node[left] at (-2.45,0) {$q$};
+            \node[right] at (2.45,0) {$n$};
+        \end{tikzpicture}
+
+        \textit{Hình 5.42}
+    \end{center}
+
+    \begin{itemize}
+        \item Vẽ hình chữ nhật $ABCD$ (kích thước tuỳ ý).
+        \item Xác định trung điểm $I$ của đoạn $AB$ và trung điểm $K$ của đoạn $CD$.
+        \item Tìm giao điểm $E$ của $AK$ và $DI$; giao điểm $F$ của $BK$ và $CI$.
+        \item Vẽ $4$ cung: $DpC$ (tâm $K$), $AmB$ (tâm $I$), $BnC$ (tâm $F$) và $AqD$ (tâm $E$).
+    \end{itemize}
+
+    Bốn cung tròn vừa vẽ tạo nên hình ``trái xoan''. Trong hình đó, tâm của hai cung liên tiếp, chẳng hạn, tâm $K$ của cung $DpC$ và tâm $F$ của cung $BnC$ thẳng hàng với điểm chắp nối $C$, chứng tỏ hai đường tròn $(K)$ và $(F)$ tiếp xúc nhau tại điểm $C$. Điều đó cho phép hai cung này chắp nối trơn với nhau tại $C$.
+
+    Em hãy tìm hiểu điều tương tự đối với các cặp cung liên tiếp còn lại để hiểu tại sao các cung tròn đã vẽ đều chắp nối trơn với nhau.
+
+    Bây giờ em hãy tự mình tìm hiểu và trao đổi với các bạn khác về cách vẽ hai hình sau đây nhé!
+
+    % TODO(HINH-NGUON): bo sung asset/crop dung tu SGK trang 111 cho hinh “qua trung”; khong redraw xap xi bang TikZ.
+    % TODO(HINH-NGUON): bo sung asset/crop dung tu SGK trang 111 cho bieu tuong “gio” trong du bao thoi tiet; khong redraw xap xi bang TikZ.
+
+    \begin{center}
+        \textit{Hình ``quả trứng'' \qquad Biểu tượng ``gió'' trong dự báo thời tiết}
+    \end{center}
+\end{exercises}
