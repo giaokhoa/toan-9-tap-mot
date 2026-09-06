@@ -24,9 +24,11 @@
             \coordinate (M) at ($(O)!-1!(A)$);
             \coordinate (N) at ($(Op)!-1!(A)$);
             \coordinate (H) at ($(A)!0.5!(B)$);
+            \pgfmathsetmacro{\rO}{sqrt(1.2^2+1.35^2)}
+            \pgfmathsetmacro{\rOp}{sqrt(1.6^2+1.35^2)}
 
-            \draw (O) circle[radius={sqrt(1.2^2+1.35^2)}cm];
-            \draw (Op) circle[radius={sqrt(1.6^2+1.35^2)}cm];
+            \draw (O) circle[radius=\rO cm];
+            \draw (Op) circle[radius=\rOp cm];
             \draw[dashed] (H) circle[radius=1.35cm];
             \draw (M)--(N);
             \draw (A)--(B);
@@ -48,11 +50,11 @@
     \begin{enumerate}[label=\alph*)]
         \item Do tính đối xứng của $(O)$ nên từ $A\in (O)$ suy ra $M\in (O)$ (vì $M$ đối xứng với $A$ qua $O$).
 
-        Tam giác $ABM$ có $BO$ là đường trung tuyến và $BO=\dfrac{1}{2}AM$ (bán kính bằng nửa đường kính) nên là tam giác vuông tại $B$. Vậy $\angle MBA=90^\circ$.
+        Tam giác $ABM$ có $BO$ là đường trung tuyến và $BO=\dfrac{1}{2}AM$ (bán kính bằng nửa đường kính) nên là tam giác vuông tại $B$. Vậy $\angle ABM=90^\circ$.
 
         Tương tự, ta cũng có $N\in (O')$ và $\angle ABN=90^\circ$. Từ hai kết quả trên suy ra
         \[
-            \angle MBN=\angle MBA+\angle ABN=90^\circ+90^\circ=180^\circ.
+            \angle MBN=\angle ABM+\angle ABN=90^\circ+90^\circ=180^\circ.
         \]
         Điều đó chứng tỏ ba điểm $M$, $B$, $N$ thẳng hàng.
 
