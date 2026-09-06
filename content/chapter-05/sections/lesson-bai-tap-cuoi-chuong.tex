@@ -1,0 +1,509 @@
+% Nguồn SGK Toán 9 Tập một — Bài tập cuối chương V, trang 112--113:
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-112-1773022957347.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-113-1773022957647.png
+%
+% Nguồn SBT Toán 9 Tập một — Ôn tập chương V, trang 69--72:
+% SBT TOAN 9 KNTT TAP 1.pdf
+% SHA-256: d7ffd04618456682795977e5c47de7874161a35e8606e5bac1906881603a72f7
+% Trang 73 bắt đầu Lời giải/Hướng dẫn/Đáp số; không lấy nội dung từ trang 73 trở đi.
+
+\section*{Bài tập cuối chương V}
+
+\begin{exercises}
+    \subsection{Bài tập cuối chương V}
+
+    \textbf{A. TRẮC NGHIỆM}
+
+    \begin{questions}[resume=SGK]
+        \item Cho đường tròn $(O; 4\,\mathrm{cm})$ và hai điểm $A$, $B$. Biết rằng $OA=\sqrt{15}\,\mathrm{cm}$ và $OB=4\,\mathrm{cm}$. Khi đó:
+        \begin{tasks}(1)
+            \task[(A)] Điểm $A$ nằm trong $(O)$, điểm $B$ nằm ngoài $(O)$.
+            \task[(B)] Điểm $A$ nằm ngoài $(O)$, điểm $B$ nằm trên $(O)$.
+            \task[(C)] Điểm $A$ nằm trên $(O)$, điểm $B$ nằm trong $(O)$.
+            \task[(D)] Điểm $A$ nằm trong $(O)$, điểm $B$ nằm trên $(O)$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Cho Hình 5.43, trong đó $BD$ là đường kính, $\widehat{AOB}=40^\circ$; $\widehat{BOC}=100^\circ$. Khi đó:
+
+        \begin{center}
+            \begin{tikzpicture}
+                \def\r{1.35}
+                \coordinate (O) at (0,0);
+                \coordinate (A) at (-110:\r);
+                \coordinate (B) at (-70:\r);
+                \coordinate (C) at (30:\r);
+                \coordinate (D) at (110:\r);
+
+                \draw (O) circle[radius=\r];
+                \draw (D)--(B);
+                \draw (O)--(A);
+                \draw (O)--(C);
+                \pic[draw, "$40^\circ$", angle radius=5mm, angle eccentricity=1.45] {angle=A--O--B};
+                \pic[draw, "$100^\circ$", angle radius=7mm, angle eccentricity=1.35] {angle=B--O--C};
+
+                \node[below left=1pt of A] {$A$};
+                \node[below right=1pt of B] {$B$};
+                \node[right=1pt of C] {$C$};
+                \node[above=1pt of D] {$D$};
+                \node[left=1pt of O] {$O$};
+            \end{tikzpicture}
+
+            \textit{Hình 5.43}
+        \end{center}
+
+        \begin{tasks}(1)
+            \task[(A)] sđ $\overset{\frown}{DC}=80^\circ$ và sđ $\overset{\frown}{AD}=220^\circ$.
+            \task[(B)] sđ $\overset{\frown}{DC}=280^\circ$ và sđ $\overset{\frown}{AD}=220^\circ$.
+            \task[(C)] sđ $\overset{\frown}{DC}=280^\circ$ và sđ $\overset{\frown}{AD}=140^\circ$.
+            \task[(D)] sđ $\overset{\frown}{DC}=80^\circ$ và sđ $\overset{\frown}{AD}=140^\circ$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Cho hai đường tròn $(A; R_1)$, $(B; R_2)$, trong đó $R_2<R_1$. Biết rằng hai đường tròn $(A)$ và $(B)$ cắt nhau (H.5.44). Khi đó:
+
+        \begin{center}
+            \begin{tikzpicture}
+                \def\Rone{1.75}
+                \def\Rtwo{1.25}
+                \def\dAB{2.15}
+                \coordinate (A) at (0,0);
+                \coordinate (B) at (\dAB,0);
+                \pgfmathsetmacro{\xC}{(\dAB*\dAB+\Rone*\Rone-\Rtwo*\Rtwo)/(2*\dAB)}
+                \pgfmathsetmacro{\yC}{sqrt(\Rone*\Rone-\xC*\xC)}
+                \coordinate (C) at (\xC,\yC);
+
+                \draw (A) circle[radius=\Rone];
+                \draw (B) circle[radius=\Rtwo];
+                \draw (A)--(C)--(B)--cycle;
+
+                \node[left=1pt of A] {$A$};
+                \node[right=1pt of B] {$B$};
+                \node[above=1pt of C] {$C$};
+                \node[above left] at ($(A)!0.55!(C)$) {$R_1$};
+                \node[above right] at ($(B)!0.55!(C)$) {$R_2$};
+            \end{tikzpicture}
+
+            \textit{Hình 5.44}
+        \end{center}
+
+        \begin{tasks}(1)
+            \task[(A)] $AB<R_1-R_2$.
+            \task[(B)] $R_1-R_2<AB<R_1+R_2$.
+            \task[(C)] $AB>R_1+R_2$.
+            \task[(D)] $AB=R_1+R_2$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Cho đường tròn $(O; R)$ và hai đường thẳng $a_1$ và $a_2$. Gọi $d_1$, $d_2$ lần lượt là khoảng cách từ điểm $O$ đến $a_1$ và $a_2$. Biết rằng $(O)$ cắt $a_1$ và tiếp xúc với $a_2$ (H.5.45). Khi đó:
+
+        \begin{center}
+            \begin{tikzpicture}
+                \def\r{1.35}
+                \coordinate (O) at (0,0);
+                \coordinate (P) at (-1.8,0.75);
+                \coordinate (Q) at (1.7,1.2);
+                \coordinate (H) at ($(P)!(O)!(Q)$);
+                \coordinate (T) at (0,-\r);
+                \coordinate (L) at (-2,-\r);
+                \coordinate (Rline) at (2,-\r);
+                \coordinate (Rpoint) at (35:\r);
+
+                \draw (O) circle[radius=\r];
+                \draw (P)--(Q);
+                \draw (L)--(Rline);
+                \draw (O)--(H);
+                \draw (O)--(T);
+                \draw (O)--(Rpoint);
+                \pic[draw, angle radius=3mm] {right angle=O--H--Q};
+                \pic[draw, angle radius=3mm] {right angle=O--T--Rline};
+
+                \node[left=1pt of O] {$O$};
+                \node[above left=1pt of P] {$a_1$};
+                \node[below left=1pt of L] {$a_2$};
+                \node[left=1pt of H] {$d_1$};
+                \node[right=1pt of T] {$d_2$};
+                \node[above right] at ($(O)!0.55!(Rpoint)$) {$R$};
+            \end{tikzpicture}
+
+            \textit{Hình 5.45}
+        \end{center}
+
+        \begin{tasks}(1)
+            \task[(A)] $d_1<R$ và $d_2=R$.
+            \task[(B)] $d_1=R$ và $d_2<R$.
+            \task[(C)] $d_1>R$ và $d_2=R$.
+            \task[(D)] $d_1<R$ và $d_2<R$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+    \end{questions}
+
+    \textbf{B. TỰ LUẬN}
+
+    \begin{questions}[resume=SGK]
+        \item Cho đường tròn $(O)$ đường kính $BC$ và điểm $A$ (khác $B$ và $C$).
+        \begin{questions}
+            \item Chứng minh rằng nếu $A$ nằm trên $(O)$ thì $ABC$ là một tam giác vuông; ngược lại, nếu $ABC$ là tam giác vuông tại $A$ thì $A$ nằm trên $(O)$.
+            \item Giả sử $A$ là một trong hai giao điểm của đường tròn $(B; BO)$ với đường tròn $(O)$. Tính các góc của tam giác $ABC$.
+            \item Với cùng giả thiết câu b, tính độ dài cung $AC$ và diện tích hình quạt nằm trong $(O)$ giới hạn bởi các bán kính $OA$ và $OC$, biết rằng $BC=6\,\mathrm{cm}$.
+        \end{questions}
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho $AB$ là một dây bất kì (không phải là đường kính) của đường tròn $(O; 4\,\mathrm{cm})$. Gọi $C$ và $D$ lần lượt là các điểm đối xứng với $A$ và $B$ qua tâm $O$.
+        \begin{questions}
+            \item Hai điểm $C$ và $D$ có nằm trên đường tròn $(O)$ không? Vì sao?
+            \item Biết rằng $ABCD$ là một hình vuông. Tính độ dài cung lớn $AB$ và diện tích hình quạt tròn tạo bởi hai bán kính $OA$ và $OB$.
+        \end{questions}
+        \answerline
+        \answerline
+
+        \item Cho điểm $B$ nằm giữa hai điểm $A$ và $C$, sao cho $AB=2\,\mathrm{cm}$ và $BC=1\,\mathrm{cm}$. Vẽ các đường tròn $(A; 1{,}5\,\mathrm{cm})$, $(B; 3\,\mathrm{cm})$ và $(C; 2\,\mathrm{cm})$. Hãy xác định các cặp đường tròn:
+        \begin{questions}
+            \item Cắt nhau;
+            \item Không giao nhau;
+            \item Tiếp xúc với nhau.
+        \end{questions}
+        \answerline
+        \answerline
+
+        \item Cho tam giác vuông $ABC$ ($\widehat A$ vuông). Vẽ hai đường tròn $(B; BA)$ và $(C; CA)$ cắt nhau tại $A$ và $A'$. Chứng minh rằng:
+        \begin{questions}
+            \item $BA$ và $BA'$ là hai tiếp tuyến cắt nhau của đường tròn $(C; CA)$.
+            \item $CA$ và $CA'$ là hai tiếp tuyến cắt nhau của đường tròn $(B; BA)$.
+        \end{questions}
+        \answerline
+        \answerline
+
+        \item Cho hai đường tròn $(O)$ và $(O')$ cắt nhau tại $A$ và $B$. Một đường thẳng $d$ đi qua $A$ cắt $(O)$ tại $E$ và cắt $(O')$ tại $F$ ($E$ và $F$ khác $A$). Biết điểm $A$ nằm trong đoạn $EF$. Gọi $I$ và $K$ lần lượt là trung điểm của $AE$ và $AF$ (H.5.46).
+
+        \begin{center}
+            \begin{tikzpicture}
+                \def\rO{1.25}
+                \def\rOp{1.75}
+                \def\dOO{2.5}
+                \coordinate (O) at (0,0);
+                \coordinate (Op) at (\dOO,0);
+                \pgfmathsetmacro{\xA}{(\dOO*\dOO+\rO*\rO-\rOp*\rOp)/(2*\dOO)}
+                \pgfmathsetmacro{\yA}{sqrt(\rO*\rO-\xA*\xA)}
+                \coordinate (A) at (\xA,\yA);
+                \coordinate (B) at (\xA,-\yA);
+                \coordinate (L) at ($(A)+(-170:3.2)$);
+                \coordinate (R) at ($(A)+(10:4.0)$);
+                \coordinate (I) at ($(L)!(O)!(R)$);
+                \coordinate (K) at ($(L)!(Op)!(R)$);
+                \coordinate (E) at ($(A)!2!(I)$);
+                \coordinate (F) at ($(A)!2!(K)$);
+
+                \draw (O) circle[radius=\rO];
+                \draw (Op) circle[radius=\rOp];
+                \draw (E)--(F);
+                \draw (O)--(I);
+                \draw (Op)--(K);
+                \pic[draw, angle radius=3mm] {right angle=O--I--E};
+                \pic[draw, angle radius=3mm] {right angle=F--K--Op};
+
+                \node[above=1pt of A] {$A$};
+                \node[below=1pt of B] {$B$};
+                \node[below left=1pt of O] {$O$};
+                \node[below right=1pt of Op] {$O'$};
+                \node[above left=1pt of E] {$E$};
+                \node[above right=1pt of F] {$F$};
+                \node[above=1pt of I] {$I$};
+                \node[above=1pt of K] {$K$};
+            \end{tikzpicture}
+
+            \textit{Hình 5.46}
+        \end{center}
+
+        \begin{questions}
+            \item Chứng minh rằng tứ giác $OO'KI$ là một hình thang vuông.
+            \item Chứng minh rằng $IK=\dfrac{1}{2}EF$.
+            \item Khi $d$ ở vị trí nào ($d$ vẫn qua $A$) thì $OO'KI$ là một hình chữ nhật?
+        \end{questions}
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{exercises}
+
+\section*{Ôn tập chương V}
+
+\begin{practice}
+    \subsection{Ôn tập chương V}
+
+    Một số kiến thức đã học thường dùng để giải toán trong chương này:
+
+    \begin{enumerate}
+        \item Cho đường trung trực $d$ của đoạn thẳng $AB$. Khi đó:
+        \begin{itemize}
+            \item Nếu $M\in d$ thì $MA=MB$;
+            \item Ngược lại, nếu $MA=MB$ thì $M\in d$.
+        \end{itemize}
+
+        \item Cho tam giác $ABC$ và $AM$ là đường trung tuyến của nó ($M\in BC$).
+        \begin{itemize}
+            \item Nếu $ABC$ là tam giác vuông tại $A$ ($\widehat A=90^\circ$) thì $AM=\dfrac{BC}{2}$.
+            \item Ngược lại, nếu $AM=\dfrac{BC}{2}$ thì $ABC$ là tam giác vuông tại $A$ (hay $\widehat A=90^\circ$).
+        \end{itemize}
+
+        \item Cho tam giác $ABC$. Xét bốn yếu tố: đường cao $AH$, đường trung tuyến $AM$, đường phân giác của góc $A$ và đường trung trực của đoạn $BC$.
+        \begin{itemize}
+            \item Nếu tam giác $ABC$ cân tại $A$ thì bốn yếu tố nói trên trùng nhau.
+            \item Nếu có hai trong bốn yếu tố nói trên trùng nhau thì $ABC$ là tam giác cân tại $A$.
+        \end{itemize}
+
+        \item Nếu một đường thẳng song song với cạnh $BC$ của tam giác $ABC$ và cắt hai cạnh $AB$, $AC$ lần lượt tại $B'$, $C'$ thì $\triangle ABC\sim\triangle AB'C'$;
+
+        \item Trong tam giác vuông $ABC$ ($\widehat A=90^\circ$):
+        \[
+            \sin B=\dfrac{AC}{BC};\qquad
+            \cos B=\dfrac{AB}{BC};\qquad
+            \tan B=\dfrac{AC}{AB};\qquad
+            \cot B=\dfrac{AB}{AC}.
+        \]
+
+        \item Tính chất của tỉ lệ thức: Từ một trong các đẳng thức sau suy ra được các đẳng thức còn lại:
+        \[
+            ad=bc;\quad
+            \dfrac{a}{b}=\dfrac{c}{d};\quad
+            \dfrac{a}{c}=\dfrac{b}{d};\quad
+            \dfrac{d}{b}=\dfrac{c}{a};\quad
+            \dfrac{d}{c}=\dfrac{b}{a}\quad (a,b,c,d\ne0).
+        \]
+
+        \item Tính chất của dãy hai tỉ số bằng nhau:
+        \[
+            \text{Nếu }\dfrac{a}{b}=\dfrac{c}{d}\text{ thì }
+            \dfrac{a}{b}=\dfrac{c}{d}
+            =\dfrac{a+c}{b+d}
+            =\dfrac{a-c}{b-d}
+            \quad\text{(giả thiết các tỉ số đều có nghĩa).}
+        \]
+    \end{enumerate}
+
+    \textbf{A. CÂU HỎI (Trắc nghiệm)}
+
+    \begin{enumerate}
+        \item Trong mặt phẳng tọa độ $Oxy$, cho đường tròn $(O;\sqrt{5})$, hai điểm $A(-\sqrt{3};1)$ và $B(-1;2)$. Khi đó xảy ra:
+        \begin{tasks}(1)
+            \task[(A)] Điểm $A$ nằm trong $(O)$, điểm $B$ nằm ngoài $(O)$.
+            \task[(B)] Điểm $A$ nằm trong $(O)$, điểm $B$ nằm trên $(O)$.
+            \task[(C)] Điểm $A$ nằm trên $(O)$, điểm $B$ nằm trong $(O)$.
+            \task[(D)] Điểm $A$ nằm ngoài $(O)$, điểm $B$ nằm trên $(O)$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Cho đường thẳng $xy$ cắt đường tròn $(O)$ tại hai điểm $A$ và $B$ (H.5.10). Khi đó, các điểm thuộc đường thẳng $xy$ và nằm trong đường tròn $(O)$ là:
+
+        \begin{center}
+            \begin{tikzpicture}
+                \def\r{1}
+                \coordinate (O) at (0,0.5);
+                \pgfmathsetmacro{\xA}{sqrt(\r*\r-0.5*0.5)}
+                \coordinate (A) at (-\xA,0);
+                \coordinate (B) at (\xA,0);
+                \coordinate (X) at (-1.75,0);
+                \coordinate (Y) at (1.75,0);
+
+                \draw (O) circle[radius=\r];
+                \draw (X)--(Y);
+
+                \node[above=1pt of O] {$O$};
+                \node[below=1pt of A] {$A$};
+                \node[below=1pt of B] {$B$};
+                \node[above left=1pt of X] {$x$};
+                \node[above right=1pt of Y] {$y$};
+            \end{tikzpicture}
+
+            \textit{Hình 5.10}
+        \end{center}
+
+        \begin{tasks}(1)
+            \task[(A)] Các điểm thuộc tia $AB$.
+            \task[(B)] Các điểm thuộc tia $By$.
+            \task[(C)] Các điểm thuộc đoạn $AB$.
+            \task[(D)] Các điểm nằm giữa $A$ và $B$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Cho Hình 5.11, trong đó tất cả các cung $\overset{\frown}{AB}$, $\overset{\frown}{BC}$, $\overset{\frown}{CD}$, $\overset{\frown}{DE}$, $\overset{\frown}{EG}$ và $\overset{\frown}{GA}$ đều có số đo bằng $60^\circ$. Khi đó:
+
+        \begin{center}
+            \begin{tikzpicture}
+                \def\r{1.15}
+                \coordinate (O) at (0,0);
+                \coordinate (A) at (0:\r);
+                \coordinate (B) at (60:\r);
+                \coordinate (C) at (120:\r);
+                \coordinate (D) at (180:\r);
+                \coordinate (E) at (240:\r);
+                \coordinate (G) at (300:\r);
+
+                \draw (O) circle[radius=\r];
+                \draw (D)--(A);
+                \draw (E)--(B);
+                \draw (C)--(G);
+
+                \node[right=1pt of A] {$A$};
+                \node[above right=1pt of B] {$B$};
+                \node[above left=1pt of C] {$C$};
+                \node[left=1pt of D] {$D$};
+                \node[below left=1pt of E] {$E$};
+                \node[below right=1pt of G] {$G$};
+                \node[below left=1pt of O] {$O$};
+            \end{tikzpicture}
+
+            \textit{Hình 5.11}
+        \end{center}
+
+        \begin{tasks}(1)
+            \task[(A)] Điểm đối xứng với $A$ qua $CG$ là $B$.
+            \task[(B)] Điểm đối xứng với $A$ qua $CG$ là $D$.
+            \task[(C)] Điểm đối xứng với $A$ qua $CG$ là $E$.
+            \task[(D)] Điểm đối xứng với $A$ qua $CG$ là $G$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Độ dài $L$ (đơn vị cm) của cung tròn và diện tích $S$ của hình quạt tròn (đơn vị $\mathrm{cm}^2$) có cùng bán kính $9\,\mathrm{cm}$ và cùng ứng với cung $280^\circ$ là:
+        \begin{tasks}(1)
+            \task[(A)] $L=7\pi$ và $S=63\pi$.
+            \task[(B)] $L=14\pi$ và $S=63\pi$.
+            \task[(C)] $L=7\pi$ và $S=28\pi$.
+            \task[(D)] $L=14\pi$ và $S=28\pi$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Cho góc nhọn $xOy$ và điểm $M$ nằm trong góc đó. Biết rằng $M$ nằm cách $Ox$ một khoảng bằng $3\,\mathrm{cm}$ và cách $Oy$ một khoảng bằng $2\,\mathrm{cm}$. Khi đó
+        \begin{tasks}(1)
+            \task[(A)] Nếu đường tròn $(M)$ tiếp xúc với $Ox$ thì $(M)$ cắt $Oy$.
+            \task[(B)] Nếu đường tròn $(M)$ tiếp xúc với $Ox$ thì $(M)$ cũng tiếp xúc với $Oy$.
+            \task[(C)] Nếu đường tròn $(M)$ tiếp xúc với $Ox$ thì $(M)$ không giao nhau với $Oy$.
+            \task[(D)] Nếu đường tròn $(M)$ tiếp xúc với $Oy$ thì cắt $Ox$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Cho hai điểm $A$ và $B$ sao cho $AB=7\,\mathrm{cm}$ và đường tròn $(B;4\,\mathrm{cm})$. Khi đó:
+        \begin{tasks}(1)
+            \task[(A)] Hai đường tròn $(A;R)$ và $(B)$ cắt nhau nếu $R<11\,\mathrm{cm}$.
+            \task[(B)] Hai đường tròn $(A;R)$ và $(B)$ cắt nhau nếu $R>3\,\mathrm{cm}$.
+            \task[(C)] Hai đường tròn $(A;R)$ và $(B)$ không giao nhau nếu $R>11\,\mathrm{cm}$.
+            \task[(D)] Hai đường tròn $(A;R)$ và $(B)$ không giao nhau nếu $R\le3\,\mathrm{cm}$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+    \end{enumerate}
+
+    \textbf{B. BÀI TẬP}
+
+    \begin{questions}[resume=SBT]
+        \item Cho tam giác $ABC$ có $AB<AC$ và đường cao $AH$ (H.5.12).
+
+        \begin{center}
+            \begin{tikzpicture}
+                \coordinate (H) at (0,0);
+                \coordinate (A) at (0,2);
+                \coordinate (B) at (-1.1,0);
+                \coordinate (C) at (1.9,0);
+                \draw (A)--(B)--(C)--cycle;
+                \draw (A)--(H);
+                \pic[draw, angle radius=3mm] {right angle=A--H--C};
+                \node[above=1pt of A] {$A$};
+                \node[left=1pt of B] {$B$};
+                \node[right=1pt of C] {$C$};
+                \node[below=1pt of H] {$H$};
+            \end{tikzpicture}
+
+            \textit{Hình 5.12}
+        \end{center}
+
+        \begin{questions}
+            \item Trong các điểm $B$, $H$ và $C$, điểm nào nằm trong, điểm nào nằm trên và điểm nào nằm ngoài đường tròn $(A;AB)$? Vì sao?
+            \item Xác định vị trí của điểm $D$ trên đoạn $AC$ trong mỗi trường hợp sau:
+            \begin{itemize}
+                \item Đường tròn $(A)$ và đường tròn $(C;CD)$ tiếp xúc với nhau;
+                \item Đường tròn $(A)$ và đường tròn $(C;CD)$ cắt nhau;
+                \item Đường tròn $(A)$ và đường tròn $(C;CD)$ không giao nhau.
+            \end{itemize}
+        \end{questions}
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho hình thang cân $ABCD$ ($AB\parallel CD$).
+        \begin{questions}
+            \item Chứng minh rằng đường trung trực $d$ của $AB$ cũng là đường trung trực của $CD$ (từ đó suy ra hai điểm $A$ và $B$ đối xứng với nhau, $C$ và $D$ đối xứng với nhau qua $d$).
+            \item Giải thích tại sao nếu một đường tròn đi qua 3 điểm $A$, $B$ và $C$ thì nó cũng đi qua điểm $D$.
+        \end{questions}
+        \answerline
+        \answerline
+
+        \item Giả sử $CD$ là một dây song song với đường kính $AB$ của đường tròn $(O)$ sao cho $ABCD$ là một tứ giác lồi. Gọi $E$ là trung điểm của đoạn $CD$.
+        \begin{questions}
+            \item Chứng minh rằng $A$ đối xứng với $B$ và $C$ đối xứng với $D$ qua đường thẳng $OE$.
+            \item Chứng minh rằng tứ giác $ABCD$ là một hình thang cân.
+            \item Biết rằng $AB=12\,\mathrm{cm}$ và $\widehat{COD}=100^\circ$. Tính độ dài cung (nhỏ) $AD$ và cung (lớn) $ABC$.
+            \item Với giả thiết ở câu c, tính diện tích hình quạt tròn ứng với cung nhỏ $BD$.
+        \end{questions}
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho tam giác vuông $ABC$ ($\widehat A=90^\circ$) có $\widehat C=30^\circ$ và $AB=3\,\mathrm{cm}$. Đường phân giác của góc $B$ cắt $AC$ tại $D$.
+        \begin{questions}
+            \item Chứng minh rằng đường tròn $(D;DA)$ tiếp xúc với cạnh $BC$.
+            \item Tính độ dài cung nằm trong góc $BDC$ của đường tròn $(D;DA)$ và diện tích hình quạt tròn tương ứng với cung ấy.
+            \item Tính diện tích hình vành khuyên tạo bởi hai đường tròn $(D;DA)$ và $(D;DC)$.
+        \end{questions}
+        \answerline
+        \answerline
+        \answerline
+
+        \item Từ điểm $P$ nằm ngoài đường tròn $(O)$, kẻ hai tiếp tuyến $PA$ và $PB$ đến đường tròn ($A$ và $B$ là hai tiếp điểm).
+        \begin{questions}
+            \item Chứng minh rằng $PO\perp AB$.
+            \item Gọi $C$ là điểm đối xứng với $A$ qua $O$. Chứng minh rằng $BC\parallel PO$.
+            \item Tính độ dài các cạnh của tam giác $PAB$, biết $OA=3\,\mathrm{cm}$ và $OP=5\,\mathrm{cm}$.
+        \end{questions}
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho tam giác $ABC$ vuông tại $A$, đường cao $AH$. Từ $B$ và từ $C$ kẻ hai đường thẳng tiếp xúc với đường tròn $(A;AH)$ lần lượt tại $D$ và $E$. Chứng minh rằng:
+        \begin{questions}
+            \item Hai điểm $D$ và $E$ đối xứng với nhau qua $A$;
+            \item $DE$ tiếp xúc với đường tròn đường kính $BC$.
+        \end{questions}
+        \answerline
+        \answerline
+
+        \item Cho đường tròn $(O)$, đường thẳng $a$ tiếp xúc với $(O)$ tại $A$, đường thẳng $b$ tiếp xúc với $(O)$ tại $B$ sao cho $a\parallel b$. Gọi $C$ là một điểm tuỳ ý thuộc $(O)$, khác $A$ và $B$. Tiếp tuyến $c$ của $(O)$ tại $C$ cắt $a$ và $b$ lần lượt tại $M$ và $N$.
+        \begin{questions}
+            \item Chứng minh $AB$ là một đường kính của $(O)$.
+            \item Gọi $D$, $P$ và $Q$ lần lượt là các điểm đối xứng với $C$, $M$ và $N$ qua tâm $O$. Chứng minh rằng $D\in(O)$, $P\in b$ và $Q\in a$.
+            \item Chứng minh rằng $PQ$ tiếp xúc với $(O)$ tại $D$.
+            \item Chứng minh tứ giác $MNPQ$ là một hình thoi.
+        \end{questions}
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho hai đường tròn $(O;R)$ và $(O';R')$ tiếp xúc ngoài với nhau tại $A$, hai điểm $B\in(O)$ và $C\in(O')$ sao cho $B$ và $C$ nằm cùng phía đối với đường thẳng $OO'$ và $OB\parallel O'C$.
+        \begin{questions}
+            \item Chứng minh góc $BAC$ là góc vuông.
+            \item Cho biết $R=3\,\mathrm{cm}$, $R'=1\,\mathrm{cm}$ và $BC$ cắt $OO'$ tại $D$. Tính độ dài đoạn $OD$.
+        \end{questions}
+        \answerline
+        \answerline
+
+        \item Cho đường tròn tâm $O$, đường kính $MN$. Một đường tròn $(N)$ cắt $(O)$ tại $A$ và $B$.
+        \begin{questions}
+            \item Chứng minh rằng $MA$ và $MB$ là hai tiếp tuyến của $(N)$.
+            \item Đường thẳng qua $N$ và vuông góc với $NA$ cắt $MB$ tại $C$. Chứng minh hai điểm $M$ và $N$ đối xứng với nhau qua $OC$.
+            \item Đường thẳng qua $M$ và vuông góc với $MA$ cắt $NB$ tại $D$. Chứng minh ba điểm $O$, $C$ và $D$ thẳng hàng.
+        \end{questions}
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{practice}
