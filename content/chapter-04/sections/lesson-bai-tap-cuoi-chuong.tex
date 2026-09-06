@@ -1,0 +1,446 @@
+% Nguon SGK: trang 81--82.
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-81-1773022947321.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-82-1773022947665.png
+% Nguon SBT: "SBT TOAN 9 KNTT TAP 1.pdf", trang 50--53.
+% SHA-256: d7ffd04618456682795977e5c47de7874161a35e8606e5bac1906881603a72f7.
+
+\section*{Bài tập cuối chương IV}
+
+\begin{exercises}
+    \subsection{Bài tập cuối chương IV}
+
+    \textbf{A. TRẮC NGHIỆM}
+
+    \begin{questions}[resume=SGK]
+        \item Trong Hình 4.32, $\cos\alpha$ bằng
+        \begin{tasks}(4)
+            \task $\dfrac{5}{3}$.
+            \task $\dfrac{3}{4}$.
+            \task $\dfrac{3}{5}$.
+            \task $\dfrac{4}{5}$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \begin{center}
+        \begin{tikzpicture}
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (5,0);
+            \coordinate (C) at (1.8,2.4);
+            \draw (A)--(B)--(C)--cycle;
+            \pic[draw, angle radius=3.5mm] {right angle=A--C--B};
+            \pic[draw, "$\alpha$", angle radius=5mm, angle eccentricity=1.35] {angle=B--A--C};
+            \node at ($(A)!0.5!(C)+(-0.22,0)$) {$3$};
+            \node at ($(C)!0.5!(B)+(0.22,0)$) {$4$};
+            \node at ($(A)!0.5!(B)+(0,-0.28)$) {$5$};
+            \node[below=9pt of B] {Hình 4.32};
+        \end{tikzpicture}
+        \end{center}
+
+        \item Trong tam giác $MNP$ vuông tại $M$ (H.4.33), $\sin\widehat{MNP}$ bằng
+        \begin{tasks}(4)
+            \task $\dfrac{PN}{MN}$.
+            \task $\dfrac{MP}{PN}$.
+            \task $\dfrac{MN}{PN}$.
+            \task $\dfrac{MN}{MP}$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \begin{center}
+        \begin{tikzpicture}
+            \coordinate (M) at (0,0);
+            \coordinate (N) at (0,2.2);
+            \coordinate (P) at (3.3,0);
+            \draw (M)--(N)--(P)--cycle;
+            \pic[draw, angle radius=3.5mm] {right angle=N--M--P};
+            \pic[draw, angle radius=5mm] {angle=M--N--P};
+            \node[below left=1pt of M] {$M$};
+            \node[above left=1pt of N] {$N$};
+            \node[below right=1pt of P] {$P$};
+            \node at ($(M)!0.5!(P)+(0,-0.48)$) {Hình 4.33};
+        \end{tikzpicture}
+        \end{center}
+
+        \item Trong tam giác $ABC$ vuông tại $A$ (H.4.34), $\tan B$ bằng
+        \begin{tasks}(4)
+            \task $\dfrac{AB}{AC}$.
+            \task $\dfrac{AC}{AB}$.
+            \task $\dfrac{AB}{BC}$.
+            \task $\dfrac{BC}{AC}$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \begin{center}
+        \begin{tikzpicture}
+            \coordinate (B) at (0,0);
+            \coordinate (A) at (3.4,0);
+            \coordinate (C) at (3.4,2.2);
+            \draw (B)--(A)--(C)--cycle;
+            \pic[draw, angle radius=3.5mm] {right angle=B--A--C};
+            \pic[draw, angle radius=5mm] {angle=A--B--C};
+            \node[below left=1pt of B] {$B$};
+            \node[below right=1pt of A] {$A$};
+            \node[above right=1pt of C] {$C$};
+            \node at ($(B)!0.5!(A)+(0,-0.48)$) {Hình 4.34};
+        \end{tikzpicture}
+        \end{center}
+
+        \item Với mọi góc nhọn $\alpha$, ta có
+        \begin{tasks}(2)
+            \task $\sin(90^\circ-\alpha)=\cos\alpha$.
+            \task $\tan(90^\circ-\alpha)=\cos\alpha$.
+            \task $\cot(90^\circ-\alpha)=1-\tan\alpha$.
+            \task $\cot(90^\circ-\alpha)=\sin\alpha$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Giá trị $\tan 30^\circ$ bằng
+        \begin{tasks}(4)
+            \task $\sqrt{3}$.
+            \task $\dfrac{\sqrt{3}}{2}$.
+            \task $\dfrac{1}{\sqrt{3}}$.
+            \task $1$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+    \end{questions}
+
+    \textbf{B. TỰ LUẬN}
+
+    \begin{questions}[resume=SGK]
+        \item Xét các tam giác vuông có một góc nhọn bằng hai lần góc nhọn còn lại. Hỏi các tam giác đó có đồng dạng với nhau không? Tính sin và côsin của góc nhọn lớn hơn.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Hình 4.35 là mô hình của một túp lều. Tìm góc $\alpha$ giữa cạnh mái lều và mặt đất (làm tròn kết quả đến phút).
+
+        % TODO(HINH-NGUON): bo sung asset/crop phan anh tup leu tu SGK trang 81; khong redraw xap xi bang TikZ.
+        \begin{center}
+        \begin{tikzpicture}
+            \coordinate (L) at (0,0);
+            \coordinate (R) at (4.4,0);
+            \coordinate (H) at ($(L)!0.5!(R)$);
+            \coordinate (T) at ($(H)+(0,1.8)$);
+            \draw (L)--(T)--(R)--cycle;
+            \draw[dashed] (T)--(H);
+            \pic[draw, angle radius=4mm] {right angle=L--H--T};
+            \pic[draw, "$\alpha$", angle radius=5mm, angle eccentricity=1.35] {angle=T--R--L};
+            \draw ($(L)+(0,-0.25)$)--($(R)+(0,-0.25)$);
+            \node at ($(L)!0.5!(R)+(0,-0.52)$) {$4{,}4\ \text{m}$};
+            \node at ($(T)!0.5!(H)+(0.28,0)$) {$1{,}8\ \text{m}$};
+            \node[below=9pt of R] {Hình 4.35};
+        \end{tikzpicture}
+        \end{center}
+
+        \answerline
+        \answerline
+
+        \item Một cây cao bị gãy, ngọn cây đổ xuống mặt đất. Ba điểm: gốc cây, điểm gãy, ngọn cây tạo thành một tam giác vuông. Đoạn cây gãy tạo với mặt đất góc $20^\circ$ và chắn ngang lối đi một đoạn $5$ m (H.4.36). Hỏi trước khi bị gãy, cây cao khoảng bao nhiêu mét (làm tròn kết quả đến hàng phần mười)?
+
+        % TODO(HINH-NGUON): bo sung asset/crop minh hoa cay gay tu SGK trang 82; khong redraw xap xi bang TikZ.
+        \begin{center}
+        \begin{tikzpicture}
+            \coordinate (T) at (0,0);
+            \coordinate (R) at (5,0);
+            \coordinate (G) at (5,{5*tan(20)});
+            \draw (T)--(R)--(G)--cycle;
+            \pic[draw, angle radius=5mm, "$20^\circ$", angle eccentricity=1.45] {angle=R--T--G};
+            \pic[draw, angle radius=3.5mm] {right angle=T--R--G};
+            \node at ($(T)!0.5!(R)+(0,-0.28)$) {$5\ \text{m}$};
+            \node[below=9pt of R] {Hình 4.36};
+        \end{tikzpicture}
+        \end{center}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho tam giác $ABC$ vuông tại $A$, có $\widehat{B}=\alpha$ (H.4.37).
+        \begin{questions}
+            \item Hãy viết các tỉ số lượng giác $\sin\alpha$, $\cos\alpha$.
+
+            \answerline
+            \answerline
+
+            \item Sử dụng định lí Pythagore, chứng minh rằng $\sin^2\alpha+\cos^2\alpha=1$.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \begin{center}
+        \begin{tikzpicture}
+            \coordinate (B) at (0,0);
+            \coordinate (A) at (2.8,0);
+            \coordinate (C) at (2.8,4.4);
+            \draw (B)--(A)--(C)--cycle;
+            \pic[draw, angle radius=3.5mm] {right angle=B--A--C};
+            \pic[draw, "$\alpha$", angle radius=5mm, angle eccentricity=1.35] {angle=A--B--C};
+            \node[below left=1pt of B] {$B$};
+            \node[below right=1pt of A] {$A$};
+            \node[above right=1pt of C] {$C$};
+            \node at ($(B)!0.5!(A)+(0,-0.48)$) {Hình 4.37};
+        \end{tikzpicture}
+        \end{center}
+
+        \item \textbf{ĐỐ VUI. Chu vi Trái Đất bằng bao nhiêu?}
+
+        Vào khoảng năm 200 trước Công nguyên, Eratosthenes (Ô-ra-tô-xten), một nhà toán học và thiên văn học người Hy Lạp, đã ước lượng được “chu vi” của Trái Đất (chu vi của đường Xích Đạo) nhờ hai quan sát sau:
+        \begin{enumerate}[label=\arabic*.]
+            \item Hồi đó, hằng năm cứ vào trưa ngày Hạ chí (21/6), người ta thấy tia sáng mặt trời chiếu thẳng xuống đáy một cái giếng sâu nổi tiếng ở thành phố Syene (Xy-en), tức là tia sáng chiếu thẳng đứng.
+            \item Cùng vào trưa một ngày Hạ chí, ở thành phố Alexandria (A-lếch-xăng-đri-a) cách Syene 800 km, Eratosthenes thấy một tháp cao 25 m có bóng trên mặt đất dài 3,1 m.
+        \end{enumerate}
+
+        Từ hai quan sát trên, ông có thể tính xấp xỉ “chu vi” của Trái Đất như thế nào? (trên Hình 4.38, điểm $O$ là tâm Trái Đất, điểm $S$ tượng trưng cho thành phố Syene, điểm $A$ tượng trưng cho thành phố Alexandria, điểm $H$ là đỉnh của tháp, bóng của tháp trên mặt đất được coi là đoạn thẳng $AB$).
+
+        % TODO(HINH-NGUON): bo sung asset/crop phan minh hoa Trai Dat/Mat Troi tu SGK trang 82; khong redraw xap xi bang TikZ.
+        \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (60:1.7);
+            \coordinate (S) at (52:1.7);
+            \coordinate (H) at (60:3.0);
+            \coordinate (TOne) at ($(A)!2!90:(O)$);
+            \coordinate (TTwo) at ($(A)!2!-90:(O)$);
+            \coordinate (RayPoint) at ($(H)+(S)-(O)$);
+            \path[name path=tangentA] (TOne)--(TTwo);
+            \path[name path=sunRay] ($(H)!-4!(RayPoint)$)--($(H)!4!(RayPoint)$);
+            \path[name intersections={of=tangentA and sunRay, by=B}];
+            \draw (O) circle[radius=1.7];
+            \draw (O)--(A)--(H);
+            \draw (O)--(S);
+            \draw (B)--(A);
+            \draw[-{Stealth[length=2.4mm,width=1.8mm]}] ($(H)+(52:1.5)$)--(B);
+            \fill (O) circle (1.2pt) node[below left=1pt] {$O$};
+            \fill (A) circle (1.2pt) node[below right=1pt] {$A$};
+            \fill (S) circle (1.2pt) node[right=2pt] {$S$};
+            \fill (H) circle (1.2pt) node[above left=1pt] {$H$};
+            \fill (B) circle (1.2pt) node[left=3pt] {$B$};
+            \node at (0,-2.15) {Hình 4.38};
+        \end{tikzpicture}
+        \end{center}
+
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{exercises}
+
+\begin{practice}
+    \subsection{Ôn tập chương IV}
+
+    \textbf{A. CÂU HỎI (Trắc nghiệm)}
+
+    \begin{enumerate}[label=\arabic*.]
+        \item Tam giác $ABC$ vuông tại $A$ thì:
+        \begin{tasks}(2)
+            \task $\sin B+\cos C=0$.
+            \task $\sin C+\cos B=0$.
+            \task $\sin B-\cos C=0$.
+            \task $\cos B+\cos C=0$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Tam giác $ABC$ vuông tại $A$ thì:
+        \begin{tasks}(2)
+            \task $\tan B+\tan C=0$.
+            \task $\tan B+\cot C=0$.
+            \task $\tan B-\cot C=0$.
+            \task $\cot B+\cot C=0$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Chọn câu \textbf{sai}:
+
+        Góc nhọn $\alpha$ có $\sin\alpha=\dfrac{1}{2}$ thì
+        \begin{tasks}(4)
+            \task $\dfrac{1}{\tan\alpha}=\sqrt{3}$.
+            \task $\dfrac{1}{\sin\alpha}=2$.
+            \task $\tan^2\alpha=\dfrac{1}{3}$.
+            \task $\cos^2\alpha=\dfrac{1}{4}$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+    \end{enumerate}
+
+    \textbf{B. BÀI TẬP}
+
+    \begin{questions}[resume=SBT]
+        \item Chứng minh nếu một góc nhọn của một tam giác vuông có số đo gấp đôi số đo góc nhọn kia thì tam giác đó có một cạnh dài gấp đôi một trong hai cạnh còn lại.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Xét điểm $B$ nằm giữa hai điểm $A$ và $H$. Giả sử có điểm $D$ sao cho $DH$ vuông góc với $AB$ và $\widehat{DAH}=15^\circ$, $\widehat{DBH}=30^\circ$. Chứng minh rằng $HD=\dfrac{AB}{2}$.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho hai toà nhà cách nhau 32 m. Tại điểm $A$ trên nóc toà nhà cao nhìn xuống nóc $D$ và chân $C$ của toà nhà thấp lần lượt theo các góc $15^\circ$ và $43^\circ$ (so với phương nằm ngang) (H.4.16). Tính chiều cao của hai toà nhà đó (làm tròn đến m).
+
+        \begin{center}
+        \begin{tikzpicture}
+            \coordinate (B) at (0,0);
+            \coordinate (C) at (6.4,0);
+            \coordinate (A) at (0,{6.4*tan(43)});
+            \coordinate (E) at (6.4,{6.4*tan(43)});
+            \coordinate (D) at (6.4,{6.4*(tan(43)-tan(15))});
+            \draw (B)--(A);
+            \draw (C)--(D);
+            \draw (B)--(C);
+            \draw[dashed] (A)--(E);
+            \draw[dashed] (A)--(D);
+            \draw[dashed] (A)--(C);
+            \pic[draw, "$15^\circ$", angle radius=6mm, angle eccentricity=1.4] {angle=D--A--E};
+            \pic[draw, "$43^\circ$", angle radius=11mm, angle eccentricity=1.25] {angle=C--A--E};
+            \node[above left=1pt of A] {$A$};
+            \node[above right=1pt of D] {$D$};
+            \node[below right=1pt of C] {$C$};
+            \node at ($(B)!0.5!(C)+(0,-0.28)$) {$32\ \text{m}$};
+            \node at ($(B)!0.5!(C)+(0,-0.72)$) {Hình 4.16};
+        \end{tikzpicture}
+        \end{center}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Chiều cao từ mặt đất đến đỉnh tháp Pisa ở Italia là 58 mét, tháp nghiêng góc $5^\circ30'$ đối với phương thẳng đứng (H.4.17). Khi Mặt Trời chiếu vuông góc với mặt đất thì bóng của tháp dài bao nhiêu decimét?
+
+        % TODO(HINH-NGUON): bo sung asset/crop Hinh 4.17 tu SBT trang 51; khong redraw xap xi bang TikZ.
+        \answerline
+        \answerline
+
+        \item Cho tam giác $ABC$ có đường cao $AH$, $\widehat{B}=60^\circ$, $\widehat{C}=45^\circ$ và cạnh $BC=6$ cm. Chứng minh rằng $AH=3(3-\sqrt{3})$ cm.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Tính khoảng cách giữa hai địa điểm $A$, $B$ ở hai bên hồ nước (không đo trực tiếp được), biết khoảng cách từ một địa điểm $C$ đến $A$ và đến $B$ là $CA=90$ m, $CB=150$ m, $\widehat{CAB}=120^\circ$ (làm tròn đến m) (H.4.18).
+
+        % TODO(HINH-NGUON): bo sung phan minh hoa ho nuoc tu SBT trang 52; khong redraw xap xi bang TikZ.
+        \begin{center}
+        \begin{tikzpicture}
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (5.6,0);
+            \coordinate (C) at (120:3.0);
+            \draw (A)--(C)--(B)--cycle;
+            \pic[draw, "$120^\circ$", angle radius=7mm, angle eccentricity=1.35] {angle=B--A--C};
+            \node[below left=1pt of A] {$A$};
+            \node[right=1pt of B] {$B$};
+            \node[above=1pt of C] {$C$};
+            \node at ($(C)!0.5!(A)+(-0.28,0)$) {$90$};
+            \node at ($(C)!0.5!(B)+(0,0.28)$) {$150$};
+            \node at ($(A)!0.5!(B)+(0,-0.48)$) {Hình 4.18};
+        \end{tikzpicture}
+        \end{center}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Một cầu thủ đứng cách khung thành 18 m, đá quả bóng sát mặt đất, nghiêng một góc $20^\circ$ so với phương vuông góc với khung thành, tới điểm $M$ của khung thành (H.4.19). Tính khoảng cách từ cầu thủ đến điểm $M$ (làm tròn đến dm).
+
+        \begin{center}
+        \begin{tikzpicture}
+            \coordinate (A) at (0,0);
+            \coordinate (H) at (0,3.6);
+            \coordinate (M) at ({3.6*tan(20)},3.6);
+            \draw (A)--(H)--(M)--cycle;
+            \pic[draw, angle radius=3.5mm] {right angle=A--H--M};
+            \pic[draw, "$20^\circ$", angle radius=5mm, angle eccentricity=1.35] {angle=H--A--M};
+            \node at ($(A)!0.5!(H)+(-0.28,0)$) {$18$};
+            \node[below left=1pt of A] {$A$};
+            \node[above left=1pt of H] {$H$};
+            \node[above right=1pt of M] {$M$};
+            \node[below=8pt of M] {Hình 4.19};
+        \end{tikzpicture}
+        \end{center}
+
+        \answerline
+        \answerline
+
+        \item Hai chiếc thuyền $A$ và $B$ ở vị trí được minh hoạ như trong Hình 4.20. Tính khoảng cách giữa chúng (làm tròn đến m), biết $IK=380$ m.
+
+        % TODO(HINH-NGUON): bo sung asset/crop minh hoa thuyen/bo nuoc Hinh 4.20 tu SBT trang 52; khong redraw xap xi bang TikZ.
+        \begin{center}
+        \begin{tikzpicture}
+            \coordinate (I) at (0,0);
+            \coordinate (K) at (4.5,0);
+            \coordinate (B) at (0,{4.5*tan(50)});
+            \coordinate (A) at (0,{4.5*tan(65)});
+            \draw (I)--(K)--(B)--cycle;
+            \draw (K)--(A);
+            \pic[draw, angle radius=5mm, "$50^\circ$", angle eccentricity=1.35] {angle=I--K--B};
+            \pic[draw, angle radius=9mm, "$15^\circ$", angle eccentricity=1.25] {angle=B--K--A};
+            \pic[draw, angle radius=3.5mm] {right angle=B--I--K};
+            \node[below left=1pt of I] {$I$};
+            \node[below right=1pt of K] {$K$};
+            \node[left=1pt of B] {$B$};
+            \node[left=1pt of A] {$A$};
+            \node at ($(I)!0.5!(K)+(0,-0.48)$) {Hình 4.20};
+        \end{tikzpicture}
+        \end{center}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Tìm độ dài dây cáp mắc giữa hai cọc ở vị trí $C$, $D$ trên hai bên bờ vực như trong Hình 4.21 (làm tròn đến mét).
+
+        % TODO(HINH-NGUON): bo sung phan minh hoa vach nui tu SBT trang 53; khong redraw xap xi bang TikZ.
+        \begin{center}
+        \begin{tikzpicture}
+            \coordinate (E) at (0,0);
+            \coordinate (M) at (0,4);
+            \coordinate (N) at (1,4);
+            \coordinate (C) at (1,{tan(30)});
+            \coordinate (D) at ({4/tan(30)},4);
+            \draw (M)--(D);
+            \draw (E)--(D);
+            \draw (M)--(E);
+            \draw[dashed] (N)--(C);
+            \pic[draw, "$60^\circ$", angle radius=6mm, angle eccentricity=1.35] {angle=C--E--M};
+            \node[left=1pt of M] {$M$};
+            \node[above=1pt of N] {$N$};
+            \node[below left=1pt of E] {$E$};
+            \node[below right=1pt of C] {$C$};
+            \node[above right=1pt of D] {$D$};
+            \node at ($(M)!0.5!(E)+(-0.35,0)$) {$20\ \text{m}$};
+            \node at ($(M)!0.5!(N)+(0,-0.28)$) {$5\ \text{m}$};
+            \node at ($(E)!0.5!(D)+(0,-0.62)$) {Hình 4.21};
+        \end{tikzpicture}
+        \end{center}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Một người đứng cách chân ngọn hải đăng 50 m, nhìn xuống chân hải đăng dưới góc $2^\circ$ và nhìn lên đỉnh ngọn hải đăng dưới góc $45^\circ$ (so với đường nằm ngang) (H.4.22). Tính chiều cao ngọn hải đăng (làm tròn đến mét).
+
+        % TODO(HINH-NGUON): bo sung asset/crop phan minh hoa hai dang Hinh 4.22 tu SBT trang 53; khong redraw xap xi bang TikZ.
+        \begin{center}
+        \begin{tikzpicture}
+            \coordinate (P) at (0,0);
+            \coordinate (F) at (5,-{5*tan(2)});
+            \coordinate (T) at (5,5);
+            \coordinate (H) at (5,0);
+            \draw (P)--(F);
+            \draw (P)--(T);
+            \draw[dashed] (P)--(H);
+            \draw (F)--(T);
+            \pic[draw, "$45^\circ$", angle radius=5mm, angle eccentricity=1.35] {angle=H--P--T};
+            \pic[draw, "$2^\circ$", angle radius=9mm, angle eccentricity=1.4] {angle=F--P--H};
+            \node[below=9pt of H] {Hình 4.22};
+        \end{tikzpicture}
+        \end{center}
+
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{practice}
