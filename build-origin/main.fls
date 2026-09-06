@@ -1,4 +1,4 @@
-PWD /workspaces/template
+PWD /workspaces/toan-9-tap-mot
 INPUT /usr/local/texlive/2026/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-var/web2c/xetex/xelatex.fmt
