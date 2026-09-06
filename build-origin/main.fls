@@ -430,7 +430,6 @@ INPUT ./content/chapter-01/sections/section-01.tex
 INPUT ./content/chapter-01/sections/section-01.tex
 INPUT ./content/chapter-01/sections/section-01.tex
 INPUT content/chapter-01/sections/section-01.tex
-OUTPUT build/main.xdv
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
@@ -456,6 +455,7 @@ INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+OUTPUT build/main.xdv
 INPUT ./content/chapter-02/chapter.tex
 INPUT ./content/chapter-02/chapter.tex
 INPUT ./content/chapter-02/chapter.tex
