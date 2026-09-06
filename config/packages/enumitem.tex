@@ -1,0 +1,35 @@
+% Giữ các danh sách gọn.
+\setlist[itemize]{nosep}
+\setlist[enumerate]{nosep}
+
+% Dùng màu chủ đạo cho dấu đầu dòng và số thứ tự.
+\setlist[itemize,1]{
+    label={\textcolor{base950}{\textbullet}},
+    leftmargin=24pt
+}
+\setlist[enumerate,1]{
+    label={\textcolor{base950}{\arabic*.}},
+    leftmargin=24pt
+}
+
+% Tiền tố của danh sách câu hỏi. Chỉ exercises/practice dùng questions cho
+% numbering SGK/SBT; semantic block trong lesson viết nhãn trực tiếp.
+\newcommand{\questionprefix}{}
+
+% Chỉ dùng MỘT list questions. SGK/SBT tách state bằng named series của enumitem,
+% không clone thêm lessonquestions/exercisequestions/practicequestions.
+\newlist{questions}{enumerate}{2}
+\setlist[questions,1]{
+    label={\bfseries \questionprefix\arabic*.},
+    labelsep=4pt,
+    wide,
+    nosep,
+    itemsep=4pt
+}
+\setlist[questions,2]{
+    label={\color{base950}\alph*)},
+    labelsep=4pt,
+    leftmargin=24pt,
+    nosep,
+    itemsep=4pt
+}

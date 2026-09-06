@@ -1,0 +1,23 @@
+% 1. Nạp các package và khai báo tùy chọn của package.
+\input{config/packages}
+
+% 2. Thiết lập chung không thuộc riêng package nào.
+\input{config/metadata}
+\input{config/layout}
+
+% 3. Cấu hình từng package theo thứ tự phụ thuộc.
+\input{config/packages/fontspec}
+\input{config/packages/graphicx}
+\input{config/packages/geometry}
+\input{config/packages/setspace}
+\input{config/packages/xcolor}
+\input{config/packages/tikz}
+\input{config/packages/fancyhdr}
+\input{config/packages/titlesec}
+\input{config/packages/enumitem}
+\input{config/packages/tasks}
+\input{config/packages/tcolorbox}
+\input{config/packages/tabularray}
+
+% 4. Khai báo lệnh và môi trường sau khi mọi dependency đã sẵn sàng.
+\input{config/commands}

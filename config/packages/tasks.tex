@@ -1,0 +1,16 @@
+% Baseline cho danh sách ngang bằng package tasks.
+% Đây chỉ là mặc định; từng list phải override số cột/span/spacing theo độ dài item.
+% Giữ quan hệ item-indent = label-width + label-offset để text item căn có chủ đích.
+% Format màu tách khỏi `label` để representation dùng cho \ref không mang lệnh màu.
+\settasks{
+    label = \Alph*.,
+    label-format = \color{base950},
+    ref = \Alph*,
+    label-width = 1.4em,
+    label-offset = 0.4em,
+    item-indent = 1.8em,
+    column-sep = 1em,
+    before-skip = 4pt,
+    after-skip = 4pt,
+    after-item-skip = 4pt
+}

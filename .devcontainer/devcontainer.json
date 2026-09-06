@@ -1,0 +1,26 @@
+{
+    "name": "Toán 9 - tập một",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
+                "latex-workshop.latex.outDir": "%DIR%/build",
+                "latex-workshop.formatting.latex": "latexindent",
+                "latex-workshop.formatting.latexindent.args": [
+                    "%TMPFILE%",
+                    "-y=defaultIndent: '%INDENT%'"
+                ],
+                "latex-workshop.format.fixQuotes.enabled": true,
+                "latex-workshop.view.pdf.internal.port": 51188
+            },
+            "extensions": [
+                "EditorConfig.EditorConfig",
+                "James-Yu.latex-workshop"
+            ]
+        }
+    },
+    "remoteUser": "texlive"
+}

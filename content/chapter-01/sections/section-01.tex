@@ -1,0 +1,239 @@
+\section{Tập hợp các số nguyên}
+
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    \subsubsection{Tập hợp các số nguyên}
+
+    \begin{keyconcept}
+        \begin{itemize}
+            \item Số tự nhiên khác $0$ còn được gọi là số nguyên dương.
+            \item Các số nguyên âm, số $0$ và các số nguyên dương tạo thành tập hợp các số nguyên.
+            \item Tập hợp các số nguyên được kí hiệu là $\mathbb{Z}$.
+        \end{itemize}
+    \end{keyconcept}
+
+    \textbf{Lưu ý:}
+    \begin{itemize}
+        \item Số 0 không phải số nguyên âm, cũng không phải số nguyên dương.
+        \item Các số nguyên dương $1$, $2$, $3$, ... đều mang dấu ``$+$'' nên còn được viết là $+1$, $+2$, $+3$, ...
+    \end{itemize}
+
+
+    \subsubsection{So sánh các số nguyên}
+    \begin{keyconcept}
+        \textbf{So sánh hai số nguyên khác dấu:}
+        \begin{itemize}
+            \item Số nguyên âm luôn nhỏ hơn số $0$.
+            \item Số nguyên dương luôn lớn hơn số $0$.
+        \end{itemize}
+        Do đó, với hai số nguyên khác dấu, số nguyên âm luôn nhỏ hơn số nguyên dương.
+    \end{keyconcept}
+
+    \begin{questions}
+        \item So sánh các số nguyên sau:
+        \begin{tasks}[label={}](4)
+            \task $-3$\answerbox$2$
+            \task $4$\answerbox$-5$
+            \task $0$\answerbox$-1$
+            \task $0$\answerbox$3$
+        \end{tasks}
+    \end{questions}
+
+    \begin{keyconcept}
+        \textbf{Để so sánh hai số nguyên âm, ta làm như sau:}
+        \begin{itemize}
+            \item \textbf{Bước 1.} Bỏ dấu ``$-$'' trước cả hai số âm.
+            \item \textbf{Bước 2.} Trong hai số nguyên dương nhận được, số nào nhỏ hơn thì số nguyên âm ban đầu (tương ứng) sẽ lớn hơn.
+        \end{itemize}
+    \end{keyconcept}
+
+    \textbf{Minh họa:} So sánh $-3$ và $-5$.
+    \begin{itemize}
+        \item Bỏ dấu ``$-$'' trước cả hai số âm ta được hai số $3$ và $5$.
+        \item So sánh $3$ và $5$ ta thấy $3 < 5$.
+        \item Vậy số nguyên âm ban đầu (tương ứng) sẽ lớn hơn, tức là $-3 > -5$.
+    \end{itemize}
+
+    \begin{questions}[resume]
+        \item So sánh các số nguyên sau:
+        \begin{tasks}[label={},item-format={\centering},item-indent = 16pt](4)
+            \task $1$\answerbox$3$
+            \task $37$\answerbox$25$
+            \task $215$\answerbox$304$
+            \task $8$\answerbox$5$
+            \task $-1$\answerbox$-3$
+            \task $-37$\answerbox$-25$
+            \task $-215$\answerbox$-304$
+            \task $-8$\answerbox$-5$
+        \end{tasks}
+    \end{questions}
+
+    \subsubsection{Phép cộng hai số nguyên cùng dấu}
+    \begin{keyconcept}
+        \textbf{Để cộng hai số nguyên âm, ta làm như sau:}
+        \begin{itemize}
+            \item Bước 1. Bỏ dấu ``$-$'' trước mỗi số
+            \item Bước 2. Tính tổng của hai số nguyên dương nhận được ở Bước 1
+            \item Bước 3. Thêm dấu ``$-$'' trước kết quả nhận được ở Bước 2, ta có tổng cần tìm.
+        \end{itemize}
+    \end{keyconcept}
+
+    \textbf{Minh hoạ:}: Tính $(-8) + (-6)$.
+    \begin{itemize}
+        \item Bước 1. Bỏ dấu ``$-$'' trước mỗi số ta được hai số $8$ và $6$.
+        \item Bước 2. Tính tổng của hai số nguyên dương nhận được: $8 + 6 = 14$.
+        \item Bước 3. Thêm dấu ``$-$'' trước kết quả nhận được ở Bước 2, ta có tổng cần tìm: $(-8) + (-6) = -14$.
+    \end{itemize}
+
+    \begin{questions}[resume]
+        \item Tính:
+        \begin{questions}
+            \begin{multicols}{2}
+                \item $(-48)+(-67)$
+
+                Bỏ dấu ``$-$'' ta được hai số: \answerline*
+
+                Tính tổng hai số trên: \answerline*
+
+                Thêm dấu ``$-$'' vào tổng vừa tìm được: \answerline*
+                \item $(-79)+(-45)$
+
+                Bỏ dấu ``$-$'' ta được hai số: \answerline*
+
+                Tính tổng hai số trên: \answerline*
+
+                Thêm dấu ``$-$'' vào tổng vừa tìm được: \answerline*
+            \end{multicols}
+        \end{questions}
+    \end{questions}
+
+    \begin{keyconcept}
+        \textbf{Để cộng hai số nguyên khác dấu, ta làm như sau:}
+        \begin{itemize}
+            \item Bước 1. Bỏ dấu ``$-$'' trước số nguyên âm, giữ nguyên số còn lại
+            \item Bước 2. Trong hai số nguyên dương nhận được ở Bước 1, ta lấy số lớn hơn trừ đi số nhỏ hơn
+            \item Bước 3. Cho hiệu vừa nhận được dấu ban đầu của số lớn hơn ở Bước 2, ta có tổng cần tìm.
+        \end{itemize}
+    \end{keyconcept}
+
+    \textbf{Minh hoạ:} Tính $(-12) + 8$.
+    \begin{itemize}
+        \item Bước 1. Bỏ dấu ``$-$'' trước số nguyên âm ta được hai số $12$ và $8$.
+        \item Bước 2. Trong hai số nguyên dương nhận được, ta thấy $12 > 8$ nên ta lấy $12 - 8 = 4$.
+        \item Bước 3. Vì số lớn hơn ở Bước 2 là $12$ (ban đầu mang dấu ``$-$''), nên ta cho hiệu vừa nhận được dấu ``$-$'', ta có tổng cần tìm: $(-12) + 8 = -4$.
+    \end{itemize}
+
+    \begin{questions}[resume]
+        \item Tính:
+        \begin{questions}
+            \item $(-25) + 17$
+
+            Bỏ dấu ``$-$'' trước số nguyên âm ta được hai số: \answerline*
+
+            Lấy số lớn trừ đi số nhỏ: \answerline*
+
+            Số lớn ban đầu mang dấu gì?: \answerline* Cho hiệu vừa tìm được dấu đó: \answerline*
+            \item $46 + (-29)$
+
+            Bỏ dấu ``$-$'' trước số nguyên âm ta được hai số: \answerline*
+
+            Lấy số lớn trừ đi số nhỏ: \answerline*
+
+            Số lớn ban đầu mang dấu gì?: \answerline* Cho hiệu vừa tìm được dấu đó: \answerline*
+        \end{questions}
+    \end{questions}
+
+    \begin{keyconcept}
+        Hai số đối nhau là hai số có tổng bằng $0$.
+    \end{keyconcept}
+
+    \begin{questions}[resume]
+        \item Tìm số đối của các số sau:
+        \begin{tasks}[label={}](2)
+            \task $5$ có số đối là \answerline*
+            \task $-12$ có số đối là \answerline*
+            \task $0$ có số đối là \answerline*
+            \task $37$ có số đối là \answerline*
+        \end{tasks}
+    \end{questions}
+
+    \textbf{Lưu ý:} Số đối của số $0$ là chính nó.
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}
+        \item Trong các phát biểu sau đây, phát biểu nào đúng, phát biểu nào sai? Giải thích.
+        \begin{questions}
+            \item Tổng của hai số nguyên dương là số nguyên dương.\answerbox
+            \item Tổng của hai số nguyên âm là số nguyên âm.\answerbox
+            \item Tổng của hai số nguyên cùng dấu là số nguyên dương.\answerbox
+        \end{questions}
+
+        \item Tính (yêu cầu trình bày đây đủ để nhớ quy tắc tính):
+        \begin{questions}
+            \item $(-2018)+2018 = $ \answerline*
+            \item $57+(-93) = $ \answerline*
+            \item $(-38)+46 = $ \answerline*
+        \end{questions}
+
+        \item Tính (yêu cầu trình bày đây đủ để nhớ quy tắc tính):
+        \begin{questions}
+            \item $(-315)+(-15)= $ \answerline*
+            \item $(-215)+125= $ \answerline*
+            \item $(-200)+200= $ \answerline*
+            \item $(-151)+435= $ \answerline*
+        \end{questions}
+
+        \item So sánh
+        \begin{tasks}[label={}](3)
+            \task $801+(-65)$\answerbox$801$
+            \task $(-115)+23$\answerbox$-115$
+            \task $(-39)+(-22)$\answerbox$-39$
+            \task $43+(-12)$\answerbox$-43+12$
+            \task $1634+(-15)$\answerbox$1534$
+            \task $(-207)+37$\answerbox$-170$
+        \end{tasks}
+
+        \item Cho ví dụ về phép cộng của hai số nguyên khác dấu sao cho:
+        \begin{questions}
+            \item Tổng của chúng là số nguyên dương: \answerline*
+            \item Tổng của chúng là số nguyên âm: \answerline*
+            \item Tổng của chúng là số $0$: \answerline*
+        \end{questions}
+
+        \item Ở một số máy tính cầm tay, nút dấu âm có dạng $+/-$
+        Dùng máy tính cầm tay để tính:
+        \begin{multicols}{3}
+            $(-123)+(-18) = $ \answerline*
+
+            $(-375)+210 = $ \answerline*
+
+            $(-127)+25+(-136) = $ \answerline*
+        \end{multicols}
+
+        \item Nhiệt độ ở Thủ đô Ôt-ta-oa, Ca-na-đa (Ottawa, Canada) lúc $7$ giờ là $-4^{\circ}C$, đến $10$ giờ tăng thêm $6^{\circ}C$. Nhiệt độ ở Ôt-ta-oa lúc $10$ giờ là bao nhiêu?
+
+        \answerline
+        \item Một cửa hàng kinh doanh có lợi nhuận như sau: tháng đầu tiên là $-10 \, 000 \, 000$ đồng; tháng thứ hai là $30 \, 000 \, 000$ đồng. Tính lợi nhuận của cửa hàng sau hai tháng đó.
+
+        \answerline
+        \item Để di chuyển giữa các tầng của toà nhà cao tầng, người ta thường sử dụng thang máy. Tầng có mặt sàn là mặt đất thường được gọi là tầng G, các tầng ở dưới mặt đất lần lượt từ trên xuống được gọi là B1, B2, ... Người ta biểu thị vị trí tầng G là 0, tầng hầm B1 là $-1$, tầng hầm B2 là $-2$, ...
+        \begin{questions}
+            \item Từ tầng G bác Sơn đi thang máy xuống tầng hầm B1. Sau đó bác đi xuống tiếp 2 tầng nữa. Tìm số nguyên biểu thị vị trí tầng mà bác Sơn đến khi kết thúc hành trình.
+
+            \answerline
+            \item Bác Dư đang ở tầng hầm B2, sau đó bác đi thang máy lên 3 tầng rồi đi xuống 2 tầng. Tìm số nguyên biểu thị vị trí tầng mà bác Dư đến khi kết thúc hành trình.
+
+            \answerline
+
+            \answerline
+        \end{questions}
+
+        \item Một công ty nhập khẩu hàng đông lạnh cần bảo quản trữ đông khối lượng hàng hóa ở một nhiệt độ cố định nào đó. Do khối lượng hàng hóa nhiều hơn dự kiến nên công ty phải giảm nhiệt độ xuống thêm $4^{\circ}C$ thì nhiệt độ lúc này là $-11^{\circ}C$. Hỏi nhiệt độ cố định ban đầu để bảo quản khối hàng đông lạnh là bao nhiêu?
+
+        \answerline
+    \end{questions}
+\end{exercises}

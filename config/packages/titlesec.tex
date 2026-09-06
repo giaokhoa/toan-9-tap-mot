@@ -1,0 +1,106 @@
+% Biểu tượng tiêu đề được thay đổi theo từng phần.
+\newcommand{\subsectionicon}{}
+
+% Bắt đầu mỗi bài học trên trang mới và đánh số trang lại từ 1.
+% (chia sẽ từng bài trước khi thành sách)
+\newcommand{\sectionbreak}{\clearpage\thispagestyle{sectionfirst}\pagenumbering{arabic}}
+
+% Tiêu đề bài học: số ở bên trái, tên bài ở bên phải.
+\titlespacing{\section}{0pt}{0pt}{0pt}
+\titleformat{\section}[block]
+{}
+{}
+{0pt}
+{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \begin{scope}[shift={([xshift=48pt]current page.north west)}]
+            \path
+            (0,0) coordinate (NW)
+            (56pt,0) coordinate (NE)
+            (0,-48pt) coordinate (SW)
+            (56pt,-48pt) coordinate (SE)
+            (28pt,-72pt) coordinate (TIP);
+            \fill[base700] (NW) -- (NE) -- (SE) -- (TIP) -- (SW) -- cycle;
+            \path[name path=left-angled-helper] ($(SW)!4pt!90:(TIP)$) -- ($(TIP)!4pt!-90:(SW)$);
+            \path[name path=right-angled-helper] ($(SE)!4pt!-90:(TIP)$) -- ($(TIP)!4pt!90:(SE)$);
+            \path[name intersections={of=left-angled-helper and right-angled-helper, by=stitch-tip}];
+            \path[name path=left-vertical-helper] ([xshift=4pt]NW) -- ([xshift=4pt]SW);
+            \path[name path=right-vertical-helper] ([xshift=-4pt]NE) -- ([xshift=-4pt]SE);
+            \path[name intersections={of=left-vertical-helper and left-angled-helper, by=inner-sw}];
+            \path[name intersections={of=right-vertical-helper and right-angled-helper, by=inner-se}];
+            \draw[white, dashed, dash pattern=on 3pt off 2pt]
+            ([xshift=4pt]NW) -- (inner-sw) -- (stitch-tip) -- (inner-se) -- ([xshift=-4pt]NE);
+            \node[text=white, font={\LARGE\titlefont}] at (28pt, -32pt) {\thesection};
+        \end{scope}
+        \node [
+            anchor=north west,
+            align=left,
+            font=\color{base800}\titlefont\Large,
+            minimum height=64pt
+        ]
+        at ([xshift=136pt, yshift=-8pt]current page.north west)
+        {\uppercase{#1}};
+    \end{tikzpicture}%
+}
+
+% Tiêu đề section không phải bài: không hiển thị số bài và căn giữa tiêu đề.
+\titleformat{name=\section,numberless}[block]
+{}
+{}
+{0pt}
+{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node [
+            anchor=north,
+            align=center,
+            font=\color{base800}\titlefont\Large,
+            minimum height=64pt
+        ]
+        at ([yshift=-8pt]current page.north)
+        {\uppercase{#1}};
+    \end{tikzpicture}%
+}
+
+% Tiêu đề mục có biểu tượng và nền tự co theo nội dung.
+\titlespacing{\subsection}{0pt}{8pt}{4pt}
+\titleformat{\subsection}[block]
+{\vspace{8pt}}
+{}
+{0pt}
+{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node [anchor=west, inner ysep=6pt, inner xsep=8pt] (title) at (14pt, 0) {\color{base800}\small\titlefont\uppercase{#1}};
+        \path let \p{north} = (title.north), \p{south} = (title.south) in
+        \pgfextra{
+            \pgfmathsetlengthmacro{\squaresize}{\y{north}-\y{south}}
+            \xdef\globalSquaresize{\squaresize}
+        }
+        node [left color=base700, right color=base600, minimum size=\squaresize, rounded corners=8pt] (icon) {\subsectionicon};
+        \begin{scope}[on background layer]
+            \path [draw=none, left color=base200, right color=base100]
+            ($(icon.south east) + (-8pt, 0)$) --
+            (title.south east) --
+            ($(title.south east) + (16pt,0.5*\globalSquaresize)$) --
+            (title.north east) --
+            ($(icon.north east) + (-8pt, 0)$) --
+            cycle;
+        \end{scope}
+    \end{tikzpicture}%
+}
+[\strut]
+
+% Tiêu đề cấp 2 dùng số La Mã và chữ in hoa.
+\titlespacing{\subsubsection}{0pt}{8pt}{4pt}
+\titleformat{\subsubsection}[block]
+{\small\bfseries}
+{\thesubsubsection.}
+{0.5em}
+{\uppercase{#1}}
+
+% Tiêu đề đoạn dùng số Ả Rập.
+\titlespacing{\paragraph}{0pt}{8pt}{4pt}
+\titleformat{\paragraph}[block]
+{\bfseries}
+{\theparagraph.}
+{0.5em}
+{#1}

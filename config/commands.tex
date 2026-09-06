@@ -1,0 +1,49 @@
+% Định dạng lại cách đánh số chương, bài học, mục
+% - Chương: I, II, III, ...
+% - Bài học: 1, 2, 3, ...
+% - Mục: I, II, III, ...
+% - Đoạn: 1, 2, 3, ...
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsubsection}{\Roman{subsubsection}}
+\renewcommand{\theparagraph}{\arabic{paragraph}}
+
+% Đánh số tiêu đề đến cấp \paragraph.
+\setcounter{secnumdepth}{4}
+
+% Mỗi khi bật chữ đậm, đồng thời áp dụng màu chữ chủ đạo đậm nhất.
+\renewcommand{\bfseries}{\color{base950}\fontseries{b}\selectfont}
+
+% Lesson chỉ quyết định style/icon; semantic label của nội dung được viết trực tiếp
+% trong source lesson. `questions` + named series chỉ dành cho SGK/SBT numbered exercises.
+\newenvironment{lesson}{
+    \renewcommand{\subsectionicon}{\large\color{white}\iconLightbulbOn}
+}{}
+
+\newenvironment{exercises}{
+    \renewcommand{\subsectionicon}{\large\color{white}\iconPenToSquare}
+    \renewcommand{\questionprefix}{\arabic{chapter}.}
+}{}
+
+\newenvironment{practice}{
+    \renewcommand{\subsectionicon}{\large\color{white}\iconPersonRunningFast}
+    \renewcommand{\questionprefix}{\arabic{chapter}.}
+}{}
+
+% Dùng \answerline cho dòng riêng, thêm * để dùng trong câu;
+% truyền độ dài trong [] khi cần, ví dụ \answerline*[4cm].
+\NewDocumentCommand{\answerline}{s o}{\IfBooleanTF{#1}
+    {\IfNoValueTF{#2}
+        {{\color{base200}\hrulefill}}
+        {{\color{base200}\rule{#2}{0.4pt}}}\rule{0pt}{\dimexpr\ht\strutbox+8pt\relax}}
+    {\par\vspace{6pt}\noindent
+        \IfNoValueTF{#2}
+        {{\color{base200}\hrulefill}}
+        {{\color{base200}\rule{#2}{0.4pt}}}\rule[-2pt]{0pt}{0pt}\par}}
+
+% Ô vuông để điền đáp án ngắn.
+\newcommand{\answerbox}{%
+    \nobreak\hspace{4pt}\tikz[baseline={3pt}]{
+        \draw (0,0) rectangle (14pt,14pt);
+    }\nobreak\hspace{4pt}%
+}

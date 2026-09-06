@@ -1,0 +1,56 @@
+% Nội dung chân trang dùng chung cho các kiểu trang.
+\makeatletter
+\newcommand{\pageauthor}{{\color{base800}\small
+        \raisebox{0.2ex}\iconUserTie\, \@author}}
+\makeatother
+
+% Hiển thị số trang trong một dải màu.
+\newcommand{\pagenumber}{%
+    \begin{tikzpicture}[
+            baseline=(pagenum.base),
+            overlay
+        ]
+        \node[
+            anchor=east,
+            left color=white,
+            right color=base200,
+            inner xsep=16pt,
+            inner ysep=8pt
+        ] (pagenum) at (16pt,0) {\color{base800}\fontseries{b}\selectfont\thepage};
+        \path[draw=none,fill=base600]
+        (pagenum.south east)
+        -- ++(-4pt,4pt)
+        -- ($(pagenum.north east) + (-4pt,-4pt)$)
+        -- (pagenum.north east)
+        -- cycle;
+    \end{tikzpicture}%
+}
+
+\newcommand{\pagefooter}{
+    \fancyfoot[L]{\pageauthor}
+    \fancyfoot[R]{\pagenumber}
+}
+
+% Định dạng đầu và chân trang mặc định.
+\pagestyle{fancy}
+\fancyhf{}
+
+% Đường kẻ ngăn cách đầu trang với nội dung.
+\renewcommand{\headrulewidth}{0.1pt}
+\renewcommand{\headrule}{
+    \color{base700}
+    \hrule width\headwidth height\headrulewidth
+    \vskip-\headrulewidth
+}
+
+% Tên mục hiện tại ở trái; số điện thoại ở phải.
+\fancyhead[L]{\color{base800} \leftmark}
+\fancyhead[R]{\color{base800} {\small\iconMobile}\, \phonenumber}
+\pagefooter
+
+% Trang đầu bài học bỏ phần đầu trang nhưng vẫn giữ chân trang.
+\fancypagestyle{sectionfirst}{
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \pagefooter
+}

@@ -1,0 +1,26 @@
+% Dùng Times New Roman cho nội dung chính.
+\setmainfont{Times New Roman}
+
+% Dùng Chonburi cho tiêu đề.
+\newfontfamily{\titlefont}{Chonburi}[
+    Path = ./assets/fonts/,
+    Extension = .ttf
+]
+
+% Nạp hai kiểu Font Awesome để dùng cho biểu tượng.
+\newfontfamily{\far}{Regular}[
+    Path = ./assets/fonts/,
+    Extension = .otf
+]
+
+\newfontfamily{\fas}{Solid}[
+    Path = ./assets/fonts/,
+    Extension = .otf
+]
+
+% Ánh xạ mã Unicode của Font Awesome thành các lệnh biểu tượng dễ nhớ.
+\newcommand{\iconLightbulbOn}{{\far\char"F672}}
+\newcommand{\iconMobile}{{\far\char"F3CE}}
+\newcommand{\iconPenToSquare}{{\far\char"F044}}
+\newcommand{\iconPersonRunningFast}{{\far\char"E5FF}}
+\newcommand{\iconUserTie}{{\fas\char"F508}}

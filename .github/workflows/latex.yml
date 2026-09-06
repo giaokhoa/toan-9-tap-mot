@@ -1,0 +1,89 @@
+name: LaTeX CI
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'build-origin/**'
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - 'build-origin/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: latex-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build PDF in devcontainer
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Build with repository devcontainer
+        uses: devcontainers/ci@v0.3
+        with:
+          push: never
+          runCmd: |
+            mkdir -p build
+            latexmk \
+              -xelatex \
+              -interaction=nonstopmode \
+              -halt-on-error \
+              -file-line-error \
+              -synctex=1 \
+              -outdir=build \
+              main.tex
+            test -s build/main.pdf
+
+      - name: Upload PDF and LaTeX log
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: latex-build-${{ github.sha }}
+          path: |
+            build/main.pdf
+            build/main.log
+            build/main.fls
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Publish latest build to main
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && success()
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          test -s build/main.pdf
+          test -s build/main.log
+          test -s build/main.fls
+
+          git fetch origin main
+          if [ "$(git rev-parse origin/main)" != "${GITHUB_SHA}" ]; then
+            echo "main advanced while this build was running; skip stale build publish."
+            exit 0
+          fi
+
+          mkdir -p build-origin
+          cp build/main.pdf build-origin/main.pdf
+          cp build/main.log build-origin/main.log
+          cp build/main.fls build-origin/main.fls
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -f build-origin/main.pdf build-origin/main.log build-origin/main.fls
+          if git diff --cached --quiet; then
+            echo "Build artifacts unchanged; nothing to publish."
+            exit 0
+          fi
+
+          git commit -m "chore(build-origin): update generated artifacts [skip ci]"
+          git push origin HEAD:main

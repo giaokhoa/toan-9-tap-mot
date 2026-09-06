@@ -1,0 +1,26 @@
+% Bộ library mặc định cho hình toán học semantic:
+% - calc: nội suy/trung điểm/tính tọa độ từ điểm đã đặt tên;
+% - intersections: dựng giao điểm thật của named paths;
+% - backgrounds: tách lớp nền khỏi cạnh/điểm/nhãn;
+% - positioning: đặt nhãn/node bằng anchor và quan hệ tương đối;
+% - angles + quotes: dựng/ghi nhãn góc từ các điểm có tên;
+% - babel: cô lập ký tự shorthand đang active của babel khi TikZ phân tích cú pháp.
+% - arrows.meta: dùng arrow tip có kích thước kiểm soát được cho các hình cần mũi tên rõ.
+\usetikzlibrary{calc, intersections, backgrounds, positioning, angles, quotes, babel, arrows.meta}
+
+\tikzset{
+    % Trục số dùng Stealth lớn hơn arrow mặc định để đọc rõ ở kích thước PDF thật.
+    number line axis/.style={
+        -{Stealth[length=3mm,width=2.2mm]}
+    },
+    % Style dùng chung cho sơ đồ cây phân tích thừa số.
+    % Khoảng cách giữa các level/sibling vẫn là dữ liệu hình học cục bộ của từng cây.
+    factor tree/.style={
+        every node/.style={
+            draw,
+            rounded corners=2pt,
+            minimum width=12mm,
+            minimum height=7mm
+        }
+    }
+}

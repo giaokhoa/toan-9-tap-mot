@@ -1,0 +1,13 @@
+% Khoảng đệm và đường kẻ mặc định cho bảng thường lẫn bảng dài.
+\SetTblrInner[tblr, longtblr]{
+    abovesep = 4pt,
+    hlines = {solid, fg=base800},
+    vlines = {solid, fg=base700}
+}
+
+% Khoảng cách bên ngoài bảng dài; không sinh nhãn bảng tự động.
+\SetTblrOuter[longtblr]{
+    presep=8pt,
+    postsep=12pt,
+    label = none
+}
