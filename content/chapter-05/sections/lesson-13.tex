@@ -70,7 +70,7 @@
     \begin{center}
         \begin{tikzpicture}
             \coordinate (O) at (0,0);
-            \coordinate (A) at (1.43,1.10);
+            \coordinate (A) at (38:1.8);
             \coordinate (C) at (0.95,0);
             \coordinate (B) at (2.35,0);
             \draw (O) circle (1.8);
@@ -105,6 +105,8 @@
             \coordinate (O) at (0,0);
             \coordinate (A) at (-1.8,0);
             \coordinate (B) at (1.8,0);
+            \coordinate (L) at ($(A)!0.5!(O)$);
+            \coordinate (R) at ($(O)!0.5!(B)$);
             \draw (O) circle (1.8);
             \draw (A)--(B);
             \fill (O) circle (1.2pt);
@@ -113,8 +115,8 @@
             \node[above=2pt of O] {$O$};
             \node[left=2pt of A] {$A$};
             \node[right=2pt of B] {$B$};
-            \draw (-0.92,-0.08)--(-0.92,0.08);
-            \draw (0.92,-0.08)--(0.92,0.08);
+            \draw ($(L)+(0,-0.08)$)--($(L)+(0,0.08)$);
+            \draw ($(R)+(0,-0.08)$)--($(R)+(0,0.08)$);
         \end{tikzpicture}
 
         \textit{Hình 5.2}
@@ -268,10 +270,10 @@
             \coordinate (O) at (0,0);
             \coordinate (A) at (-1.8,0);
             \coordinate (B) at (1.8,0);
-            \coordinate (M) at (1.2,1.3416);
-            \coordinate (N) at (-1.2,-1.3416);
-            \coordinate (H) at (1.2,0);
-            \coordinate (P) at (1.2,-1.3416);
+            \coordinate (M) at (48:1.8);
+            \coordinate (N) at ($(M)!2!(O)$);
+            \coordinate (H) at ($(A)!(M)!(B)$);
+            \coordinate (P) at ($(M)!2!(H)$);
             \draw (O) circle (1.8);
             \draw (A)--(B);
             \draw (N)--(M);
