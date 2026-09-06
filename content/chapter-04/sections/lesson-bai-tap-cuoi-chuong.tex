@@ -29,9 +29,9 @@
             \draw (A)--(B)--(C)--cycle;
             \pic[draw, angle radius=3.5mm] {right angle=A--C--B};
             \pic[draw, "$\alpha$", angle radius=5mm, angle eccentricity=1.35] {angle=B--A--C};
-            \node[left=2pt of $(A)!0.5!(C)$] {$3$};
-            \node[right=2pt of $(C)!0.5!(B)$] {$4$};
-            \node[below=2pt of $(A)!0.5!(B)$] {$5$};
+            \node at ($(A)!0.5!(C)+(-0.22,0)$) {$3$};
+            \node at ($(C)!0.5!(B)+(0.22,0)$) {$4$};
+            \node at ($(A)!0.5!(B)+(0,-0.28)$) {$5$};
             \node[below=9pt of B] {Hình 4.32};
         \end{tikzpicture}
         \end{center}
@@ -56,7 +56,7 @@
             \node[below left=1pt of M] {$M$};
             \node[above left=1pt of N] {$N$};
             \node[below right=1pt of P] {$P$};
-            \node[below=8pt of $(M)!0.5!(P)$] {Hình 4.33};
+            \node at ($(M)!0.5!(P)+(0,-0.48)$) {Hình 4.33};
         \end{tikzpicture}
         \end{center}
 
@@ -80,7 +80,7 @@
             \node[below left=1pt of B] {$B$};
             \node[below right=1pt of A] {$A$};
             \node[above right=1pt of C] {$C$};
-            \node[below=8pt of $(B)!0.5!(A)$] {Hình 4.34};
+            \node at ($(B)!0.5!(A)+(0,-0.48)$) {Hình 4.34};
         \end{tikzpicture}
         \end{center}
 
@@ -126,8 +126,8 @@
             \pic[draw, angle radius=4mm] {right angle=L--H--T};
             \pic[draw, "$\alpha$", angle radius=5mm, angle eccentricity=1.35] {angle=T--R--L};
             \draw ($(L)+(0,-0.25)$)--($(R)+(0,-0.25)$);
-            \node[below=2pt of $(L)!0.5!(R)+(0,-0.25)$] {$4{,}4\ \text{m}$};
-            \node[right=2pt of $(T)!0.5!(H)$] {$1{,}8\ \text{m}$};
+            \node at ($(L)!0.5!(R)+(0,-0.52)$) {$4{,}4\ \text{m}$};
+            \node at ($(T)!0.5!(H)+(0.28,0)$) {$1{,}8\ \text{m}$};
             \node[below=9pt of R] {Hình 4.35};
         \end{tikzpicture}
         \end{center}
@@ -146,7 +146,7 @@
             \draw (T)--(R)--(G)--cycle;
             \pic[draw, angle radius=5mm, "$20^\circ$", angle eccentricity=1.45] {angle=R--T--G};
             \pic[draw, angle radius=3.5mm] {right angle=T--R--G};
-            \node[below=2pt of $(T)!0.5!(R)$] {$5\ \text{m}$};
+            \node at ($(T)!0.5!(R)+(0,-0.28)$) {$5\ \text{m}$};
             \node[below=9pt of R] {Hình 4.36};
         \end{tikzpicture}
         \end{center}
@@ -180,7 +180,7 @@
             \node[below left=1pt of B] {$B$};
             \node[below right=1pt of A] {$A$};
             \node[above right=1pt of C] {$C$};
-            \node[below=8pt of $(B)!0.5!(A)$] {Hình 4.37};
+            \node at ($(B)!0.5!(A)+(0,-0.48)$) {Hình 4.37};
         \end{tikzpicture}
         \end{center}
 
@@ -189,7 +189,7 @@
         Vào khoảng năm 200 trước Công nguyên, Eratosthenes (Ô-ra-tô-xten), một nhà toán học và thiên văn học người Hy Lạp, đã ước lượng được “chu vi” của Trái Đất (chu vi của đường Xích Đạo) nhờ hai quan sát sau:
         \begin{enumerate}[label=\arabic*.]
             \item Hồi đó, hằng năm cứ vào trưa ngày Hạ chí (21/6), người ta thấy tia sáng mặt trời chiếu thẳng xuống đáy một cái giếng sâu nổi tiếng ở thành phố Syene (Xy-en), tức là tia sáng chiếu thẳng đứng.
-            \item Cũng vào trưa một ngày Hạ chí, ở thành phố Alexandria (A-lếch-xăng-đri-a) cách Syene 800 km, Eratosthenes thấy một tháp cao 25 m có bóng trên mặt đất dài 3,1 m.
+            \item Cùng vào trưa một ngày Hạ chí, ở thành phố Alexandria (A-lếch-xăng-đri-a) cách Syene 800 km, Eratosthenes thấy một tháp cao 25 m có bóng trên mặt đất dài 3,1 m.
         \end{enumerate}
 
         Từ hai quan sát trên, ông có thể tính xấp xỉ “chu vi” của Trái Đất như thế nào? (trên Hình 4.38, điểm $O$ là tâm Trái Đất, điểm $S$ tượng trưng cho thành phố Syene, điểm $A$ tượng trưng cho thành phố Alexandria, điểm $H$ là đỉnh của tháp, bóng của tháp trên mặt đất được coi là đoạn thẳng $AB$).
@@ -258,11 +258,10 @@
         \begin{center}
         \begin{tikzpicture}
             \coordinate (B) at (0,0);
-            \coordinate (A) at (0,4.2);
             \coordinate (C) at (6.4,0);
-            \coordinate (E) at (6.4,4.2);
-            \path (A) -- ++(-15:6.4) coordinate (Dline);
-            \coordinate (D) at (6.4,{4.2-6.4*tan(15)});
+            \coordinate (A) at (0,{6.4*tan(43)});
+            \coordinate (E) at (6.4,{6.4*tan(43)});
+            \coordinate (D) at (6.4,{6.4*(tan(43)-tan(15))});
             \draw (B)--(A);
             \draw (C)--(D);
             \draw (B)--(C);
@@ -274,8 +273,8 @@
             \node[above left=1pt of A] {$A$};
             \node[above right=1pt of D] {$D$};
             \node[below right=1pt of C] {$C$};
-            \node[below=2pt of $(B)!0.5!(C)$] {$32\ \text{m}$};
-            \node[below=9pt of $(B)!0.5!(C)$] {Hình 4.16};
+            \node at ($(B)!0.5!(C)+(0,-0.28)$) {$32\ \text{m}$};
+            \node at ($(B)!0.5!(C)+(0,-0.72)$) {Hình 4.16};
         \end{tikzpicture}
         \end{center}
 
@@ -312,7 +311,7 @@
             \draw (A)--(H)--(M)--cycle;
             \pic[draw, angle radius=3.5mm] {right angle=A--H--M};
             \pic[draw, "$20^\circ$", angle radius=5mm, angle eccentricity=1.35] {angle=H--A--M};
-            \node[left=2pt of $(A)!0.5!(H)$] {$18$};
+            \node at ($(A)!0.5!(H)+(-0.28,0)$) {$18$};
             \node[below left=1pt of A] {$A$};
             \node[above left=1pt of H] {$H$};
             \node[above right=1pt of M] {$M$};
@@ -341,7 +340,7 @@
             \node[below right=1pt of K] {$K$};
             \node[left=1pt of B] {$B$};
             \node[left=1pt of A] {$A$};
-            \node[below=8pt of $(I)!0.5!(K)$] {Hình 4.20};
+            \node at ($(I)!0.5!(K)+(0,-0.48)$) {Hình 4.20};
         \end{tikzpicture}
         \end{center}
 
