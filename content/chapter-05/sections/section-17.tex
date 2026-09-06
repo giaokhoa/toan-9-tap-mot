@@ -1,0 +1,484 @@
+\setcounter{section}{16}
+\section{Vị trí tương đối của hai đường tròn}
+
+% Nguồn SGK: trang 104--107 theo direct image URL trong issue #28.
+% Nguồn SBT: SBT TOAN 9 KNTT TAP 1.pdf, trang 66--68,
+% SHA-256 d7ffd04618456682795977e5c47de7874161a35e8606e5bac1906881603a72f7.
+
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    \begin{center}
+        \begin{tblr}{
+            width=\linewidth,
+            colspec={X[l] X[l]},
+            cells={valign=t},
+            row{1}={font=\bfseries, halign=c}
+        }
+            Khái niệm, thuật ngữ & Kiến thức, kĩ năng \\
+            \textbullet\ Hai đường tròn cắt nhau\par
+            \textbullet\ Hai đường tròn tiếp xúc nhau\par
+            \textbullet\ Hai đường tròn không giao nhau.\par
+            \textbullet\ Tiếp điểm
+            &
+            \textbullet\ Nhận biết các vị trí tương đối của hai đường tròn.
+        \end{tblr}
+    \end{center}
+
+    \begin{itemize}
+        \item Nguyệt thực là hiện tượng Mặt Trăng bị bóng của Trái Đất che khuất toàn bộ (nguyệt thực toàn phần) hay một phần (H.5.30). Do Mặt Trăng và bóng Trái Đất được xem là có dạng hình tròn nên nguyệt thực cho ta một hình ảnh thực tế về vị trí tương đối của hai đường tròn. Em có thể cắt ra hai hình tròn bằng giấy để mô phỏng hiện tượng nguyệt thực. Nhưng trước hết hãy tìm hiểu về vị trí tương đối của hai đường tròn.
+        \item Sau đây, khi nói hai đường tròn mà không có giải thích gì thêm, ta hiểu đó là hai đường tròn phân biệt.
+    \end{itemize}
+
+    % TODO(HINH-NGUON): bo sung asset/crop Hinh 5.30 tu SGK trang 104; khong redraw xap xi bang TikZ.
+
+    \textbf{1. HAI ĐƯỜNG TRÒN CẮT NHAU}
+
+    \textbf{Tìm hiểu hai đường tròn cắt nhau}
+
+    \textbf{HĐ1} Cho Hình 5.31, trong đó giả sử $O'A<OA$. Ta có $OA-O'A<OO'<OA+O'A$.
+
+    Hãy vẽ hai đường tròn $(O;OA)$ và $(O';O'A)$ và cho biết hai đường tròn đó có mấy điểm chung?
+
+    \begin{center}
+        \begin{tikzpicture}[x=1cm,y=1cm]
+            \coordinate (O) at (0,1.3);
+            \coordinate (Op) at (4,1.3);
+            \coordinate (A) at (2.45,0);
+            \draw (O)--(Op)--(A)--cycle;
+            \fill (O) circle (1.2pt);
+            \fill (Op) circle (1.2pt);
+            \fill (A) circle (1.2pt);
+            \node[above left=1pt of O] {$O$};
+            \node[above right=1pt of Op] {$O'$};
+            \node[below=1pt of A] {$A$};
+        \end{tikzpicture}
+
+        \textit{Hình 5.31}
+    \end{center}
+
+    \answerline
+    \answerline
+
+    \begin{keyconcept}
+        Nếu hai đường tròn có đúng hai điểm chung thì ta nói đó là hai đường tròn cắt nhau. Hai điểm chung gọi là hai giao điểm của chúng.
+    \end{keyconcept}
+
+    \textbf{Nhận xét}
+
+    Từ HĐ1 ta thấy hai đường tròn $(O;R)$ và $(O';R')$ cắt nhau khi
+    \[
+        R-R'<OO'<R+R'\quad (\text{với }R>R').
+    \]
+
+    \textbf{Ví dụ 1} Cho hai điểm $O$ và $O'$ sao cho $OO'=5$ cm. Hãy giải thích tại sao hai đường tròn $(O;4\text{ cm})$ và $(O';3\text{ cm})$ cắt nhau.
+
+    \begin{center}
+        \begin{tikzpicture}[x=1cm,y=1cm]
+            \coordinate (O) at (0,0);
+            \coordinate (Op) at (2.5,0);
+            \coordinate (A) at (1.6,-1.2);
+            \coordinate (B) at (1.6,1.2);
+            \draw (O) circle (2);
+            \draw (Op) circle (1.5);
+            \draw (O)--(A)--(Op);
+            \draw (O)--(B);
+            \fill (O) circle (1.2pt);
+            \fill (Op) circle (1.2pt);
+            \fill (A) circle (1.2pt);
+            \fill (B) circle (1.2pt);
+            \node[left=2pt of O] {$O$};
+            \node[right=2pt of Op] {$O'$};
+            \node[below=1pt of A] {$A$};
+            \node[above=1pt of B] {$B$};
+        \end{tikzpicture}
+
+        \textit{Hình 5.32}
+    \end{center}
+
+    \textbf{Giải}
+
+    Đặt $R=4$ cm; $R'=3$ cm, ta thấy $1$ cm $<5$ cm $<7$ cm, nên $R-R'<OO'<R+R'$. Do đó, hai đường tròn đã cho cắt nhau.
+
+    \textbf{Luyện tập 1}
+
+    Cho đường tròn $(O;5\text{ cm})$ và điểm $I$ cách $O$ một khoảng $2$ cm. Xác định vị trí tương đối của đường tròn đã cho và đường tròn $(I;r)$ trong mỗi trường hợp sau:
+    \begin{enumerate}[label=\alph*)]
+        \item $r=4$ cm;
+        \item $r=6$ cm.
+    \end{enumerate}
+
+    \answerline
+    \answerline
+
+    \textbf{2. HAI ĐƯỜNG TRÒN TIẾP XÚC NHAU}
+
+    \textbf{Tìm hiểu hai đường tròn tiếp xúc nhau.}
+
+    \textbf{HĐ2} Trên Hình 5.33a, ta có $OO'=OA+O'A$; trên Hình 5.33b, ta có $OO'=OA-O'A$. Trong mỗi trường hợp, hãy vẽ hai đường tròn $(O;OA)$ và $(O';O'A)$ và cho biết hai đường tròn đó có mấy điểm chung?
+
+    \begin{center}
+        \begin{tikzpicture}[x=1cm,y=1cm]
+            \coordinate (Oa) at (0,0);
+            \coordinate (Aa) at (2,0);
+            \coordinate (Opa) at (4,0);
+            \draw (Oa)--(Opa);
+            \fill (Oa) circle (1.2pt);
+            \fill (Aa) circle (1.2pt);
+            \fill (Opa) circle (1.2pt);
+            \node[above=2pt of Oa] {$O$};
+            \node[above=2pt of Aa] {$A$};
+            \node[above=2pt of Opa] {$O'$};
+            \node[below=5pt of Aa] {a)};
+
+            \coordinate (Ob) at (6,0);
+            \coordinate (Opb) at (8,0);
+            \coordinate (Ab) at (10,0);
+            \draw (Ob)--(Ab);
+            \fill (Ob) circle (1.2pt);
+            \fill (Opb) circle (1.2pt);
+            \fill (Ab) circle (1.2pt);
+            \node[above=2pt of Ob] {$O$};
+            \node[above=2pt of Opb] {$O'$};
+            \node[above=2pt of Ab] {$A$};
+            \node[below=5pt of Opb] {b)};
+        \end{tikzpicture}
+
+        \textit{Hình 5.33}
+    \end{center}
+
+    \answerline
+    \answerline
+
+    \begin{keyconcept}
+        Nếu hai đường tròn có duy nhất một điểm chung thì ta nói đó là hai đường tròn tiếp xúc nhau. Điểm chung gọi là tiếp điểm của chúng.
+    \end{keyconcept}
+
+    \begin{center}
+        \begin{tikzpicture}[x=1cm,y=1cm]
+            \coordinate (Oa) at (0,0);
+            \coordinate (Aa) at (1.6,0);
+            \coordinate (Opa) at (2.6,0);
+            \draw (Oa) circle (1.6);
+            \draw (Opa) circle (1);
+            \draw (Oa)--(Opa);
+            \fill (Oa) circle (1.2pt);
+            \fill (Aa) circle (1.2pt);
+            \fill (Opa) circle (1.2pt);
+            \node[left=2pt of Oa] {$O$};
+            \node[above=2pt of Aa] {$A$};
+            \node[right=2pt of Opa] {$O'$};
+            \node[below=1.9cm of Aa] {a) Tiếp xúc ngoài};
+
+            \coordinate (Ob) at (6.5,0);
+            \coordinate (Opb) at (7.15,0);
+            \coordinate (Ab) at (8.3,0);
+            \draw (Ob) circle (1.8);
+            \draw (Opb) circle (1.15);
+            \draw (Ob)--(Ab);
+            \fill (Ob) circle (1.2pt);
+            \fill (Opb) circle (1.2pt);
+            \fill (Ab) circle (1.2pt);
+            \node[left=2pt of Ob] {$O$};
+            \node[above=2pt of Opb] {$O'$};
+            \node[right=2pt of Ab] {$A$};
+            \node[below=2.1cm of Opb] {b) Tiếp xúc trong};
+        \end{tikzpicture}
+
+        \textit{Hình 5.34}
+    \end{center}
+
+    \textbf{Chú ý}
+
+    Người ta còn phân biệt hai trường hợp: hai đường tròn tiếp xúc ngoài (H.5.34a) và hai đường tròn tiếp xúc trong (H.5.34b).
+
+    \textbf{Nhận xét}
+    \begin{enumerate}[label=\arabic*)]
+        \item Từ HĐ2, ta nhận thấy: Hai đường tròn $(O;R)$ và $(O';R')$ tiếp xúc ngoài khi $OO'=R+R'$, và tiếp xúc trong khi $OO'=R-R'$ $(R>R')$.
+        \item Nếu hai đường tròn tiếp xúc với nhau thì tiếp điểm thẳng hàng với hai tâm.
+    \end{enumerate}
+
+    \textbf{Ví dụ 2}
+
+    Cho hai điểm $O$ và $O'$ sao cho $OO'=5$ cm. Giải thích tại sao hai đường tròn $(O;3\text{ cm})$ và $(O';2\text{ cm})$ tiếp xúc với nhau. Chúng tiếp xúc trong hay tiếp xúc ngoài?
+
+    \textbf{Giải}
+
+    Đặt $R=3$ cm và $R'=2$ cm, ta thấy $5$ cm $=3$ cm $+2$ cm, nghĩa là $OO'=R+R'$. Vậy hai đường tròn đã cho tiếp xúc ngoài với nhau.
+
+    \textbf{Luyện tập 2}
+
+    Cho hai điểm $O$ và $O'$ sao cho $OO'=3$ cm. Giải thích tại sao hai đường tròn $(O;8\text{ cm})$ và $(O';5\text{ cm})$ tiếp xúc với nhau. Chúng tiếp xúc trong hay tiếp xúc ngoài?
+
+    \answerline
+    \answerline
+
+    \textbf{3. HAI ĐƯỜNG TRÒN KHÔNG GIAO NHAU}
+
+    \textbf{Tìm hiểu hai đường tròn không giao nhau}
+
+    \textbf{HĐ3} Trên Hình 5.35a, ta có $OO'>OA+O'B$; trên Hình 5.35b, ta có $OO'<OA-O'B$.
+
+    Trong mỗi trường hợp, hãy vẽ hai đường tròn $(O;OA)$ và $(O';O'B)$ và cho biết hai đường tròn đó có điểm chung nào không.
+
+    \begin{center}
+        \begin{tikzpicture}[x=1cm,y=1cm]
+            \coordinate (Oa) at (0,0);
+            \coordinate (Aa) at (1.4,0);
+            \coordinate (Ba) at (2.5,0);
+            \coordinate (Opa) at (4,0);
+            \draw (Oa)--(Opa);
+            \fill (Oa) circle (1.2pt);
+            \fill (Aa) circle (1.2pt);
+            \fill (Ba) circle (1.2pt);
+            \fill (Opa) circle (1.2pt);
+            \node[above=2pt of Oa] {$O$};
+            \node[above=2pt of Aa] {$A$};
+            \node[above=2pt of Ba] {$B$};
+            \node[above=2pt of Opa] {$O'$};
+            \node[below=5pt of Ba] {a)};
+
+            \coordinate (Ob) at (6.2,0);
+            \coordinate (Opb) at (7.4,0);
+            \coordinate (Bb) at (8.6,0);
+            \coordinate (Ab) at (10.2,0);
+            \draw (Ob)--(Ab);
+            \fill (Ob) circle (1.2pt);
+            \fill (Opb) circle (1.2pt);
+            \fill (Bb) circle (1.2pt);
+            \fill (Ab) circle (1.2pt);
+            \node[above=2pt of Ob] {$O$};
+            \node[above=2pt of Opb] {$O'$};
+            \node[above=2pt of Bb] {$B$};
+            \node[above=2pt of Ab] {$A$};
+            \node[below=5pt of Bb] {b)};
+        \end{tikzpicture}
+
+        \textit{Hình 5.35}
+    \end{center}
+
+    \answerline
+    \answerline
+
+    \begin{keyconcept}
+        Nếu hai đường tròn không có điểm chung nào thì ta nói đó là hai đường tròn không giao nhau.
+    \end{keyconcept}
+
+    \textbf{Chú ý}
+
+    Người ta còn phân biệt hai trường hợp: hai đường tròn ngoài nhau (H.5.36a) và đường tròn này đựng đường tròn kia (H.5.36b).
+
+    \begin{center}
+        \begin{tikzpicture}[x=1cm,y=1cm]
+            \coordinate (Oa) at (0,0);
+            \coordinate (Aa) at (1.5,0);
+            \coordinate (Ba) at (2.5,0);
+            \coordinate (Opa) at (3.5,0);
+            \draw (Oa) circle (1.5);
+            \draw (Opa) circle (1);
+            \draw (Oa)--(Opa);
+            \fill (Oa) circle (1.2pt);
+            \fill (Aa) circle (1.2pt);
+            \fill (Ba) circle (1.2pt);
+            \fill (Opa) circle (1.2pt);
+            \node[left=2pt of Oa] {$O$};
+            \node[above=2pt of Aa] {$A$};
+            \node[above=2pt of Ba] {$B$};
+            \node[right=2pt of Opa] {$O'$};
+            \node[below=1.9cm of Ba] {a) Hai đường tròn ngoài nhau};
+
+            \coordinate (Ob) at (7.2,0);
+            \coordinate (Opb) at (7.9,0);
+            \coordinate (Ab) at (9.3,0);
+            \draw (Ob) circle (2.1);
+            \draw (Opb) circle (1.2);
+            \draw (Ob)--(Ab);
+            \fill (Ob) circle (1.2pt);
+            \fill (Opb) circle (1.2pt);
+            \fill (Ab) circle (1.2pt);
+            \node[left=2pt of Ob] {$O$};
+            \node[above=2pt of Opb] {$O'$};
+            \node[right=2pt of Ab] {$A$};
+            \node[below=2.3cm of Opb] {b) $(O)$ đựng $(O')$};
+        \end{tikzpicture}
+
+        \textit{Hình 5.36}
+    \end{center}
+
+    \textbf{Nhận xét}
+
+    Từ HĐ3 ta nhận thấy:
+    \begin{itemize}
+        \item Hai đường tròn $(O;R)$ và $(O';R')$ ngoài nhau khi $OO'>R+R'$.
+        \item Đường tròn $(O;R)$ đựng đường tròn $(O';R')$ khi $R>R'$ và $OO'<R-R'$. Đặc biệt, khi $O$ trùng với $O'$ và $R\ne R'$ thì ta có hai đường tròn đồng tâm.
+    \end{itemize}
+
+    \textbf{Ví dụ 3} Xác định vị trí tương đối của hai đường tròn $(O;3\text{ cm})$ và $(O';5\text{ cm})$, biết rằng $OO'>8$ cm.
+
+    \textbf{Giải}
+
+    Đặt $R=3$ cm và $R'=5$ cm, ta có $OO'>8$ cm $=R+R'$.
+
+    Vậy $(O;3\text{ cm})$ và $(O';5\text{ cm})$ là hai đường tròn ngoài nhau.
+
+    \textbf{Luyện tập 3}
+
+    Cho hai điểm $O$ và $O'$ sao cho $OO'=2$ cm. Xác định vị trí tương đối của hai đường tròn $(O;5\text{ cm})$ và $(O';r)$, biết rằng $r<3$ cm.
+
+    \answerline
+    \answerline
+
+    \textbf{Thực hành}
+
+    Để mô phỏng nguyệt thực, em hãy cắt hai hình tròn từ giấy: hình tròn thứ nhất màu sáng tượng trưng cho Mặt Trăng, hình tròn thứ hai màu tối (to hơn và bằng giấy mờ càng tốt) tượng trưng cho bóng Trái Đất. Sắp xếp hai hình tròn đó để:
+    \begin{enumerate}[label=\alph*)]
+        \item Mô phỏng nguyệt thực một phần. Khi đó, hình ảnh của hai đường tròn có vị trí tương đối như thế nào?
+
+        \answerline
+        \item Mô phỏng nguyệt thực toàn phần. Khi đó, hình ảnh của hai đường tròn có vị trí tương đối như thế nào?
+
+        \answerline
+    \end{enumerate}
+
+    \textbf{Tranh luận}
+
+    Tròn cho rằng: Nói ``hai đường tròn không cắt nhau'' cũng có nghĩa là ``hai đường tròn không giao nhau''. Theo em, Tròn đúng hay sai?
+
+    \answerline
+    \answerline
+
+    Ta có bảng tổng kết sau:
+
+    \begin{center}
+        \begin{tblr}{
+            width=\linewidth,
+            colspec={X[2,l] Q[c] X[2,l]},
+            cells={valign=m},
+            row{1}={font=\bfseries, halign=c}
+        }
+            Vị trí tương đối của hai đường tròn $(O;R)$ và $(O';R')$ $(R\ge R')$ & Số điểm chung & Hệ thức giữa $OO'$ với $R$ và $R'$ \\
+            Hai đường tròn cắt nhau & 2 & $R-R'<OO'<R+R'$ \\
+            Hai đường tròn tiếp xúc nhau:\par
+            - Tiếp xúc ngoài\par
+            - Tiếp xúc trong
+            & 1 & $OO'=R+R'$\par $OO'=R-R'>0$ \\
+            Hai đường tròn không giao nhau:\par
+            - $(O)$ và $(O')$ ở ngoài nhau\par
+            - $(O)$ đựng $(O')$
+            & 0 & $OO'>R+R'$\par $OO'<R-R'$ \\
+        \end{tblr}
+    \end{center}
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}[resume=SGK]
+        \item Hình 5.37 cho thấy hình ảnh của những đường tròn qua cách trình bày một số sản phẩm mây tre đan. Bằng cách đánh số các đường tròn, em hãy chỉ ra một vài cặp đường tròn cắt nhau và vài cặp đường tròn không giao nhau.
+
+        % TODO(HINH-NGUON): bo sung asset/crop Hinh 5.37 tu SGK trang 107; khong redraw xap xi bang TikZ.
+
+        \answerline
+        \answerline
+
+        \item Cho hai điểm $O$ và $O'$ cách nhau một khoảng $5$ cm. Mỗi đường tròn sau đây có vị trí tương đối như thế nào đối với đường tròn $(O;3\text{ cm})$.
+        \begin{questions}
+            \item Đường tròn $(O';3\text{ cm})$;
+
+            \answerline
+            \item Đường tròn $(O';1\text{ cm})$;
+
+            \answerline
+            \item Đường tròn $(O';8\text{ cm})$.
+
+            \answerline
+        \end{questions}
+
+        \item Cho ba điểm thẳng hàng $O$, $A$ và $O'$. Với mỗi trường hợp sau, hãy viết hệ thức giữa các độ dài $OO'$, $OA$ và $O'A$ rồi xét xem hai đường tròn $(O;OA)$ và $(O';O'A)$ tiếp xúc trong hay tiếp xúc ngoài với nhau; vẽ hình để khẳng định dự đoán của mình.
+        \begin{questions}
+            \item Điểm $A$ nằm giữa hai điểm $O$ và $O'$;
+
+            \answerline
+            \answerline
+            \item Điểm $O$ nằm giữa hai điểm $A$ và $O'$;
+
+            \answerline
+            \answerline
+            \item Điểm $O'$ nằm giữa hai điểm $A$ và $O$.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Cho hai đường tròn $(O)$ và $(O')$ tiếp xúc ngoài với nhau tại $A$. Một đường thẳng qua $A$ cắt $(O)$ tại $B$ và cắt $(O')$ tại $C$. Chứng minh rằng $OB\parallel O'C$.
+
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{exercises}
+
+\begin{practice}
+    \subsection{Luyện tập}
+
+    \begin{questions}[resume=SBT]
+        \item Hai đường tròn $(O;2\text{ cm})$ và $(O';3\text{ cm})$ có vị trí tương đối như thế nào trong mỗi trường hợp sau:
+        \begin{questions}
+            \item $OO'=4$ cm?
+
+            \answerline
+            \item $OO'=5$ cm?
+
+            \answerline
+            \item $OO'=6$ cm?
+
+            \answerline
+        \end{questions}
+
+        \item Vẽ hình và chứng minh phần b của Ví dụ 2.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho điểm $A$ và đường tròn $(O;R)$ sao cho $R<OA<3R$.
+        \begin{questions}
+            \item Chứng minh rằng đường tròn $(A;2R)$ cắt đường tròn $(O;R)$. Gọi $B$ là một trong hai giao điểm của chúng.
+
+            \answerline
+            \answerline
+            \item Gọi $C$ là điểm đối xứng với $B$ qua $O$. Nối $A$ với $C$ cắt $(O)$ tại $D$ (khác $C$). Chứng minh rằng $AD=DC$.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Cho $I$ là trung điểm của đoạn $AB$. Xét các đường tròn $(I;IB)$ và $(A;AB)$.
+        \begin{questions}
+            \item Hai đường tròn $(I)$ và $(A)$ nói trên có vị trí tương đối như thế nào?
+
+            \answerline
+            \item Đường thẳng đi qua $B$, cắt các đường tròn $(I)$ và $(A)$ lần lượt tại $C$ và $D$. Hãy so sánh các độ dài $BC$ và $CD$.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Cho tam giác $ABC$.
+        \begin{questions}
+            \item Chứng minh rằng hai đường tròn $(B;BA)$ và $(C;CA)$ cắt nhau. Gọi $A'$ là giao điểm khác $A$ của hai đường tròn đó.
+
+            \answerline
+            \answerline
+            \item Chứng minh rằng $A$ và $A'$ đối xứng nhau qua $BC$.
+
+            \answerline
+            \answerline
+            \item Biết rằng $AA'=24$ cm, $AB=15$ cm và $AC=13$ cm. Tính độ dài $BC$.
+
+            \answerline
+            \answerline
+        \end{questions}
+    \end{questions}
+\end{practice}
