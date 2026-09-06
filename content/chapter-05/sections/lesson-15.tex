@@ -1,0 +1,439 @@
+% Nguồn SGK Toán 9 Tập một — Bài 15, trang 91--95:
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-91-1773022950717.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-92-1773022951039.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-93-1773022951329.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-94-1773022951637.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-95-1773022951959.png
+% Authority: https://olm.vn/thu-vien-so/doc-sach/shs-toan-tap-1.4491668113
+%
+% Nguồn SBT Toán 9 Tập một — Bài 15, trang 60--62:
+% SBT TOAN 9 KNTT TAP 1.pdf
+% SHA-256: d7ffd04618456682795977e5c47de7874161a35e8606e5bac1906881603a72f7
+
+\section{Độ dài của cung tròn.\\ Diện tích hình quạt tròn\\ và hình vành khuyên}
+
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    \begin{center}
+    \begin{tblr}{
+        width=\linewidth,
+        colspec={X[2,l] X[5,l]},
+        cells={valign=t},
+        row{1}={font=\bfseries, halign=c}
+    }
+        Khái niệm, thuật ngữ & Kiến thức, kĩ năng \\
+        \begin{minipage}[t]{\linewidth}
+        \begin{itemize}
+            \item Hình quạt tròn
+            \item Hình vành khuyên
+        \end{itemize}
+        \end{minipage}
+        &
+        \begin{minipage}[t]{\linewidth}
+        \begin{itemize}
+            \item Tính độ dài cung tròn.
+            \item Tính diện tích hình quạt tròn và hình vành khuyên.
+        \end{itemize}
+        \end{minipage}
+    \end{tblr}
+    \end{center}
+
+    Số người trên một địa bàn đã được tiêm mũi 4 phòng dịch Covid-19 đạt 40\% trong tổng số các đối tượng cần được tiêm. Để hoàn thành một biểu đồ hình quạt tròn, Trang cần vẽ hình quạt tròn biểu thị số liệu 40\%. Em có thể giúp bạn Trang được không?
+
+    \subsubsection{Độ dài của cung tròn}
+
+    \textbf{Công thức tính độ dài của cung tròn}
+
+    Người ta chứng minh được rằng tỉ số giữa chu vi và đường kính của một đường tròn luôn bằng một số vô tỉ không đổi gọi là số $\pi$ (đọc là pi). Ta có thể tìm được giá trị gần đúng của $\pi$ nhờ máy tính cầm tay. Trong đời sống, ta thường lấy $\pi\approx3{,}14$.
+
+    Do đó, ta có công thức tính độ dài $C$ của đường tròn $(O;R)$, đường kính $d=2R$ là:
+    \[
+        C=\pi d=2\pi R. \tag{1}
+    \]
+
+    \textbf{HĐ1} Biết rằng trên một đường tròn, hai cung bằng nhau thì có cùng độ dài và độ dài của cung tỉ lệ với số đo của nó. Từ đó hãy lập công thức tính độ dài cung $n^\circ$ của đường tròn bán kính $R$ bằng cách thực hiện các bước sau:
+    \begin{enumerate}[label=\alph*)]
+        \item Từ (1), tính độ dài của cung $1^\circ$.
+
+        \answerline
+        \item Tính độ dài $l$ của cung $n^\circ$.
+
+        \answerline
+    \end{enumerate}
+
+    Ta có công thức tính độ dài $l$ của cung $n^\circ$ trên đường tròn $(O;R)$:
+    \begin{keyconcept}
+        \[
+            l=\dfrac{n}{180}\pi R. \tag{2}
+        \]
+    \end{keyconcept}
+
+    \textbf{Nhận xét.} Từ hai công thức (1) và (2), ta được
+    \[
+        l=\dfrac{n}{360}\pi d=\dfrac{n}{360}C
+        \quad\text{hay}\quad
+        \dfrac{l}{C}=\dfrac{n}{360},
+    \]
+    nghĩa là:
+
+    Tỉ số giữa độ dài cung $n^\circ$ và độ dài đường tròn (cùng bán kính) đúng bằng $\dfrac{n}{360}$.
+
+    \textbf{Ví dụ 1} Cho $A$ và $B$ là hai điểm trên đường tròn $(O;3\text{ cm})$ sao cho $\widehat{AOB}=120^\circ$. Tính số đo và độ dài các cung có hai mút $A$, $B$.
+
+    \textbf{Giải} (H.5.13)
+
+    Ta có hai cung:
+    \begin{itemize}
+        \item Cung nhỏ $AB$ bị chắn bởi góc ở tâm $AOB$.
+
+        Do đó $\text{sđ}\widehat{AB}=\widehat{AOB}=120^\circ$;
+
+        Độ dài $l_1$ của cung $AB$ là:
+        \[
+            l_1=\dfrac{120}{180}\pi\cdot3=2\pi\text{ (cm)}.
+        \]
+
+        \item Cung lớn $AmB$ có số đo là:
+        \[
+            \text{sđ}\widehat{AmB}=360^\circ-120^\circ=240^\circ.
+        \]
+
+        Độ dài $l_2$ của cung $AmB$ là:
+        \[
+            l_2=\dfrac{240}{180}\pi\cdot3=4\pi\text{ (cm)}.
+        \]
+    \end{itemize}
+
+    \begin{center}
+    \begin{tikzpicture}
+        \coordinate (O) at (0,0);
+        \coordinate (A) at (150:1.6);
+        \coordinate (B) at (30:1.6);
+        \coordinate (M) at (270:1.6);
+        \draw (O) circle (1.6);
+        \draw (O)--(A) (O)--(B);
+        \fill (O) circle (1.2pt);
+        \node[below=1pt of O] {$O$};
+        \node[above left=1pt of A] {$A$};
+        \node[above right=1pt of B] {$B$};
+        \node[below=1pt of M] {$m$};
+        \pic[draw, angle radius=6mm, angle eccentricity=1.35, "$120^\circ$"] {angle=B--O--A};
+    \end{tikzpicture}
+
+    \textit{Hình 5.13}
+    \end{center}
+
+    \textbf{Luyện tập 1} Tính độ dài cung $40^\circ$ của đường tròn bán kính $9$ cm.
+
+    \answerline
+    \answerline
+
+    \textbf{Vận dụng 1} Bánh xe (khi bơm căng) của một chiếc xe đạp có đường kính 650 mm. Biết rằng khi giò đĩa quay một vòng thì bánh xe quay được khoảng 3,3 vòng (H.5.14). Hỏi chiếc xe đạp di chuyển được quãng đường dài bao nhiêu mét sau khi người đi xe đạp 10 vòng liên tục?
+
+    \textit{Hướng dẫn:} Khi bánh xe quay 3,3 vòng thì mỗi điểm trên bánh xe di chuyển được một độ dài bằng 3,3 lần chu vi đường tròn.
+
+    % TODO(HINH-NGUON): Hình 5.14 là hình minh hoạ xe đạp trong SGK trang 92; bổ sung asset/crop đúng từ nguồn, không redraw xấp xỉ bằng TikZ.
+
+    \answerline
+    \answerline
+
+    \subsubsection{Hình quạt tròn và hình vành khuyên}
+
+    \textbf{Hình tròn, hình quạt tròn và hình vành khuyên}
+
+    \begin{keyconcept}
+        1) \textbf{Hình quạt tròn} là phần hình tròn giới hạn bởi một cung tròn và hai bán kính đi qua hai đầu mút của cung đó (H.5.15).
+
+        2) \textbf{Hình vành khuyên} (còn gọi là hình vành khăn) (H.5.16) là phần nằm giữa hai đường tròn có cùng tâm và bán kính khác nhau (còn gọi là \textit{hai đường tròn đồng tâm}).
+    \end{keyconcept}
+
+    \begin{center}
+    \begin{tikzpicture}
+        \begin{scope}[xshift=-2cm]
+            \coordinate (Oq) at (0,0);
+            \coordinate (Aq) at (35:1.35);
+            \coordinate (Bq) at (-35:1.35);
+            \draw (Oq) circle (1.35);
+            \draw (Oq)--(Aq) (Oq)--(Bq);
+            \fill (Oq) circle (1.2pt);
+            \node[left=1pt of Oq] {$O$};
+            \node[above right=1pt of Aq] {$A$};
+            \node[below right=1pt of Bq] {$B$};
+            \node at (0,-1.75) {\textit{Hình 5.15}};
+        \end{scope}
+        \begin{scope}[xshift=2cm]
+            \coordinate (Ov) at (0,0);
+            \coordinate (Rv) at (1.35,0);
+            \coordinate (rv) at (0.75,0);
+            \draw (Ov) circle (1.35);
+            \draw (Ov) circle (0.75);
+            \draw (Ov)--(Rv);
+            \fill (Ov) circle (1.2pt);
+            \node[below left=1pt of Ov] {$O$};
+            \node[above=1pt of rv] {$r$};
+            \node[below=1pt of Rv] {$R$};
+            \node at (0,-1.75) {\textit{Hình 5.16}};
+        \end{scope}
+    \end{tikzpicture}
+    \end{center}
+
+    Em hãy tìm một số hình ảnh của hình quạt tròn và hình vành khuyên trong thực tế.
+
+    \answerline
+    \answerline
+
+    \textbf{Diện tích hình quạt tròn và hình vành khuyên}
+
+    Ta đã biết, diện tích hình tròn bán kính $R$ được tính theo công thức $S=\pi R^2$. Hãy thực hiện các hoạt động sau để tìm công thức tính diện tích của hình quạt tròn và hình vành khuyên.
+
+    \textbf{HĐ2} Biết rằng hai hình quạt tròn ứng với hai cung bằng nhau trên một đường tròn thì có diện tích bằng nhau và diện tích hình quạt tròn tỉ lệ với số đo của cung tương ứng với nó. Hãy thiết lập công thức tính diện tích hình quạt tròn bán kính $R$ ứng với cung $n^\circ$ bằng cách thực hiện từng bước sau:
+    \begin{enumerate}[label=\alph*)]
+        \item Tính diện tích hình quạt tròn ứng với cung $1^\circ$;
+
+        \answerline
+        \item Tính diện tích hình quạt tròn ứng với cung $n^\circ$.
+
+        \answerline
+    \end{enumerate}
+
+    \textbf{HĐ3} Thiết lập công thức tính diện tích hình vành khuyên nằm giữa hai đường tròn đồng tâm có bán kính là $R$ và $r$ ($R>r$).
+
+    \answerline
+    \answerline
+
+    \begin{keyconcept}
+        \begin{itemize}
+            \item Diện tích $S_q$ của hình quạt tròn bán kính $R$ ứng với cung $n^\circ$:
+            \[
+                S_q=\dfrac{n}{360}\pi R^2=\dfrac{lR}{2}. \tag{3}
+            \]
+            \item Diện tích $S_v$ của hình vành khuyên tạo bởi hai đường tròn đồng tâm có bán kính $R$ và $r$:
+            \[
+                S_v=\pi(R^2-r^2)\quad (\text{với }R>r). \tag{4}
+            \]
+        \end{itemize}
+    \end{keyconcept}
+
+    \textbf{Nhận xét}
+
+    Công thức (3) có thể viết là
+    \[
+        S_q=\dfrac{n}{360}S
+        \quad\text{hay}\quad
+        \dfrac{S_q}{S}=\dfrac{n}{360}=\dfrac{l}{C},
+    \]
+    nghĩa là:
+
+    Tỉ số giữa diện tích hình quạt tròn ứng với cung $n^\circ$ và diện tích hình tròn (cùng bán kính) đúng bằng $\dfrac{n}{360}$ và bằng tỉ số giữa độ dài cung $n^\circ$ và độ dài đường tròn.
+
+    \textbf{Ví dụ 2} Tính diện tích của hình vành khuyên nằm giữa hai đường tròn đồng tâm có bán kính là 3 m và 5 m.
+
+    \textbf{Giải}
+
+    Gọi $S_v$ là diện tích cần tính.
+
+    Ta có $S_v=\pi(5^2-3^2)=16\pi\text{ (m}^2\text{)}$.
+
+    \textbf{Ví dụ 3} Tính diện tích của hình quạt tròn bán kính 5 cm và có độ dài cung tương ứng với nó bằng $4\pi$ cm.
+
+    \textbf{Giải}
+
+    Theo đề bài, hình quạt tròn có độ dài cung tương ứng với nó là $l=4\pi$ cm, bán kính là $R=5$ cm. Do đó theo (3), diện tích $S$ của nó là:
+    \[
+        S=\dfrac{lR}{2}=\dfrac{4\pi\cdot5}{2}=10\pi\text{ (cm}^2\text{)}.
+    \]
+
+    \textbf{Thực hành}
+
+    Trở lại tình huống mở đầu. Hãy vẽ (tô màu) hình quạt tròn theo hướng dẫn sau:
+    \begin{itemize}
+        \item Vẽ đường tròn tâm $O$ (với bán kính tuỳ chọn).
+        \item Hình quạt tròn cần vẽ ứng với cung có số đo bằng 40\% của $360^\circ$. Tính số đo của cung cần vẽ.
+        \item Vẽ góc ở tâm có số đo tìm được và tô màu hình quạt tròn tương ứng.
+    \end{itemize}
+
+    \answerline
+    \answerline
+    \answerline
+    \answerline
+
+    \textbf{Luyện tập 2} Tính diện tích của hình quạt tròn đã vẽ trong Thực hành trên nếu bán kính của nó bằng 4 cm.
+
+    \answerline
+    \answerline
+
+    \textbf{Vận dụng 2} Một tấm bia tạo bởi năm đường tròn đồng tâm lần lượt có bán kính là 5 cm, 10 cm, 15 cm, 20 cm và 30 cm (H.5.17). Giả thiết rằng người chơi ném phi tiêu một cách ngẫu nhiên và luôn trúng bia. Tính xác suất ném trúng vòng 8 (hình vành khuyên nằm giữa đường tròn thứ hai và thứ ba), biết rằng xác suất cần tìm bằng tỉ số giữa diện tích của hình vành khuyên tương ứng với diện tích của hình tròn lớn nhất.
+
+    % TODO(HINH-NGUON): Hình 5.17 là hình minh hoạ bia ném phi tiêu trong SGK trang 94; bổ sung asset/crop đúng từ nguồn, không redraw xấp xỉ bằng TikZ.
+
+    \answerline
+    \answerline
+    \answerline
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}[resume=SGK]
+        \item Cho đường tròn $(O;4\text{ cm})$ và ba điểm $A$, $B$, $C$ trên đường tròn đó sao cho tam giác $ABC$ cân tại đỉnh $A$ và số đo của cung nhỏ $BC$ bằng $70^\circ$.
+        \begin{questions}
+            \item Giải thích tại sao hai cung nhỏ $AB$ và $AC$ bằng nhau.
+
+            \answerline
+            \answerline
+
+            \item Tính độ dài của các cung $BC$, $AB$ và $AC$ (làm tròn kết quả đến hàng phần mười).
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Tính diện tích của hình quạt tròn bán kính 4 cm, ứng với cung $36^\circ$.
+
+        \answerline
+        \answerline
+
+        \item Tính diện tích hình vành khuyên nằm giữa hai đường tròn đồng tâm có bán kính là 6 cm và 4 cm.
+
+        \answerline
+        \answerline
+
+        \item Có hai chiếc bánh pizza hình tròn (H.5.18). Chiếc bánh thứ nhất có đường kính 16 cm được cắt thành 6 miếng đều nhau có dạng hình quạt tròn. Chiếc bánh thứ hai có đường kính 18 cm được cắt thành 8 miếng đều nhau có dạng hình quạt tròn. Hãy so sánh diện tích bề mặt của hai miếng bánh cắt ra từ chiếc bánh thứ nhất và thứ hai.
+
+        % TODO(HINH-NGUON): Hình 5.18 là ảnh hai chiếc bánh pizza trong SGK trang 95; bổ sung asset/crop đúng từ nguồn, không redraw xấp xỉ bằng TikZ.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Một chiếc quạt giấy khi xoè ra có dạng nửa hình tròn bán kính 2,2 dm như Hình 5.19. Tính diện tích phần giấy của chiếc quạt, biết rằng khi gấp lại, phần giấy có chiều dài khoảng 1,6 dm (làm tròn kết quả đến hàng phần trăm của dm$^2$).
+
+        % TODO(HINH-NGUON): Hình 5.19 là hình minh hoạ quạt giấy trong SGK trang 95; bổ sung asset/crop đúng từ nguồn, không redraw xấp xỉ bằng TikZ.
+
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{exercises}
+
+\begin{practice}
+    \subsection{Luyện tập}
+
+    \begin{questions}[resume=SBT]
+        \item Cho hình thoi $ABCD$ có $\widehat{A}=75^\circ$ và $AB=6$ cm. Vẽ đường tròn $(D)$, bán kính 6 cm.
+        \begin{questions}
+            \item Chứng minh rằng $A,C\in(D)$.
+
+            \answerline
+            \answerline
+
+            \item Tính độ dài cung nhỏ $AC$ và diện tích hình quạt tròn ứng với cung nhỏ $AC$.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Độ dài của một cung tròn bằng $\dfrac{2}{5}$ chu vi của hình tròn có cùng bán kính. Tính diện tích của hình quạt tròn ứng với cung tròn đó, biết diện tích của hình tròn là $S=20$ cm$^2$.
+
+        \answerline
+        \answerline
+
+        \item Trên bờ của một cái ao cá hình tròn, người ta dựng ba cái chòi câu cá tại các điểm $A$, $B$ và $C$. Biết rằng tam giác $ABC$ cân tại $B$ và có $AB=BC=10$ m, $\widehat{ABC}=120^\circ$ (H.5.5).
+        \begin{questions}
+            \item Tính bán kính của ao cá.
+
+            \answerline
+            \answerline
+
+            \item Tính độ dài quãng đường (men theo bờ ao) từ chòi $A$ đến chòi $B$ và chòi $C$ (làm tròn kết quả đến chữ số thập phân thứ nhất).
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (150:1.6);
+            \coordinate (B) at (90:1.6);
+            \coordinate (C) at (30:1.6);
+            \draw (O) circle (1.6);
+            \draw (A)--(B)--(C);
+            \fill (O) circle (1.2pt);
+            \node[below=1pt of O] {$O$};
+            \node[left=1pt of A] {$A$};
+            \node[above=1pt of B] {$B$};
+            \node[right=1pt of C] {$C$};
+            \pic[draw, angle radius=5mm, angle eccentricity=1.45, "$120^\circ$"] {angle=A--B--C};
+        \end{tikzpicture}
+
+        \textit{Hình 5.5}
+        \end{center}
+
+        \item Giả định rằng Trái Đất quay xung quanh Mặt Trời theo một quỹ đạo tròn có bán kính khoảng 150 triệu kilômét và phải hết đúng một năm (365 ngày) để hoàn thành một vòng quay. Hãy tính quãng đường Trái Đất đi được trong một ngày (làm tròn đến hàng nghìn theo đơn vị kilômét).
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Năm học vừa qua, kết quả xếp loại học lực cuối năm học sinh của một huyện được biểu thị trong biểu đồ hình quạt tròn như hình bên:
+
+        \begin{center}
+        \begin{tikzpicture}
+            \def\R{1.35}
+            \coordinate (O) at (0,0);
+            \coordinate (P0) at (90:\R);
+            \coordinate (P1) at (180:\R);
+            \coordinate (P2) at (324:\R);
+
+            % 25% — Đạt
+            \path[fill=black!30] (O)--(P0) arc[start angle=90,end angle=180,radius=\R]--cycle;
+            % 40% — Khá
+            \path[fill=white] (O)--(P1) arc[start angle=180,end angle=324,radius=\R]--cycle;
+            % 35% — Tốt
+            \path[fill=black!12] (O)--(P2) arc[start angle=324,end angle=450,radius=\R]--cycle;
+
+            \draw (O) circle (\R);
+            \draw (O)--(P0) (O)--(P1) (O)--(P2);
+            \node at (135:0.78) {25\%};
+            \node at (27:0.78) {35\%};
+            \node at (252:0.75) {40\%};
+
+            \coordinate (L1) at (2.05,0.72);
+            \coordinate (L2) at (2.05,0.08);
+            \coordinate (L3) at (2.05,-0.56);
+            \draw[fill=black!12] ($(L1)+(-0.18,-0.18)$) rectangle ($(L1)+(0.18,0.18)$);
+            \draw[fill=white] ($(L2)+(-0.18,-0.18)$) rectangle ($(L2)+(0.18,0.18)$);
+            \draw[fill=black!30] ($(L3)+(-0.18,-0.18)$) rectangle ($(L3)+(0.18,0.18)$);
+            \node[right=0.28cm of L1] {Tốt};
+            \node[right=0.28cm of L2] {Khá};
+            \node[right=0.28cm of L3] {Đạt};
+        \end{tikzpicture}
+        \end{center}
+
+        Hãy tìm số đo của các cung tròn tương ứng với mỗi hình quạt biểu thị các số liệu cho trên hình.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Một chiếc bánh pizza hình tròn được chia thành 8 miếng như nhau bởi 4 nhát cắt qua tâm (H.5.6).
+        \begin{questions}
+            \item Mỗi miếng bánh có dạng một hình quạt tròn ứng với cung bao nhiêu độ?
+
+            \answerline
+
+            \item Người ta chọn một chiếc hộp có đáy là hình vuông để đặt lọt chiếc bánh vào trong đó (mà vẫn giữ nguyên hình tròn). Hỏi mỗi cạnh đáy của chiếc hộp đó tối thiểu phải dài bao nhiêu centimét (làm tròn đến hàng đơn vị), biết rằng diện tích bề mặt mỗi miếng bánh bằng 60 cm$^2$?
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        % TODO(HINH-NGUON): Hình 5.6 là hình minh hoạ chiếc bánh pizza có hoạ tiết trong SBT trang 62; bổ sung asset/crop đúng từ nguồn, không redraw xấp xỉ bằng TikZ.
+    \end{questions}
+\end{practice}
