@@ -1,9 +1,9 @@
 ---
 name: tabularray-math-tables
-description: "Dựng bảng toán học bằng tabularray theo đúng semantic hàng-cột, dùng kích thước vừa đủ và kế thừa style chung của repo; chỉ override cục bộ khi bảng nguồn thật sự khác."
+description: "Dựng bảng toán học bằng tabularray theo đúng semantic hàng-cột, mặc định phân phối theo full text width để dễ đọc/đối chiếu/điền; chỉ dùng natural width khi có chứng cứ rõ ràng bảng cần ngắn."
 metadata:
   language: "vi"
-  version: "1.1.0"
+  version: "1.2.0"
   scope: "latex,tabularray,tblr,longtblr,tables,worksheet,math,layout"
 ---
 
@@ -14,7 +14,7 @@ Dùng skill này khi nội dung có **quan hệ hàng-cột thực sự**: bản
 Mục tiêu của repo:
 
 1. dựng đúng semantic của bảng;
-2. bảng chỉ rộng/cao **vừa đủ cho nội dung và vùng viết cần thiết**;
+2. bảng học sinh cần đọc/đối chiếu/điền **mặc định dùng gần/toàn chiều rộng dòng** để tránh co thành khối nhỏ khó đọc; chỉ thu về natural width khi có chứng cứ rõ ràng từ nguồn hoặc semantic;
 3. đường kẻ, màu và style chung lấy từ config của repo để toàn sách đồng đều;
 4. mỗi bảng chỉ khai báo phần cấu trúc/kích thước riêng của nó;
 5. chỉ override border/style cục bộ khi nguồn thật sự yêu cầu khác default.
@@ -87,28 +87,28 @@ Dùng khi bảng dài có thể qua trang. Nếu header cần lặp lại, dùng
 
 Không tự cắt một semantic table thành nhiều `tblr` chỉ để né page break nếu `longtblr` giải quyết đúng hơn.
 
-## 6. Kích thước: mặc định vừa đủ, không ép full-width
+## 6. Kích thước: mặc định full-width; natural width là ngoại lệ có chứng cứ
 
 Đây là convention quan trọng của repo.
 
-### Bảng ngắn
+### Mặc định cho bảng student-facing
 
-Nếu dữ liệu ngắn và natural width đã hợp lý, **không đặt `width=\linewidth`**.
+Với bảng dùng để học sinh đọc, đối chiếu, tính toán hoặc điền câu trả lời, **mặc định dùng `width=\linewidth`** và phân phối chiều rộng bằng `X`/weighted `X`. Nội dung ô ngắn **không phải** là lý do tự động để co bảng về natural width.
+
+Ví dụ bảng giá trị ngắn vẫn nên phân phối trên chiều rộng dòng để nhãn và các cột có khoảng thở ổn định:
 
 ```tex
-\begin{center}
+\noindent
 \begin{tblr}{
-  colspec={Q[l] *{4}{Q[c]}}
+  width=\linewidth,
+  colspec={Q[l] *{4}{X[c]}}
 }
   $x$    & $-2$ & $-1$ & $0$ & $1$ \\
   $2x+1$ &      &      &     &     \\
 \end{tblr}
-\end{center}
 ```
 
-### Bảng thực sự cần co giãn
-
-Chỉ dùng `width=...`/`X` khi nội dung hoặc cấu trúc cần phân phối chiều rộng.
+Với bảng có prose, dùng weighted `X` theo semantic thay vì kéo đều tất cả cột:
 
 ```tex
 \noindent
@@ -121,7 +121,18 @@ Chỉ dùng `width=...`/`X` khi nội dung hoặc cấu trúc cần phân phối
 \end{tblr}
 ```
 
-Không ép bảng nhỏ thành full-width chỉ để nhìn "đều".
+### Khi nào được dùng natural width
+
+Chỉ để bảng ngắn hơn `\linewidth` khi có **chứng cứ rõ ràng** rằng full-width làm sai hoặc làm xấu cấu trúc nguồn/semantic, ví dụ:
+
+- bảng nguồn thật sự là một bảng nhỏ/compact đặt inline hoặc giữa một đoạn;
+- bảng chỉ có rất ít ô ngắn và việc kéo giãn tạo khoảng trống phi tự nhiên, làm sai cảm giác tỷ lệ của nguồn;
+- bảng là một ma trận/khối ký hiệu nhỏ mà chiều rộng tự nhiên chính là một phần ý nghĩa trình bày;
+- có constraint layout cụ thể đã được kiểm trên PDF thật.
+
+Khi dùng natural width, agent phải có khả năng chỉ ra lý do từ nguồn hoặc artifact/review; không được viện lý do chung như "dữ liệu ngắn" hay "nhìn gọn hơn".
+
+Không dùng `resizebox`, `\hspace` hoặc tăng `colsep` quá mức để giả full-width/natural-width.
 
 ## 7. Chọn cột theo dữ liệu
 
@@ -137,11 +148,11 @@ Q[c,m]
 Q[c,m,2.2cm]
 ```
 
-Phù hợp với số thứ tự, số ngắn, ký hiệu, đáp án Đ/S, nhãn ngắn.
+Phù hợp với số thứ tự, số ngắn, ký hiệu, đáp án Đ/S, nhãn ngắn. Trong bảng full-width, `Q` thường dùng cho cột nhãn/STT cố định và `X` dùng cho phần còn lại cần phân phối.
 
 ### `X`
 
-Dùng khi nội dung cần wrap và chia phần width còn lại:
+Dùng khi nội dung cần wrap **hoặc khi bảng cần phân phối chiều rộng dòng**:
 
 ```tex
 X[l]
@@ -149,7 +160,7 @@ X[2,l]
 X[3,c]
 ```
 
-Không dùng toàn cột `Q[c]`/`c` cho prose dài rồi chữa overflow bằng font nhỏ.
+Không dùng toàn cột `Q[c]`/`c` cho prose dài rồi chữa overflow bằng font nhỏ. Không dùng toàn `Q` cho một bảng student-facing nhiều cột nếu kết quả là bảng co thành một khối nhỏ giữa trang mà không có chứng cứ nguồn yêu cầu như vậy.
 
 ## 8. Style chung của repo là source of truth
 
@@ -287,9 +298,9 @@ Các key thường dùng:
 
 Nếu bảng overfull, xử lý theo thứ tự:
 
-1. kiểm tra bảng có bị ép full-width/natural-width sai không;
+1. kiểm tra `width`/`colspec` có phản ánh đúng convention full-width và semantic không;
 2. kiểm tra prose có đang nằm trong cột natural/fixed quá hẹp không;
-3. đổi cột cần wrap sang `X`;
+3. đổi cột cần wrap/phân phối sang `X`;
 4. chỉnh hệ số `X`;
 5. chỉnh `colsep` hợp lý;
 6. kiểm tra span;
@@ -313,7 +324,9 @@ Không làm bảng thấp/rộng bất hợp lý chỉ để tiết kiệm trang
 Không:
 
 - giả bảng bằng `tasks`, TikZ hoặc spacing;
-- ép mọi bảng thành `width=\linewidth`;
+- co bảng student-facing về natural width chỉ vì ô ngắn hoặc vì thấy "gọn";
+- dùng bảng nhỏ giữa trang mà không có chứng cứ nguồn/semantic rõ ràng;
+- kéo full-width bằng `\hspace`, spacing tay hoặc `resizebox` thay vì `width=\linewidth` + `X`;
 - lặp lại `hlines`/`vlines`/màu đã có trong config;
 - dùng `|` trong `colspec`/`rowspec` cho grid bình thường khi config đã tạo rules;
 - tự chọn border color riêng cho từng bảng;
@@ -337,7 +350,9 @@ Không:
 
 ### Size/layout
 
-- [ ] Bảng dùng natural width nếu đã đủ; chỉ full-width khi thật sự cần.
+- [ ] Bảng student-facing mặc định dùng `width=\linewidth`/gần full-width và phân phối bằng `X` hợp lý.
+- [ ] Nếu dùng natural width, đã có chứng cứ rõ ràng từ nguồn/semantic/artifact rằng bảng cần ngắn.
+- [ ] Không có bảng nhiều cột co thành một khối nhỏ giữa trang chỉ vì dùng toàn `Q`.
 - [ ] Cột prose dùng `X` khi cần wrap.
 - [ ] Cột ngắn dùng `Q`/fixed hợp lý.
 - [ ] Alignment đúng loại dữ liệu.
@@ -358,6 +373,6 @@ Không:
 
 ## 17. Nguyên tắc chốt cho Agent
 
-> **Mỗi bảng chỉ khai báo cái riêng của bảng đó. Cái chung của cả sách phải lấy từ config chung.**
+> **Mỗi bảng chỉ khai báo cái riêng của bảng đó. Cái chung của cả sách phải lấy từ config chung. Bảng student-facing mặc định phải tận dụng chiều rộng dòng; bảng ngắn là ngoại lệ cần chứng cứ.**
 
 Trong repo này, border và màu grid đã là policy chung. Vì vậy Agent tập trung vào semantic, `colspec`/`rowspec`, span, alignment, kích thước và vùng viết; không vẽ lại line/color ở từng bảng trừ khi bảng nguồn thật sự là ngoại lệ.
