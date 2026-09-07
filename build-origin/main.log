@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.9.6)  7 SEP 2026 03:56
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.9.6)  7 SEP 2026 04:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1126,26 +1126,129 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
 (babel)             Reported on input line 94.
  [2]
+[3] [4] [5]) (./content/chapter-01/sections/section-02.tex [6] [1
+
+] [2] [3]
+[4] [5] [6] [7] [8] [9] [10] [11])
+(./content/chapter-01/sections/lesson-luyen-tap-chung-sau-2.tex [12] [1
+
+]
+[2]) (./content/chapter-01/sections/section-03.tex
+(./content/chapter-01/sections/section-03-core.tex [3] [1
+
+] [2] [3] [4])
+(./content/chapter-01/sections/section-03-sbt-tail.tex [5]))
+(./content/chapter-01/sections/lesson-bai-tap-cuoi-chuong.tex [6] [1
+
+] [2]
 [3] [4] [5])) (./content/chapter-02/chapter.tex [6]
 Chương II.
 (./content/chapter-02/sections/section-04.tex [7
 
 ] [1
 
-] [2] [3] [4] [5] [6]))
-[7] (build/main.aux)
+] [2] [3] [4] [5] [6])
+(./content/chapter-02/sections/section-05.tex
+(./content/chapter-02/sections/section-05-core.tex [7] [1
+
+] [2] [3] [4])
+(./content/chapter-02/sections/section-05-sbt-27-figure.tex))
+(./content/chapter-02/sections/lesson-luyen-tap-chung-sau-5.tex [5] [1
+
+]
+[2]) (./content/chapter-02/sections/section-06.tex [3] [1
+
+] [2] [3] [4] [5])
+(./content/chapter-02/sections/lesson-bai-tap-cuoi-chuong.tex [6] [1
+
+] [2]
+[3] [1
+
+] [2])) (./content/chapter-03/chapter.tex [3] [4
+
+]
+Chương III.
+(./content/chapter-03/sections/section-07.tex [5] [6] [7] [8] [9])
+(./content/chapter-03/sections/lesson-08.tex
+(./content/chapter-03/sections/lesson-08-core.tex [10] [1
+
+] [2] [3] [4] [5]))
+(./content/chapter-03/sections/lesson-luyen-tap-chung-sau-8.tex [6] [1
+
+]
+[2]) (./content/chapter-03/sections/section-09.tex [3] [1
+
+] [2] [3] [4] [5]
+[6]) (./content/chapter-03/sections/section-10.tex [7] [1
+
+] [2] [3] [4])
+(./content/chapter-03/sections/lesson-luyen-tap-chung-sau-10.tex [5] [1
+
+]
+[2]) (./content/chapter-03/sections/lesson-bai-tap-cuoi-chuong.tex [3] [1
+
+]
+[2] [1
+
+])) (./content/chapter-04/chapter.tex [2]
+Chương IV.
+(./content/chapter-04/sections/section-11.tex [3
+
+] [4] [5] [6] [7] [8]
+(./content/chapter-04/sections/section-11-exercises.tex [9])
+(./content/chapter-04/sections/section-11-practice.tex [10] [11] [12]))
+(./content/chapter-04/sections/section-02.tex
+(./content/chapter-04/sections/section-02-core.tex [13] [1
+
+] [2] [3] [4]
+[5] [6] [7]) (./content/chapter-04/sections/section-02-sbt-tail.tex [8]))
+(./content/chapter-04/sections/lesson-luyen-tap-chung-sau-12.tex [9] [1
+
+]
+[2] [3]) (./content/chapter-04/sections/lesson-bai-tap-cuoi-chuong.tex [4]
+[1
+
+] [2] [3] [4] [5] [6] [7])) (./content/chapter-05/chapter.tex [8]
+Chương V.
+(./content/chapter-05/sections/lesson-13.tex [9
+
+] [10] [11] [12] [13])
+(./content/chapter-05/sections/section-14.tex [14] [1
+
+] [2] [3] [4] [5])
+(./content/chapter-05/sections/lesson-15.tex [6] [1
+
+] [2] [3] [4] [5] [6])
+(./content/chapter-05/sections/lesson-luyen-tap-chung-sau-15.tex [7] [1
+
+]
+[2]) (./content/chapter-05/sections/lesson-16.tex [3] [1
+
+] [2] [3] [4] [5]
+[6]) (./content/chapter-05/sections/section-17.tex [7] [1
+
+] [2] [3] [4] [5]
+[6]) (./content/chapter-05/sections/lesson-luyen-tap-chung-sau-17.tex [7]
+[1
+
+] [2] [3] [4]) (./content/chapter-05/sections/lesson-bai-tap-cuoi-chuong.tex
+[5] [1
+
+] [2] [3] [1
+
+] [2] [3] [4])) [5] (build/main.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-08-10>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 27193 strings out of 467745
- 636938 string characters out of 5422258
- 1115120 words of memory out of 5000000
- 55878 multiletter control sequences out of 15000+600000
- 632678 words of font info for 97 fonts, out of 8000000 for 9000
+ 29079 strings out of 467745
+ 681846 string characters out of 5422258
+ 1154867 words of memory out of 5000000
+ 57644 multiletter control sequences out of 15000+600000
+ 633339 words of font info for 102 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,18n,107p,505b,1465s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,18n,363p,753b,1465s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.xdv (14 pages, 209784 bytes).
+Output written on build/main.xdv (177 pages, 2863540 bytes).
