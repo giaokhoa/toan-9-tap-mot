@@ -1,0 +1,337 @@
+% SGK direct images:
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-79-1773022946652.png
+% https://cdn3.olm.vn/upload/thuvienso/4491668113-page-80-1773022947015.png
+
+\section*{Luyện tập chung}
+
+\begin{lesson}
+    \textbf{Ví dụ 1}
+
+    Cho tam giác $ABC$ vuông tại $A$, $AB=5$ cm, $AC=12$ cm.
+    \begin{enumerate}[label=\alph*)]
+        \item Tính các tỉ số lượng giác của góc $B$.
+        \item Từ kết quả câu a) suy ra các tỉ số lượng giác của góc $C$.
+    \end{enumerate}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (0,2.5);
+            \coordinate (C) at (6,0);
+            \draw (A)--(B)--(C)--cycle;
+            \pic[draw, angle radius=4mm] {right angle=C--A--B};
+            \pic[draw, angle radius=5mm] {angle=A--B--C};
+            \node[below left=1pt of A] {$A$};
+            \node[above left=1pt of B] {$B$};
+            \node[below right=1pt of C] {$C$};
+            \node[left=3pt of $(A)!0.5!(B)$] {$5\text{ cm}$};
+            \node[below=3pt of $(A)!0.5!(C)$] {$12\text{ cm}$};
+        \end{tikzpicture}
+
+        Hình 4.25
+    \end{center}
+
+    \textbf{Giải (H.4.25)}
+
+    a) Xét tam giác $ABC$ vuông tại $A$. Theo định lí Pythagore, ta có
+    \[
+        BC^2=AB^2+AC^2=5^2+12^2=169,
+    \]
+    suy ra $BC=13$ cm.
+
+    Ta có:
+    \[
+        \sin B=\dfrac{AC}{BC}=\dfrac{12}{13},\qquad
+        \cos B=\dfrac{AB}{BC}=\dfrac{5}{13},
+    \]
+    \[
+        \tan B=\dfrac{AC}{AB}=\dfrac{12}{5},\qquad
+        \cot B=\dfrac{AB}{AC}=\dfrac{5}{12}.
+    \]
+
+    b) Do $\widehat{B}+\widehat{C}=90^\circ$ nên
+    \[
+        \sin C=\cos B=\dfrac{5}{13},\qquad
+        \cos C=\sin B=\dfrac{12}{13},
+    \]
+    \[
+        \tan C=\cot B=\dfrac{5}{12},\qquad
+        \cot C=\tan B=\dfrac{12}{5}.
+    \]
+
+    \textbf{Ví dụ 2}
+
+    Một bức tường đang xây dở có dạng hình thang vuông $ABCD$, vuông góc ở $A$ và $D$, $AB=1$ m, $CD=4$ m, $AD=6$ m.
+    \begin{enumerate}[label=\alph*)]
+        \item Hỏi góc $\alpha$ tạo bởi đường thẳng $BC$ và mặt đất $AD$ có số đo xấp xỉ bằng bao nhiêu (làm tròn đến phút)? (H.4.26)
+        \item Tính độ dài cạnh $BC$ (làm tròn đến chữ số thập phân thứ nhất).
+    \end{enumerate}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (A) at (0,0);
+            \coordinate (D) at (6,0);
+            \coordinate (B) at (0,1);
+            \coordinate (C) at (6,4);
+            \coordinate (E) at (C |- B);
+            \path[name path=ground] (-3,0)--(6.5,0);
+            \path[name path=walltop] ($(B)!-0.7!(C)$)--($(B)!1.1!(C)$);
+            \path[name intersections={of=ground and walltop, by=I}];
+            \draw (I)--(D)--(C)--(I);
+            \draw (A)--(B);
+            \draw[dashed] (B)--(E);
+            \pic[draw, angle radius=4mm] {right angle=D--A--B};
+            \pic[draw, angle radius=4mm] {right angle=A--D--C};
+            \pic[draw, angle radius=5mm] {angle=D--I--C};
+            \node[above left=1pt of B] {$B$};
+            \node[above right=1pt of C] {$C$};
+            \node[below right=1pt of D] {$D$};
+            \node[below=1pt of A] {$A$};
+            \node[right=1pt of E] {$E$};
+            \node[below left=1pt of I] {$I$};
+            \node[left=3pt of $(A)!0.5!(B)$] {$1$};
+            \node[right=3pt of $(D)!0.5!(C)$] {$4$};
+            \node[below=3pt of $(A)!0.5!(D)$] {$6$};
+            \node[above right=1pt of I] {$\alpha$};
+        \end{tikzpicture}
+
+        Hình 4.26
+    \end{center}
+
+    \textbf{Giải}
+
+    a) Gọi $I$ là giao điểm của hai đường thẳng $AD$ và $BC$. Qua $B$ kẻ đường thẳng song song với $AD$ (mặt đất) cắt $CD$ ở $E$ thì khi đó $\widehat{EBC}=\widehat{DIC}=\alpha$ (hai góc đồng vị).
+
+    Tứ giác $ABED$ có $BE\parallel AD$, $AB\parallel DE$, $\widehat{A}=90^\circ$ nên $ABED$ là hình chữ nhật.
+
+    Do đó $BE=AD=6$ m, $EC=CD-ED=4-1=3$ (m).
+
+    Xét $\triangle BCE$ vuông tại $E$, ta có
+    \[
+        \tan\alpha=\tan\widehat{EBC}=\dfrac{EC}{BE}=\dfrac{3}{6}=\dfrac{1}{2}.
+    \]
+    Từ đó tính được $\alpha\approx26^\circ34'$.
+
+    b) Cách 1. Áp dụng định lí Pythagore vào tam giác $BEC$ vuông tại $E$, ta có:
+    \[
+        BC^2=BE^2+EC^2=6^2+3^2=45.
+    \]
+    Suy ra $BC=\sqrt{45}=3\sqrt{5}\approx6{,}7$ (m).
+
+    Cách 2. Tam giác $BEC$ vuông tại $E$ nên $EC=BC\cdot\sin\alpha$,
+    suy ra
+    \[
+        BC=\dfrac{EC}{\sin\alpha}=\dfrac{3}{\sin26^\circ34'}\approx6{,}7\text{ (m)}.
+    \]
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}[resume=SGK]
+        \item Một cuốn sách khổ $17\times24$ cm, tức là chiều rộng 17 cm, chiều dài 24 cm. Gọi $\alpha$ là góc giữa đường chéo và cạnh 17 cm. Tính $\sin\alpha$, $\cos\alpha$ (làm tròn đến chữ số thập phân thứ hai) và tính số đo $\alpha$ (làm tròn đến độ).
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho tam giác $ABC$ có chân đường cao $AH$ nằm giữa $B$ và $C$. Biết $HB=3$ cm, $HC=6$ cm, $\widehat{HAC}=60^\circ$. Hãy tính độ dài các cạnh (làm tròn đến cm), số đo các góc của tam giác $ABC$ (làm tròn đến độ).
+
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+
+        \item Tìm chiều rộng $d$ của dòng sông trong Hình 4.27 (làm tròn đến m).
+
+        \begin{center}
+            \begin{tikzpicture}
+                \coordinate (A) at (0,0);
+                \coordinate (B) at (5,0);
+                \coordinate (C) at (5,4.2);
+                \coordinate (D) at (-0.7,4.2);
+                \coordinate (E) at (5.8,4.2);
+                \draw (A)--(B);
+                \draw (D)--(E);
+                \draw (A)--(C);
+                \draw[dashed] (B)--(C);
+                \pic[draw, angle radius=5mm] {angle=B--A--C};
+                \pic[draw, angle radius=5mm] {angle=D--C--A};
+                \pic[draw, angle radius=4mm] {right angle=A--B--C};
+                \node[above right=1pt of A] {$40^\circ$};
+                \node[below left=1pt of C] {$40^\circ$};
+                \node[below=3pt of $(A)!0.5!(B)$] {$50\text{ m}$};
+                \node[right=3pt of $(B)!0.5!(C)$] {$d$};
+            \end{tikzpicture}
+
+            Hình 4.27
+        \end{center}
+
+        \answerline
+        \answerline
+
+        \item Tính các số liệu còn thiếu (dấu ``?'') ở Hình 4.28 với góc làm tròn đến độ, với độ dài làm tròn đến chữ số thập phân thứ nhất.
+
+        \begin{center}
+            \begin{tikzpicture}
+                % a)
+                \coordinate (A1) at (0,0);
+                \coordinate (B1) at (2.4,0);
+                \coordinate (C1) at (2.4,2.01);
+                \draw (A1)--(B1)--(C1)--cycle;
+                \pic[draw, angle radius=3mm] {right angle=A1--B1--C1};
+                \pic[draw, angle radius=4mm] {angle=B1--A1--C1};
+                \node[above right=1pt of A1] {$40^\circ$};
+                \node[below=2pt of $(A1)!0.5!(B1)$] {$3$};
+                \node[right=2pt of $(B1)!0.5!(C1)$] {$?$};
+                \node[below=5pt of A1] {a)};
+
+                % b)
+                \coordinate (A2) at (4.0,0);
+                \coordinate (B2) at (6.15,0);
+                \coordinate (C2) at (6.15,2.1);
+                \coordinate (D2) at (4.0,2.1);
+                \draw (A2)--(B2)--(C2)--(D2)--cycle;
+                \draw (D2)--(B2);
+                \pic[draw, angle radius=2.5mm] {right angle=B2--A2--D2};
+                \pic[draw, angle radius=2.5mm] {right angle=D2--C2--B2};
+                \pic[draw, angle radius=2.5mm] {right angle=A2--D2--C2};
+                \pic[draw, angle radius=4mm] {angle=D2--B2--A2};
+                \node[above=2pt of $(D2)!0.5!(B2)$] {$10$};
+                \node[right=2pt of $(B2)!0.5!(C2)$] {$7$};
+                \node[above left=1pt of B2] {$?$};
+                \node[below=5pt of A2] {b)};
+
+                % c)
+                \coordinate (A3) at (7.4,0);
+                \coordinate (B3) at (8.4,2.0);
+                \coordinate (C3) at (11.2,0.6);
+                \draw (A3)--(B3)--(C3)--cycle;
+                \pic[draw, angle radius=3mm] {right angle=A3--B3--C3};
+                \pic[draw, angle radius=4mm] {angle=C3--A3--B3};
+                \node[left=1pt of $(A3)!0.5!(B3)$] {$5$};
+                \node[above=1pt of $(B3)!0.5!(C3)$] {$7$};
+                \node[above right=1pt of A3] {$?$};
+                \node[below=5pt of A3] {c)};
+
+                % d)
+                \coordinate (A4) at (12.0,0);
+                \coordinate (C4) at (14.87,2.01);
+                \coordinate (B4) at ($(A4)!0.6!(C4)$);
+                \coordinate (H4) at (B4 |- A4);
+                \coordinate (K4) at (C4 |- A4);
+                \draw (A4)--(C4);
+                \draw (A4)--(K4);
+                \draw (B4)--(H4);
+                \draw (C4)--(K4);
+                \pic[draw, angle radius=3mm] {right angle=A4--H4--B4};
+                \pic[draw, angle radius=3mm] {right angle=A4--K4--C4};
+                \pic[draw, angle radius=4mm] {angle=K4--A4--C4};
+                \node[above right=1pt of A4] {$35^\circ$};
+                \node[above left=1pt of $(A4)!0.5!(B4)$] {$3$};
+                \node[above left=1pt of $(B4)!0.5!(C4)$] {$2$};
+                \node[right=1pt of $(H4)!0.5!(B4)$] {$?$};
+                \node[right=1pt of $(K4)!0.5!(C4)$] {$?$};
+                \node[below=5pt of A4] {d)};
+            \end{tikzpicture}
+
+            Hình 4.28
+        \end{center}
+
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+
+        \item Một bạn muốn tính khoảng cách giữa hai địa điểm $A$, $B$ ở hai bên hồ nước. Biết rằng các khoảng cách từ một điểm $C$ đến $A$ và đến $B$ là $CA=90$ m, $CB=150$ m và $\widehat{ACB}=120^\circ$ (H.4.29). Hãy tính $AB$ giúp bạn.
+
+        \begin{center}
+            \begin{tikzpicture}
+                \coordinate (C) at (0,0);
+                \coordinate (B) at (-3,0);
+                \coordinate (A) at (0.9,1.56);
+                \coordinate (H) at (0.9,0);
+                \draw (B)--(C)--(A)--(B);
+                \draw[dashed] (A)--(H);
+                \draw (C)--(H);
+                \pic[draw, angle radius=3mm] {right angle=C--H--A};
+                \pic[draw, angle radius=5mm] {angle=A--C--B};
+                \node[left=1pt of B] {$B$};
+                \node[below=1pt of C] {$C$};
+                \node[above right=1pt of A] {$A$};
+                \node[below=1pt of H] {$H$};
+                \node[below=2pt of $(B)!0.5!(C)$] {$150\text{ m}$};
+                \node[above=2pt of $(C)!0.5!(A)$] {$90\text{ m}$};
+                \node[above left=1pt of C] {$120^\circ$};
+            \end{tikzpicture}
+
+            Hình 4.29
+        \end{center}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Mặt cắt ngang của một đập ngăn nước có dạng hình thang $ABCD$ (H.4.30). Chiều rộng của mặt trên $AB$ của đập là 3 m. Độ dốc của sườn $AD$, tức là $\tan D=1{,}25$. Độ dốc của sườn $BC$, tức là $\tan C=1{,}5$. Chiều cao của đập là 3,5 m. Hãy tính chiều rộng $CD$ của chân đập, chiều dài của các sườn $AD$ và $BC$ (làm tròn đến dm).
+
+        \begin{center}
+            \begin{tikzpicture}
+                \coordinate (D) at (0,0);
+                \coordinate (C) at (7,0);
+                \coordinate (A) at (1.8,3.5);
+                \coordinate (B) at (4.8,3.5);
+                \coordinate (H) at (1.8,0);
+                \draw (D)--(A)--(B)--(C)--cycle;
+                \draw (A)--(H);
+                \pic[draw, angle radius=3mm] {right angle=D--H--A};
+                \pic[draw, angle radius=4mm] {angle=C--D--A};
+                \pic[draw, angle radius=4mm] {angle=B--C--D};
+                \node[above left=1pt of A] {$A$};
+                \node[above right=1pt of B] {$B$};
+                \node[below left=1pt of D] {$D$};
+                \node[below right=1pt of C] {$C$};
+                \node[above=2pt of $(A)!0.5!(B)$] {$3\text{ m}$};
+                \node[right=2pt of $(A)!0.5!(H)$] {$3{,}5\text{ m}$};
+            \end{tikzpicture}
+
+            Hình 4.30
+        \end{center}
+
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+
+        \item Trong một buổi tập trận, một tàu ngầm đang ở trên mặt biển bắt đầu di chuyển theo đường thẳng tạo với mặt nước biển một góc $21^\circ$ để lặn xuống (H.4.31).
+
+        \begin{center}
+            \begin{tikzpicture}
+                \coordinate (A) at (0,0);
+                \coordinate (B) at (5,0);
+                \coordinate (H) at (5,-1.92);
+                \draw (A)--(B)--(H)--(A);
+                \pic[draw, angle radius=4mm] {right angle=A--B--H};
+                \pic[draw, angle radius=5mm] {angle=H--A--B};
+                \node[above left=1pt of A] {$A$};
+                \node[above right=1pt of B] {$B$};
+                \node[right=1pt of H] {$H$};
+                \node[above=3pt of $(A)!0.5!(B)$] {Mặt biển};
+                \node[below right=1pt of A] {$21^\circ$};
+            \end{tikzpicture}
+
+            Hình 4.31
+        \end{center}
+
+        \begin{questions}
+            \item Khi tàu chuyển động theo hướng đó và đi được 200 m thì tàu ở độ sâu bao nhiêu so với mặt nước biển? (làm tròn đến m).
+
+            \answerline
+            \answerline
+            \item Giả sử tốc độ của tàu là 9 km/h thì sau bao lâu (tính từ lúc bắt đầu lặn) tàu ở độ sâu 200 m (tức là cách mặt nước biển 200 m)?
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+    \end{questions}
+\end{exercises}
